@@ -24,7 +24,6 @@ export const NavBarContainer=styled.div`
     height: 80px;
     z-index: 1;
     width: 100%;
-    padding: 0 24px;
     max-width: 1100px;
 `;
 
@@ -60,15 +59,28 @@ export const NavMenu = styled.ul`
     align-items: center;
     list-style: none;
     text-align: center;
-    margin-right: -22px;
 
     @media screen and (max-width:780px){
-        display: none;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 90vh;
+        position: absolute;
+        top: 64px;
+        left: ${({click}) => (click ? 0 : '-110%')};
+        padding: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        background: #101522;
     }
 `;
 
 export const NavItem = styled.li`
     height: 80px;
+
+    @media screen and (max-width:780px){
+        width: 100%;
+    }
 `;
 
 export const NavLink =styled(Link)`
@@ -82,6 +94,13 @@ export const NavLink =styled(Link)`
 
     &.active{
         border-bottom: 3px solid #01bf71;
+    }
+
+    @media screen and (max-width:780px){
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
     }
 `;
 
