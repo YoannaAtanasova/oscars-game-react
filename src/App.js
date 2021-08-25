@@ -1,14 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
-import Nav from './Nav';
-import PrivacyPolicy from './PrivacyPolicy';
+import NavBar from './components/NavBar';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Nav/>
+      <div>
+        <NavBar/>
         <Switch>
          {/* <Route path="/" exact component={Home}/> */}
           <Route path="/privacy-policy" component={PrivacyPolicy}/>
