@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 
 export const Nav = styled.nav`
-    background: #000;
+    background: #060606;
     height: 80px;
    /* margin-top: -80px; */
     display: flex;
@@ -12,6 +12,9 @@ export const Nav = styled.nav`
     position: sticky;
     top: 0;
     z-index: 10;
+    border-width: 0px 0px 2px 0px;
+    border-style: solid;
+    border-color: #c19b26;
     
     @media screen and (max-width: 960px){
         transition: 0.8s all ease;
@@ -27,7 +30,7 @@ export const NavBarContainer=styled.div`
     max-width: 1100px;
 `;
 
-export const NavLogo =styled(Link)`
+export const NavLogoLink =styled(Link)`
     color: #fff;
     justify-content: flex-start;
     cursor: pointer;
@@ -37,6 +40,10 @@ export const NavLogo =styled(Link)`
     margin-left: 24px;
     font-weight: bold;
     text-decoration: none;
+`;
+
+export const NavLogo = styled.img`
+    max-height: 50px;
 `;
 
 export const BurgerMenu = styled.div`
@@ -71,7 +78,7 @@ export const NavMenu = styled.ul`
         padding: 0;
         opacity: 1;
         transition: all 0.5s ease;
-        background: #101522;
+        background: #262a2d;
     }
 `;
 
@@ -91,6 +98,8 @@ export const NavLink =styled(Link)`
     padding: 0 1rem;
     height: 100%;
     cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
 
     &.active{
         border-bottom: 3px solid #01bf71;

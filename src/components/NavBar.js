@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {FaBars, FaTimes} from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
-import { BurgerMenu, Nav, NavBarContainer, NavBtn, NavBtnLink, NavItem, NavLink, NavLogo, NavMenu } from './NavBarElements';
+import { BurgerMenu, Nav, NavBarContainer, NavBtn, NavBtnLink, NavItem, NavLink, NavLogoLink, NavLogo, NavMenu } from './NavBarElements';
 
 function NavBar() {
   const [click, setClick] = useState(false)
@@ -12,7 +12,9 @@ function NavBar() {
     <IconContext.Provider value={{color: '#fff'}}>
       <Nav>
           <NavBarContainer>
-            <NavLogo to="/">OSCARS</NavLogo>
+            <NavLogoLink to="/">
+              <NavLogo src="/logo.png"/>
+            </NavLogoLink>
           
           <BurgerMenu onClick={handleClick}>
             {click ? <FaTimes/> : <FaBars/>}
