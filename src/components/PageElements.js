@@ -16,7 +16,7 @@ export const PageBody = styled.div`
     border-radius: 50px;
 `;
 
-export const Banner = styled.div`
+export const BackgroundBanner = styled.div`
     border-color: initial;
     border: 0;
     height: 80vh;

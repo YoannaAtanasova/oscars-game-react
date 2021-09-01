@@ -5,7 +5,6 @@ import { BurgerMenu, Nav, NavBarContainer, NavBtn, NavBtnLink, NavItem, NavLink,
 
 function NavBar() {
   const [click, setClick] = useState(false)
-
   const handleClick = () => setClick(!click)
 
   return (
@@ -21,7 +20,7 @@ function NavBar() {
           </BurgerMenu>
           <NavMenu onClick={handleClick} click={click}>
             <NavItem>
-              <NavLink to="/privacy-policy">Privacy Policy</NavLink>
+              <NavLink to="/login">Log In</NavLink>
             </NavItem>
           </NavMenu>
         {/* <NavBtn>

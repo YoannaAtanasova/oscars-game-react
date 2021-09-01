@@ -1,14 +1,16 @@
 import React from 'react'
-import {Page, Banner, Header, PageBody} from '../components/PageElements';
+import Footer from '../components/Footer';
+
+import {Page, BackgroundBanner, Header, PageBody} from '../components/PageElements';
 
 function Home() {
     return (
         <>
-            <Banner>
+            <BackgroundBanner>
                 <Header>
                     
                 </Header>
-            </Banner>
+            </BackgroundBanner>
             <Page>
                 <PageBody>
                     You have reached the Proxiad Oscars challenge game website.
