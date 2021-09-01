@@ -16,6 +16,10 @@ export const PageBody = styled.div`
     border-radius: 50px;
 `;
 
+export const Paragraph = styled.p`
+    font-size: 20px;
+`;
+
 export const BackgroundBanner = styled.div`
     border-color: initial;
     border: 0;

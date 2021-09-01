@@ -7,8 +7,8 @@ function Footer() {
             <FooterContent>
                 <FooterPoweredByLink href="https://www.themoviedb.org" title="Powered By TMDB" target="_newtab">
                     <img
-                        src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_2-d537fb228cf3ded904ef09b136fe3fec72548ebc1fea3fbbd1ad9e36364db38b.svg"
-                        alt="POWERED BY tHE MOVIE DB"
+                        src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_1-5bdc75aaebeb75dc7ae79426ddd9be3b2be1e342510f8202baf6bffa71d7f5c4.svg"
+                        alt="POWERED BY THE MOVIE DB"
                         width="152" />
                 </FooterPoweredByLink>
                 <FooterPoweredByLink href="https://www.statuscake.com" title="Website Uptime Monitoring">
