@@ -6,11 +6,13 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import UserDataDeletion from './pages/UserDataDeletion';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import { GlobalStyle } from './GlobalStyles';
 
 function App() {
   return (
     <Router>
       <div className="App">
+        <GlobalStyle/>
         <NavBar/>
         <Switch>
           <Route path="/" exact component={Home}/>
