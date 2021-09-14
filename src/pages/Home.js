@@ -1,6 +1,6 @@
 import React from 'react'
 
-import {Page, BackgroundBanner, Banner, Title, Header, PageBody, Paragraph, SubHeader} from '../components/PageElements';
+import {Page, BackgroundBanner, Banner, Header, PageBody, Paragraph, SubHeader} from '../components/PageElements';
 
 function Home() {
     return (

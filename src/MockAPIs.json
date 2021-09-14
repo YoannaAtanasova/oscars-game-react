@@ -1,0 +1,19 @@
+{
+    "game-information":{
+      "EndDate": "2021-12-12T00:00:00",
+      "IsGameRunning": true
+    },
+    "user-score": [
+      { "Rank": 1, "UserDisplayName": "Valeri Dublekov", "Score": 15, "WatchedMovies": 6, "WatchedNominations": 7, "Bets": 23 },
+      { "Rank": 2, "UserDisplayName": "Dimitar Kostov", "Score": 13, "WatchedMovies": 33, "WatchedNominations": 80, "Bets": 23 },
+      { "Rank": 3, "UserDisplayName": "Yoanna Atanasova", "Score": 6, "WatchedMovies": 21, "WatchedNominations": 36, "Bets": 23 }
+    ],
+    "movies":[
+        {"Id" : 1, "Title": "", "ReleaseDate": "", "PosterPath": "", "Overview": "", "ImdbId": ""},
+        {"Id" : 2, "Title": "", "ReleaseDate": "", "PosterPath": "", "Overview": "", "ImdbId": ""},
+        {"Id" : 3, "Title": "", "ReleaseDate": "", "PosterPath": "", "Overview": "", "ImdbId": ""},
+        {"Id" : 4, "Title": "", "ReleaseDate": "", "PosterPath": "", "Overview": "", "ImdbId": ""},
+        {"Id" : 5, "Title": "", "ReleaseDate": "", "PosterPath": "", "Overview": "", "ImdbId": ""},
+        {"Id" : 6, "Title": "", "ReleaseDate": "", "PosterPath": "", "Overview": "", "ImdbId": ""}
+    ]
+}
