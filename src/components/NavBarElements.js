@@ -14,7 +14,7 @@ export const Nav = styled.nav`
     z-index: 10;
     border-width: 0px 0px 2px 0px;
     border-style: solid;
-    border-color: #c19b26;
+    border-color: #b69323;
     
     @media screen and (max-width: 960px){
         transition: 0.8s all ease;

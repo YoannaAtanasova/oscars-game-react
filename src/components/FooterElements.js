@@ -38,10 +38,11 @@ export const FooterItem = styled.li`
 export const FooterLink = styled(Link)`
     color: #fff;
     cursor: pointer;
-    font-size: 1.5rem;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     margin-left: 24px;
+    margin-bottom: 5px;
     text-decoration: underline;
 
     &.active{
