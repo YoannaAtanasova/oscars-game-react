@@ -8,12 +8,12 @@
       { "Rank": 2, "UserDisplayName": "Dimitar Kostov", "Score": 13, "WatchedMovies": 33, "WatchedNominations": 80, "Bets": 23 },
       { "Rank": 3, "UserDisplayName": "Yoanna Atanasova", "Score": 6, "WatchedMovies": 21, "WatchedNominations": 36, "Bets": 23 }
     ],
-    "movies":[
-        {"Id" : 1, "Title": "", "ReleaseDate": "", "PosterPath": "", "Overview": "", "ImdbId": ""},
-        {"Id" : 2, "Title": "", "ReleaseDate": "", "PosterPath": "", "Overview": "", "ImdbId": ""},
-        {"Id" : 3, "Title": "", "ReleaseDate": "", "PosterPath": "", "Overview": "", "ImdbId": ""},
-        {"Id" : 4, "Title": "", "ReleaseDate": "", "PosterPath": "", "Overview": "", "ImdbId": ""},
-        {"Id" : 5, "Title": "", "ReleaseDate": "", "PosterPath": "", "Overview": "", "ImdbId": ""},
-        {"Id" : 6, "Title": "", "ReleaseDate": "", "PosterPath": "", "Overview": "", "ImdbId": ""}
+    "movies-data":[
+        {"Id" : 1, "Title": "Free Guy", "ReleaseDate": "11/08/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/xmbU4JTUm8rsdtn7Y3Fcm30GpeT.jpg", "Overview": "", "ImdbId": ""},
+        {"Id" : 2, "Title": "Venom", "ReleaseDate": "30/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg", "Overview": "", "ImdbId": ""},
+        {"Id" : 3, "Title": "Shang-Chi", "ReleaseDate": "01/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg", "Overview": "", "ImdbId": ""},
+        {"Id" : 4, "Title": "Black Widow", "ReleaseDate": "07/07/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg", "Overview": "", "ImdbId": ""},
+        {"Id" : 5, "Title": "No Time To Die", "ReleaseDate": "29/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/eqWaeh21e4ZgHjwpULZVHCGIq9X.jpg", "Overview": "", "ImdbId": ""},
+        {"Id" : 6, "Title": "Army of the Dead", "ReleaseDate": "14/05/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/z8CExJekGrEThbpMXAmCFvvgoJR.jpg", "Overview": "", "ImdbId": ""}
     ]
 }
