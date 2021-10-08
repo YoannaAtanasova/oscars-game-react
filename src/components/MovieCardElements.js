@@ -1,5 +1,13 @@
 import styled from 'styled-components';
 
+export const MoviesContainer = styled.div`
+    width: 1100; //calc(100vw - 80px - 268px);
+    max-width: 1500;//calc(var(--maxPrimaryPageWidth) - 80px - 268px);
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 1 auto;
+`;
+
 export const Card = styled.div`
     position: relative;
     top: 0;

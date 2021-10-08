@@ -14,6 +14,8 @@
         {"Id" : 3, "Title": "Shang-Chi", "ReleaseDate": "01/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg", "Overview": "", "ImdbId": ""},
         {"Id" : 4, "Title": "Black Widow", "ReleaseDate": "07/07/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg", "Overview": "", "ImdbId": ""},
         {"Id" : 5, "Title": "No Time To Die", "ReleaseDate": "29/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/eqWaeh21e4ZgHjwpULZVHCGIq9X.jpg", "Overview": "", "ImdbId": ""},
-        {"Id" : 6, "Title": "Army of the Dead", "ReleaseDate": "14/05/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/z8CExJekGrEThbpMXAmCFvvgoJR.jpg", "Overview": "", "ImdbId": ""}
+        {"Id" : 6, "Title": "Army of the Dead", "ReleaseDate": "14/05/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/z8CExJekGrEThbpMXAmCFvvgoJR.jpg", "Overview": "", "ImdbId": ""},
+        {"Id" : 7, "Title": "Nobody", "ReleaseDate": "18/03/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/oBgWY00bEFeZ9N25wWVyuQddbAo.jpg", "Overview": "", "ImdbId": ""},
+        {"Id" : 8, "Title": "Dune", "ReleaseDate": "15/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/s1FhMAr91WL8D5DeHOcuBELtiHJ.jpg", "Overview": "", "ImdbId": ""}
     ]
 }

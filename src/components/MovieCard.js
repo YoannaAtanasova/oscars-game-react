@@ -1,14 +1,14 @@
 import React from 'react';
 import { Card, CardContent, CardImageContainer, Image, ImageLink, ImageWrapper, MarkWarchedWrapper, MarkWatchedButton, Title, TitleLink, ReleaseDate } from './MovieCardElements';
 
-function MovieCard() {
+function MovieCard({title, releaseDate, imageUrl}) {
     return (
         <div>
             <Card>
                 <CardImageContainer>
                     <ImageWrapper>
                         <ImageLink>
-                            <Image src="https://www.themoviedb.org/t/p/w220_and_h330_face/xmbU4JTUm8rsdtn7Y3Fcm30GpeT.jpg"/>
+                            <Image src={imageUrl}/>
                         </ImageLink>
                     </ImageWrapper>
                     <MarkWarchedWrapper>
@@ -17,9 +17,9 @@ function MovieCard() {
                 </CardImageContainer>
                 <CardContent>
                     <Title>
-                        <TitleLink>Cool Title</TitleLink>
+                        <TitleLink>{title}</TitleLink>
                     </Title>
-                    <ReleaseDate>11 Aug 2021</ReleaseDate>
+                    <ReleaseDate>{releaseDate}</ReleaseDate>
                 </CardContent>
             </Card>
         </div>
