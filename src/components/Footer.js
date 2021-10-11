@@ -1,5 +1,5 @@
 import React from 'react'
-import { CopyRights, FooterContainer, FooterContent, FooterListReferences, FooterLink, FooterPoweredByLink, FooterItem } from '../components/FooterElements';
+import { CopyRights, FooterContainer, FooterContent, FooterListReferences, FooterLink, FooterPoweredByLink, FooterPoweredByImage, FooterItem } from '../components/FooterElements';
 
 function Footer() {
     return (
@@ -12,7 +12,7 @@ function Footer() {
                         width="152" />
                 </FooterPoweredByLink>
                 <FooterPoweredByLink href="https://www.statuscake.com" title="Website Uptime Monitoring">
-                    <img src="https://app.statuscake.com/button/index.php?Track=ZC84x0akbQ&Days=1&Design=1" />
+                    <FooterPoweredByImage src="https://app.statuscake.com/button/index.php?Track=ZC84x0akbQ&Days=1&Design=1" />
                 </FooterPoweredByLink>
                 <FooterListReferences>
                     <FooterItem>

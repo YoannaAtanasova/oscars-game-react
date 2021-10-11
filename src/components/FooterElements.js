@@ -59,3 +59,7 @@ export const FooterPoweredByLink = styled.a`
     margin-left: 24px;
     margin-right: 24px;
 `;
+
+export const FooterPoweredByImage = styled.img`
+    border-radius: 20px;
+`;
