@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent, CardImageContainer, Image, ImageLink, ImageWrapper, MarkWarchedWrapper, MarkWatchedButton, Title, TitleLink, ReleaseDate } from './MovieCardElements';
+import {GiPopcorn} from 'react-icons/gi'
 
 function MovieCard({title, releaseDate, imageUrl}) {
     return (
@@ -12,7 +13,9 @@ function MovieCard({title, releaseDate, imageUrl}) {
                         </ImageLink>
                     </ImageWrapper>
                     <MarkWarchedWrapper>
-                        <MarkWatchedButton/>
+                        <MarkWatchedButton href="/" title="Mark as watched">
+                            <GiPopcorn size='1.8em'/>
+                        </MarkWatchedButton>
                     </MarkWarchedWrapper>
                 </CardImageContainer>
                 <CardContent>

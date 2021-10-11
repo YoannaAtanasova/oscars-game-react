@@ -20,8 +20,10 @@ function Movies() {
         <Page>
             <PageBody>
                 <MoviesContainer>
-                    {moviesData.map(movie => (
-                        <MovieCard title={movie.Title}
+                    {moviesData.map((movie, index) => (
+                        <MovieCard
+                                key={index} 
+                                title={movie.Title}
                                 releaseDate={movie.ReleaseDate}
                                 imageUrl={movie.PosterPath}/>
                     ))}
