@@ -23,6 +23,7 @@ function Movies() {
                     {moviesData.map((movie, index) => (
                         <MovieCard
                                 key={index} 
+                                imageId={movie.Id}
                                 title={movie.Title}
                                 releaseDate={movie.ReleaseDate}
                                 imageUrl={movie.PosterPath}/>

@@ -18,7 +18,7 @@ export const Card = styled.div`
     border: 1px solid #b69323;
     border-radius: 20px;
     overflow: hidden;
-    margin: 30px 30px;
+    margin: 20px 30px;
     width: 180;
     max-width: 180px;
     /*width: calc((100vw - 80px - 260px - (var(--discoverColumnPadding) * var(--numberOfDiscoverColumns))) / var(--numberOfDiscoverColumns));
@@ -90,7 +90,7 @@ export const CardContent = styled.div`
     align-items: flex-start;
 `;
 
-export const Title = styled.div`
+export const Title = styled.h2`
     font-size: 1em;
     margin: 0;
     width: 100%;
@@ -101,6 +101,7 @@ export const Title = styled.div`
 export const TitleLink = styled.a`
     font-weight: 700;
     color: #fff;
+    text-decoration: none;
 `;
 
 export const ReleaseDate = styled.p`
@@ -109,5 +110,3 @@ export const ReleaseDate = styled.p`
     padding: 0;
     color: #e8e6e399;
 `;
-
-export const NumOfNominations = styled.div``; 
