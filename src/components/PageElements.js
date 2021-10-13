@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Page = styled.div`
     padding: 50px 150px;
     color: white;
-    background-color: #060606;
+    background-color: #181b1e;
     
     @media screen and (max-width: 960px){
         padding: 20px 50px;

@@ -7,6 +7,7 @@ import TermsOfService from './pages/TermsOfService';
 import UserDataDeletion from './pages/UserDataDeletion';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import { GlobalStyle } from './GlobalStyles';
+import Movie from './pages/Movie';
 import Movies from './pages/Movies';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Switch>
           <Route path="/" exact component={Home}/>
           <Route path="/movies" component={Movies}/>
+          <Route path="/movie/:movieId" component={Movie}/>
           <Route path="/privacy-policy" component={PrivacyPolicy}/>
           <Route path="/terms-of-service" component={TermsOfService}/>
           <Route path="/user-data-deletion" component={UserDataDeletion}/>
