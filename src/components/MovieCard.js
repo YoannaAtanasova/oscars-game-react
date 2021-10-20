@@ -43,7 +43,7 @@ function MovieCard({imageId, title, releaseDate, imageUrl}) {
                 </CardContent>
             </Card>
             <Modal open={open} onClose={onCloseModal} center classNames={{modal:'movieModal'}} closeIcon={closeIcon}>
-                <Movie id={imageId}/>
+                <Movie movieIdParam={imageId}/>
             </Modal>
         </div>
     )

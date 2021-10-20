@@ -8,7 +8,7 @@ function Movies() {
 
     useEffect(() => {
         getMoviesData();
-    }, [])
+    }, []);
 
     const getMoviesData = async () => {
         return await fetch("http://localhost:3030/movies-data")

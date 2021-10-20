@@ -3,23 +3,23 @@ import { useParams } from 'react-router';
 import MovieDetails from '../components/MovieDetails';
 import { Page, PageBody } from '../components/PageElements';
 
-function Movie({id}) {
-    const {movieId} = useParams();
+function Movie({movieIdParam}) {
+    const {movieIdFromUrl} = useParams();
 
     const [movieData, setMovieData] = useState([]);
 
     useEffect(() => {
         getMovieData();
-    }, [])
+    }, []);
 
     const getMovieData = async () => {
-        return await fetch("http://localhost:3030/movies-data-" + (movieId ? movieId : id) )
+        return await fetch("http://localhost:3030/movies-data-" + (movieIdFromUrl ? movieIdFromUrl : movieIdParam) )
             .then((response) => response.json())
             .then((data) => setMovieData(data));
       };
 
     return (
-        <Page padding={id ? '50px' : ''}>
+        <Page padding={movieIdParam ? '50px' : ''}>
             <PageBody>
                 {movieData.map((movie, index) => (
                     <MovieDetails key={index} 

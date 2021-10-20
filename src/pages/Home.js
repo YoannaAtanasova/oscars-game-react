@@ -35,7 +35,7 @@ function Home() {
                     <Paragraph>
                         You have the chance to show off your incredible prediction skills by guessing the Winners of this years Oscars nomenees.
                         The rules are elementary, my dear Watson.
-                        Take a look of all the Categories and Nomination.
+                        Take a look of all the Categories and Nominations.
                     </Paragraph>
 
                     <Paragraph>
