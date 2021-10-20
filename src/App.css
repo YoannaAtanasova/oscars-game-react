@@ -2,3 +2,13 @@
   background: #181b1e;
   font-family: 'Futura Light';
 }
+
+.movieModal{
+  max-width: 1000px !important;
+  background: none !important;
+  padding: 0px !important;
+}
+
+.movieModal button{
+  color: #b69323;
+}
