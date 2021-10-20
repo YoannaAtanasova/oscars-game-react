@@ -11,7 +11,7 @@ function Footer() {
                         alt="POWERED BY THE MOVIE DB"
                         width="152" />
                 </FooterPoweredByLink>
-                <FooterPoweredByLink href="https://www.statuscake.com" title="Website Uptime Monitoring">
+                <FooterPoweredByLink href="https://www.statuscake.com" title="Website Uptime Monitoring" target="_newtab">
                     <FooterPoweredByImage src="https://app.statuscake.com/button/index.php?Track=ZC84x0akbQ&Days=1&Design=1" />
                 </FooterPoweredByLink>
                 <FooterListReferences>

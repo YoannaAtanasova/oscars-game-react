@@ -26,7 +26,12 @@ function Movie() {
                         imageId={movie.Id}
                         title={movie.Title}
                         releaseDate={movie.ReleaseDate}
-                        imageUrl={movie.PosterPath}/>))}
+                        imageUrl={movie.PosterPath}
+                        imdbId={movie.ImdbId}
+                        overview={movie.Overview}
+                        nominations={movie.Nominations}
+                        credits={movie.Credits}
+                        usersWatched={movie.Watched}/>))}
                 
             </PageBody>
         </Page>

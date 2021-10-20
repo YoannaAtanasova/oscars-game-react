@@ -19,6 +19,43 @@
         {"Id" : 8, "Title": "Dune", "ReleaseDate": "15/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/s1FhMAr91WL8D5DeHOcuBELtiHJ.jpg", "Overview": "", "ImdbId": ""}
     ],
     "movies-data-1":[
-      {"Id" : 1, "Title": "Free Guy", "ReleaseDate": "11/08/2021", "PosterPath": "https://www.themoviedb.org/t/p/w300_and_h450_face/xmbU4JTUm8rsdtn7Y3Fcm30GpeT.jpg", "Overview": "", "ImdbId": ""}
+      {
+        "Id" : 550988, 
+        "Title": "Free Guy", 
+        "ReleaseDate": "11/08/2021", 
+        "PosterPath": "https://www.themoviedb.org/t/p/w300_and_h450_face/xmbU4JTUm8rsdtn7Y3Fcm30GpeT.jpg", 
+        "Overview": "A bank teller called Guy realizes he is a background character in an open world video game called Free City that will soon go offline.", 
+        "ImdbId": "tt6264654",
+        "Nominations":[
+          {"Id": 1, "CategoryTtle": "Best Movie"},
+          {"Id": 2, "CategoryTtle": "Actor in a Leading Role"}
+        ],
+        "Credits": [
+          {"Id": 1, "Name": "Ryan Reynolds", "Role": "Guy" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/4SYTH5FdB0dAORV98Nwg3llgVnY.jpg"},
+          {"Id": 2, "Name": "Jodie Comer", "Role": "Millie Rusk / Molotov Girl" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/va8pcuzXodVLYUQLjB1USZVB6gz.jpg"},
+          {"Id": 3, "Name": "Taika Waititi", "Role": "Antwan" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/lxbNTecxOIlV4roX02RT4Ga2Rn2.jpg"},
+          {"Id": 4, "Name": "Steve Cooper", "Role": "Art Direction" ,"IsCast": false, "Image": null},
+          {"Id": 5, "Name": "Beat Frutiger", "Role": "Supervising Art Director" ,"IsCast": false, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/2VMPjH8Olb5qHqsKNelSxkViH9b.jpg"},
+          {"Id": 6, "Name": "Lil Rel Howery", "Role": "Buddy" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/9MDi35Fy6ym7SYbO3B04vf1vBnm.jpg"},
+          {"Id": 7, "Name": "Joe Keery", "Role": "Walter 'Keys' McKeys" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/kXoE2UWf01V89yVDD08MCXrEiRe.jpg"},
+          {"Id": 8, "Name": "Utkarsh Ambudkar", "Role": "Mouser" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/wqb2EjDcJ5AKlZQuH7zV9jURs9B.jpg"},
+          {"Id": 9, "Name": "Owen Burke", "Role": "Bank Robber #2" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/kgU8OelLJImeisnTkZQ14Mjp9BP.jpg"},
+          {"Id": 10, "Name": "Kayla Caulfield", "Role": "Soonami Tech" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/3m61wlEQZi5JgBqC5tTOOVEFEUw.jpg"},
+          {"Id": 11, "Name": "Camille Kostek", "Role": "Bombshell" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/kCPrPiUZI2jr85028SWVJcPpHfb.jpg"}
+        ],
+        "Watched":[
+          {"Id": 1},
+          {"Id": 2},
+          {"Id": 3},
+          {"Id": 4}
+        ]
+      }
+    ],
+    "users":[
+      {"Id": 1},
+      {"Id": 2},
+      {"Id": 3},
+      {"Id": 4},
+      {"Id": 5}
     ]
 }

@@ -13,7 +13,7 @@ export const Page = styled.div`
 export const PageBody = styled.div`
     padding: 35px 35px;
     background-color: #262a2d;
-    border-radius: 50px;
+    border-radius: 50px 0px 50px 0px;
 `;
 
 export const Paragraph = styled.p`

@@ -32,6 +32,10 @@ function Home() {
                     </Paragraph>
 
                     <Paragraph>
+                        One more thing!
+                    </Paragraph>
+
+                    <Paragraph>
                         Be sure to mark all the nominated movies that you have watched as well (and no cheating!).
                         If several users have the same number of guessed Winners, the user who has watched more of the nominated movies will have an advantage.
                     </Paragraph>  
