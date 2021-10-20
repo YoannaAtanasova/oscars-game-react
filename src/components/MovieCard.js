@@ -14,13 +14,13 @@ function MovieCard({imageId, title, releaseDate, imageUrl}) {
                     </ImageWrapper>
                     <MarkWarchedWrapper>
                         <MarkWatchedButton href="/" title="Mark as watched">
-                            <GiPopcorn size='1.8em'/>
+                            <GiPopcorn size='1.8em' style={{ fill: "url(#gold-gradient)" }}/>
                         </MarkWatchedButton>
                     </MarkWarchedWrapper>
                 </CardImageContainer>
                 <CardContent>
                     <Title>
-                        <TitleLink href={"/movie/" + imageId}> {title} </TitleLink>
+                        <TitleLink href={"/movie/" + imageId} target="_newTab"> {title} </TitleLink>
                     </Title>
                     <ReleaseDate>{releaseDate}</ReleaseDate>
                 </CardContent>

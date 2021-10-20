@@ -126,10 +126,6 @@ export const HeaderIconsListItemText = styled.span`
 
 export const MarkWatchedButton = styled.a`
     color: white;
-
-    &:hover{
-       color: #fde086;
-    }
 `;
 
 export const MDBLink = styled.a`

@@ -48,7 +48,7 @@ function MovieDetails({imageId, title, releaseDate, imageUrl, imdbId, overview, 
                             </HeaderIconsListItem>
                             <HeaderIconsListItem>
                                 <MarkWatchedButton href="/" title="Mark as watched">
-                                    <GiPopcorn size='3.8em'/>
+                                    <GiPopcorn size='3.8em' style={{ fill: "url(#gold-gradient)" }}/>
                                 </MarkWatchedButton>
                             </HeaderIconsListItem>
                         </HeaderIconsList>
@@ -111,7 +111,7 @@ function MovieDetails({imageId, title, releaseDate, imageUrl, imdbId, overview, 
                     </ScrollerWrapper>
                 </SectionWrapper>
             </MovieDetailsContainer>
-        </div>
+        </div>      
     )
 }
 

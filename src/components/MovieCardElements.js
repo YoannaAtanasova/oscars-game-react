@@ -61,22 +61,19 @@ export const MarkWarchedWrapper = styled.div`
     top: 8px;
     right: 8px;
     z-index: 4;
-    opacity: 0.8;
     background: #262a2d;
-    border-radius: 20px;
-
-    &:hover{
-        opacity: 1;
-        background: #181b1e;
-    }
+    border-radius: 50%;
+    border: 1px #c19b26;
+    border-style: solid;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 2px 2px;
 `;
 
 export const MarkWatchedButton = styled.a`
     color: #b69323;
-
-    &:hover{
-        color: #a78b31;
-    }
 `;
 
 export const CardContent = styled.div`
