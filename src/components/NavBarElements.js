@@ -82,12 +82,24 @@ export const NavMenu = styled.ul`
     }
 `;
 
+export const DropDownWrapper = styled.div`
+    display: none;
+    position: absolute;
+    background-color: #181b1e;
+    border: #b69323 solid;
+    border-width: 0 2px 2px 2px;
+`;
+
 export const NavItem = styled.li`
     height: 80px;
 
     @media screen and (max-width:780px){
         width: 100%;
     }
+
+    &:hover ${DropDownWrapper} {
+            display: block;
+  }
 `;
 
 export const NavLink =styled(Link)`
@@ -114,20 +126,28 @@ export const NavLink =styled(Link)`
 `;
 
 export const NavBtn = styled.nav`
+    color: #fff;
     display: flex;
     align-items: center;
+    text-decoration: none;
+    padding: 0 1rem;
+    height: 100%;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
 
     @media screen and (max-width:768px){
         display: none;
+        overflow: visible;
     }
 `;
 
 export const NavBtnLink = styled(Link)`
     border-radius: 50px;
-    background: #01bf71;
+    background: #b69323;
     white-space: nowrap;
     padding: 10px 22px;
-    color: #010606;
+    color: white;
     font-size: 16px;
     outline: none;
     border: none;
@@ -139,5 +159,21 @@ export const NavBtnLink = styled(Link)`
         transition: all 0.2s ease-in-out;
         background: #fff;
         color: #010606;
+    }    
+`;
+
+export const DropDownList = styled.ul`
+    align-items: center;
+    list-style: none;
+    text-align: center;
+    justify-content: center;
+    padding-inline-start: 0px;
+`;
+
+export const DropDownItem = styled.li`
+    height: 50px;
+
+    @media screen and (max-width:780px){
+        width: 100%;
     }
 `;

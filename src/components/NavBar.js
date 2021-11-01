@@ -1,11 +1,23 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {FaBars, FaTimes} from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
-import { BurgerMenu, Nav, NavBarContainer, NavItem, NavLink, NavLogoLink, NavLogo, NavMenu } from './NavBarElements';
+import { BurgerMenu, Nav, NavBarContainer, NavBtn, NavBtnLink, NavItem, NavLink, NavLogoLink, NavLogo, NavMenu, DropDownWrapper, DropDownList, DropDownItem } from './NavBarElements';
 
 function NavBar() {
   const [click, setClick] = useState(false)
   const handleClick = () => setClick(!click)
+
+  const [categoriesData, setCategoriesData] = useState([]);
+
+    useEffect(() => {
+        getCategoriesData();
+    }, []);
+    
+    const getCategoriesData = async () => {
+        return await fetch("http://localhost:3030/categories")
+            .then((response) => response.json())
+            .then((data) => setCategoriesData(data));
+      };
 
   return (
     <IconContext.Provider value={{color: '#fff'}}>
@@ -23,15 +35,23 @@ function NavBar() {
               <NavLink to="/movies">Movies</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/category/1">Catogory</NavLink>
+              <NavLink to="/categories">Catogories</NavLink>
+              <DropDownWrapper>
+                <DropDownList>
+                  {categoriesData.map((category, index) => (
+                    <DropDownItem key={index}>
+                      <NavLink to={"/category/" + category.Id}>{category.CategoryTitle}</NavLink>
+                    </DropDownItem>
+                  ))}
+                </DropDownList>
+              </DropDownWrapper>
             </NavItem>
             <NavItem>
-              <NavLink to="/login">Log In</NavLink>
+              <NavBtn>
+                <NavBtnLink to="/login">Log In</NavBtnLink>
+              </NavBtn>
             </NavItem>
           </NavMenu>
-        {/* <NavBtn>
-            <NavBtnLink to=""></NavBtnLink>
-        </NavBtn> */}
       </NavBarContainer>
       </Nav>
     </IconContext.Provider>
