@@ -19,8 +19,11 @@ function NavBar() {
             {click ? <FaTimes/> : <FaBars/>}
           </BurgerMenu>
           <NavMenu onClick={handleClick} click={click}>
-          <NavItem>
+            <NavItem>
               <NavLink to="/movies">Movies</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to="/category/1">Catogory</NavLink>
             </NavItem>
             <NavItem>
               <NavLink to="/login">Log In</NavLink>

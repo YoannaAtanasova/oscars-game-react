@@ -26,7 +26,8 @@ function Movies() {
                                 imageId={movie.Id}
                                 title={movie.Title}
                                 releaseDate={movie.ReleaseDate}
-                                imageUrl={movie.PosterPath}/>
+                                imageUrl={movie.PosterPath}
+                                showWatchedButton={true}/>
                     ))}
                 </MoviesContainer>
             </PageBody>

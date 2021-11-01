@@ -9,7 +9,7 @@ import { Modal } from 'react-responsive-modal';
 import Movie from '../pages/Movie';
 import '../App.css'
 
-function MovieCard({imageId, title, releaseDate, imageUrl}) {
+function MovieCard({imageId, title, releaseDate, imageUrl, showWatchedButton}) {
     const [open, setOpen] = useState(false);
 
     const onOpenModal = () => setOpen(true);
@@ -29,11 +29,13 @@ function MovieCard({imageId, title, releaseDate, imageUrl}) {
                             <Image src={imageUrl}/>
                         </ImageLink>
                     </ImageWrapper>
-                    <MarkWarchedWrapper>
-                        <MarkWatchedButton href="/" title="Mark as watched">
-                            <GiPopcorn size='1.8em' style={{ fill: "url(#gold-gradient)" }}/>
-                        </MarkWatchedButton>
-                    </MarkWarchedWrapper>
+                    {showWatchedButton && (
+                        <MarkWarchedWrapper>
+                            <MarkWatchedButton href="/" title="Mark as watched">
+                                <GiPopcorn size='1.8em' style={{ fill: "url(#gold-gradient)" }}/>
+                            </MarkWatchedButton>
+                        </MarkWarchedWrapper>
+                    )}
                 </CardImageContainer>
                 <CardContent>
                     <Title>

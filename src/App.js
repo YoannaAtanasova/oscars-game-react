@@ -9,6 +9,8 @@ import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import { GlobalStyle } from './GlobalStyles';
 import Movie from './pages/Movie';
 import Movies from './pages/Movies';
+import Categories from './pages/Categories';
+import Category from './pages/Category';
 
 function App() {
   return (
@@ -18,8 +20,10 @@ function App() {
           <NavBar/>
           <Switch>
             <Route path="/" exact component={Home}/>
+            <Route path="/categories" exact component={Categories}/>
+            <Route path="/category/:categoryId" exact component={Category}/>
             <Route path="/movies" component={Movies}/>
-            <Route path="/movie/:movieId" component={Movie}/>
+            <Route path="/movie/:movieIdFromUrl" component={Movie}/>
             <Route path="/privacy-policy" component={PrivacyPolicy}/>
             <Route path="/terms-of-service" component={TermsOfService}/>
             <Route path="/user-data-deletion" component={UserDataDeletion}/>
