@@ -6,7 +6,7 @@ import { HeaderWrapper, MovieDetailsContainer, MovieDetailsHeader,
         SectionWrapper, SectionHeader, 
         OverviewBody, 
         NominationsContainer, NominationsList, Nomination,
-        ScrollerWrapper, ScrollerCardList, ScrollerCard, ScrollerCardImageLink, ScrollerCardImage, ScrollerCardTitle, ScrollerCardSubtitle} from './MovieDetailsElements';
+        ScrollerWrapper, ScrollerCardList, ScrollerCard, ScrollerCardImageLink, ScrollerCardImage, ScrollerCardTitle, ScrollerCardSubtitle, NominationLink} from './MovieDetailsElements';
 import {GiPopcorn,GiInvisibleFace} from 'react-icons/gi';
 import {FcFilmReel} from 'react-icons/fc';
 
@@ -71,7 +71,7 @@ function MovieDetails({imageId, title, releaseDate, imageUrl, imdbId, overview, 
                         {nominations.map((nomination, index) => (
                             <Nomination key={index} >
                                 <FcFilmReel /> &nbsp;
-                                {nomination.CategoryTtle}
+                                <NominationLink href={'/category/' + nomination.CategoryId}>{nomination.CategoryTtle}</NominationLink>
                             </Nomination>))}
                         </NominationsList>
                     </NominationsContainer>

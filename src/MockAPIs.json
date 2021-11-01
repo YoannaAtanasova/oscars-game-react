@@ -27,8 +27,8 @@
         "Overview": "A bank teller called Guy realizes he is a background character in an open world video game called Free City that will soon go offline.", 
         "ImdbId": "tt6264654",
         "Nominations":[
-          {"Id": 1, "CategoryTtle": "Best Movie"},
-          {"Id": 2, "CategoryTtle": "Actor in a Leading Role"}
+          {"Id": 1, "CategoryTtle": "Best Movie", "CategoryId": 1},
+          {"Id": 2, "CategoryTtle": "Actor in a Leading Role", "CategoryId": 1}
         ],
         "Credits": [
           {"Id": 1, "Name": "Ryan Reynolds", "Role": "Guy" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/4SYTH5FdB0dAORV98Nwg3llgVnY.jpg"},

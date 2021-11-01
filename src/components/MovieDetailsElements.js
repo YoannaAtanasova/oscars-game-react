@@ -188,6 +188,11 @@ export  const Nomination = styled.li`
    font-size: 1.6em;
 `;
 
+export const NominationLink = styled.a`
+    color: #fff;
+    text-decoration: none;
+ `;
+
 export const ScrollerWrapper = styled.div`
     position: relative;
     margin-top: 10px;
