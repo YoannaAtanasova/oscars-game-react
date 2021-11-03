@@ -11,6 +11,7 @@ import Movie from './pages/Movie';
 import Movies from './pages/Movies';
 import Categories from './pages/Categories';
 import Category from './pages/Category';
+import Leaderboard from './pages/Leaderboard';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             <Route path="/category/:categoryId" exact component={Category}/>
             <Route path="/movies" component={Movies}/>
             <Route path="/movie/:movieIdFromUrl" component={Movie}/>
+            <Route path="/leaderboard" component={Leaderboard}/>
             <Route path="/privacy-policy" component={PrivacyPolicy}/>
             <Route path="/terms-of-service" component={TermsOfService}/>
             <Route path="/user-data-deletion" component={UserDataDeletion}/>

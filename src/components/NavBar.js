@@ -47,6 +47,9 @@ function NavBar() {
               </DropDownWrapper>
             </NavItem>
             <NavItem>
+              <NavLink to="/leaderboard">Leaderboard</NavLink>
+            </NavItem>
+            <NavItem>
               <NavBtn>
                 <NavBtnLink to="/login">Log In</NavBtnLink>
               </NavBtn>

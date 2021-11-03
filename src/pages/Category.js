@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from 'react-router-dom';
-import { Title, TitleWrapper, CategoryWrapper } from '../components/NominationCategoryElements';
+import { CategoryWrapper } from '../components/NominationCategoryElements';
 import Nominations from '../components/Nominations';
-import { Page, PageBody } from '../components/PageElements';
+import { Page, PageBody, Title, TitleWrapper } from '../components/PageElements';
 
 function Category() {
     const {categoryId} = useParams();
