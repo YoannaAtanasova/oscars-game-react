@@ -1,12 +1,14 @@
 {
     "game-information":{
       "EndDate": "2021-12-12T00:00:00",
-      "IsGameRunning": true
+      "IsGameRunning": true,
+      "Categories": 30,
+      "Movies": 20
     },
     "user-score": [
-      { "Rank": 1, "UserDisplayName": "Valeri Dublekov", "Score": 15, "WatchedMovies": 6, "WatchedNominations": 7, "Bets": 23 },
-      { "Rank": 2, "UserDisplayName": "Dimitar Kostov", "Score": 13, "WatchedMovies": 33, "WatchedNominations": 80, "Bets": 23 },
-      { "Rank": 3, "UserDisplayName": "Yoanna Atanasova", "Score": 6, "WatchedMovies": 21, "WatchedNominations": 36, "Bets": 23 }
+      { "Rank": 1, "UserDisplayName": "Valeri Dublekov", "Score": 15, "WatchedMovies": 5, "WatchedNominations": 7, "Bets": 23 },
+      { "Rank": 2, "UserDisplayName": "Dimitar Kostov", "Score": 13, "WatchedMovies": 8, "WatchedNominations": 80, "Bets": 23 },
+      { "Rank": 3, "UserDisplayName": "Yoanna Atanasova", "Score": 6, "WatchedMovies": 7, "WatchedNominations": 36, "Bets": 23 }
     ],
     "movies-data":[
         {"Id" : 1, "Title": "Free Guy", "ReleaseDate": "11/08/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/xmbU4JTUm8rsdtn7Y3Fcm30GpeT.jpg", "Overview": "", "ImdbId": ""},

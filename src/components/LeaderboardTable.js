@@ -1,8 +1,26 @@
-import React, {useMemo} from 'react';
+import React, {useEffect, useMemo, useState} from 'react';
 import { Rank, ScoreGauge, ScoreHeader, ScoreMeter, ScoreWrapper, UserDisplayName } from './LeaderboardTableElements';
 import Table from './Table';
 
 function LeaderboardTable({data}) {
+    const [gameInformation, setGameInformation] = useState({
+      moviesCount: 0,
+      categoriesCount: 0
+    });
+
+    const {moviesCount, categoriesCount} = gameInformation;
+
+    useEffect(() => { getGameInformation(); },[]);
+
+    const getGameInformation = async () => {
+      return await fetch('http://localhost:3030/game-information')
+        .then(response => response.json())
+        .then(data => setGameInformation({
+          moviesCount: data.Movies,
+          categoriesCount: data.Categories
+        }));
+    };
+
     const columns = useMemo(
         () => [
           {
@@ -24,16 +42,16 @@ function LeaderboardTable({data}) {
             Cell: props => 
             <ScoreWrapper>
               <ScoreMeter>
-                <ScoreGauge width={calculateWidthPercentage(props.row.original.Score, 50)}></ScoreGauge>
-                <ScoreHeader>{props.row.original.Score + "/50 Total Score"}</ScoreHeader>
+                <ScoreGauge width={calculateWidthPercentage(props.row.original.Score, categoriesCount)}></ScoreGauge>
+                <ScoreHeader>{props.row.original.Score + "/" + categoriesCount +" Total Score"}</ScoreHeader>
               </ScoreMeter>
               <ScoreMeter>
-                <ScoreGauge width={calculateWidthPercentage(props.row.original.WatchedMovies,50)}></ScoreGauge>
-                <ScoreHeader>{props.row.original.WatchedMovies + "/50 Watched Movies"}</ScoreHeader>
+                <ScoreGauge width={calculateWidthPercentage(props.row.original.WatchedMovies, moviesCount)}></ScoreGauge>
+                <ScoreHeader>{props.row.original.WatchedMovies + "/" + moviesCount + " Watched Movies"}</ScoreHeader>
               </ScoreMeter>
               <ScoreMeter>
-                <ScoreGauge width={calculateWidthPercentage(props.row.original.Bets,50)}></ScoreGauge>
-                <ScoreHeader>{props.row.original.Bets + "/50 Bets"}</ScoreHeader>
+                <ScoreGauge width={calculateWidthPercentage(props.row.original.Bets, categoriesCount)}></ScoreGauge>
+                <ScoreHeader>{props.row.original.Bets + "/" + categoriesCount + " Bets"}</ScoreHeader>
               </ScoreMeter>
             </ScoreWrapper>
           }
