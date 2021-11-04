@@ -1,8 +1,47 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 
-import {Page, BackgroundBanner, Banner, Header, PageBody, Paragraph, SubHeader} from '../components/PageElements';
+import {Page, BackgroundBanner, Banner, Header, PageBody, Paragraph, SubHeader, GameInformation} from '../components/PageElements';
 
 function Home() {
+    const [gameInformation, setGameInformation] = useState({isGameRunning: true, endDate: null});
+    const {isGameRunning, endDate} = gameInformation;
+    const [timeRemaining, setTimeRemaining] = useState(null);
+
+    useEffect(() => { getGameInformation(); }, []);
+
+    useEffect(() => {
+        var interval = setInterval(() => {
+            const end = new Date(endDate);
+            const now = new Date();
+
+            var seconds = Math.floor((end - now)/1000);
+            var minutes = Math.floor(seconds/60);
+            var hours = Math.floor(minutes/60);
+            var days = Math.floor(hours/24);
+            
+            hours = hours-(days*24);
+            minutes = minutes-(days*24*60)-(hours*60);
+            seconds = seconds-(days*24*60*60)-(hours*60*60)-(minutes*60);
+
+            setTimeRemaining(days + ":" + zeroPad(hours) + ":" + zeroPad(minutes) + ":" + zeroPad(seconds));
+        }, 1000, endDate);
+
+        return () => clearInterval(interval);
+    }, [endDate]);
+
+    const getGameInformation = async () => {
+        return await fetch('http://localhost:3030/game-information')
+            .then(response => response.json())
+            .then(data => { setGameInformation({
+                isGameRunning: data.IsGameRunning,
+                endDate: data.EndDate
+            }) });
+    };
+
+    function zeroPad(number) {
+        return ('0' + number).slice(-2);
+    };
+
     return (
         <>
             <BackgroundBanner>
@@ -13,6 +52,11 @@ function Home() {
                     <SubHeader>
                         THE GAME
                     </SubHeader>
+                    <GameInformation>
+                        {isGameRunning 
+                            ? <> GAME IS RUNNING <br/> TIME LEFT: { timeRemaining } </>
+                            : <> GAME IS STOPPED </>}
+                    </GameInformation>
                 </Banner>
             </BackgroundBanner>
             <Page>
