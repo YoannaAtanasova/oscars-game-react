@@ -6,33 +6,54 @@ import { Page, PageBody } from '../components/PageElements';
 function Movie({movieIdParam}) {
     const {movieIdFromUrl} = useParams();
 
-    const [movieData, setMovieData] = useState([]);
+    const [movieData, setMovieData] = useState(
+        {
+            id: '', 
+            title: '', 
+            releaseDate: '', 
+            posterPath: '',
+            imdbId: '',
+            overview: '',
+            nominations: [],
+            credits: [],
+            watched: []
+        });
+
+    const {id, title, releaseDate, posterPath, imdbId, overview, nominations, credits, watched} = movieData;
 
     useEffect(() => {
         getMovieData();
     }, []);
 
     const getMovieData = async () => {
-        return await fetch("http://localhost:3030/movies-data-" + (movieIdFromUrl ? movieIdFromUrl : movieIdParam) )
+        return await fetch("http://localhost:3030/movies-data/" + (movieIdFromUrl ? movieIdFromUrl : movieIdParam) )
             .then((response) => response.json())
-            .then((data) => setMovieData(data));
+            .then((data) => setMovieData({
+                id: data.id,
+                title: data.Title,
+                releaseDate: data.ReleaseDate,
+                posterPath: data.PosterPath,
+                imdbId: data.ImdbID,
+                overview: data.Overview,
+                nominations: data.Nominations,
+                credits: data.Credits,
+                watched: data.Watched
+            }));
       };
 
     return (
         <Page padding={movieIdParam ? '50px' : ''}>
             <PageBody>
-                {movieData.map((movie, index) => (
-                    <MovieDetails key={index} 
-                        imageId={movie.Id}
-                        title={movie.Title}
-                        releaseDate={movie.ReleaseDate}
-                        imageUrl={movie.PosterPath}
-                        imdbId={movie.ImdbId}
-                        overview={movie.Overview}
-                        nominations={movie.Nominations}
-                        credits={movie.Credits}
-                        usersWatched={movie.Watched}/>))}
-                
+                    <MovieDetails
+                        imageId={id}
+                        title={title}
+                        releaseDate={releaseDate}
+                        imageUrl={posterPath}
+                        imdbId={imdbId}
+                        overview={overview}
+                        nominations={nominations}
+                        credits={credits}
+                        usersWatched={watched}/>
             </PageBody>
         </Page>
     );

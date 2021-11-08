@@ -23,7 +23,7 @@ function Categories() {
                         <CategoryWrapper key={index}>
                             <TitleWrapper>
                                 <Title>
-                                    <TitleLink href={'/category/' + category.Id}>
+                                    <TitleLink href={'/category/' + category.id}>
                                         {category.CategoryTitle}
                                     </TitleLink>
                                 </Title>

@@ -11,57 +11,57 @@
       { "Rank": 3, "UserDisplayName": "Yoanna Atanasova", "Score": 6, "WatchedMovies": 7, "WatchedNominations": 36, "Bets": 23 }
     ],
     "movies-data":[
-        {"Id" : 1, "Title": "Free Guy", "ReleaseDate": "11/08/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/xmbU4JTUm8rsdtn7Y3Fcm30GpeT.jpg", "Overview": "", "ImdbId": ""},
-        {"Id" : 2, "Title": "Venom", "ReleaseDate": "30/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg", "Overview": "", "ImdbId": ""},
-        {"Id" : 3, "Title": "Shang-Chi", "ReleaseDate": "01/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg", "Overview": "", "ImdbId": ""},
-        {"Id" : 4, "Title": "Black Widow", "ReleaseDate": "07/07/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg", "Overview": "", "ImdbId": ""},
-        {"Id" : 5, "Title": "No Time To Die", "ReleaseDate": "29/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/eqWaeh21e4ZgHjwpULZVHCGIq9X.jpg", "Overview": "", "ImdbId": ""},
-        {"Id" : 6, "Title": "Army of the Dead", "ReleaseDate": "14/05/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/z8CExJekGrEThbpMXAmCFvvgoJR.jpg", "Overview": "", "ImdbId": ""},
-        {"Id" : 7, "Title": "Nobody", "ReleaseDate": "18/03/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/oBgWY00bEFeZ9N25wWVyuQddbAo.jpg", "Overview": "", "ImdbId": ""},
-        {"Id" : 8, "Title": "Dune", "ReleaseDate": "15/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/s1FhMAr91WL8D5DeHOcuBELtiHJ.jpg", "Overview": "", "ImdbId": ""}
-    ],
-    "movies-data-1":[
-      {
-        "Id" : 550988, 
-        "Title": "Free Guy", 
-        "ReleaseDate": "11/08/2021", 
-        "PosterPath": "https://www.themoviedb.org/t/p/w300_and_h450_face/xmbU4JTUm8rsdtn7Y3Fcm30GpeT.jpg", 
-        "Overview": "A bank teller called Guy realizes he is a background character in an open world video game called Free City that will soon go offline.", 
-        "ImdbId": "tt6264654",
-        "Nominations":[
-          {"Id": 1, "CategoryTtle": "Best Movie", "CategoryId": 1},
-          {"Id": 2, "CategoryTtle": "Actor in a Leading Role", "CategoryId": 1}
-        ],
-        "Credits": [
-          {"Id": 1, "Name": "Ryan Reynolds", "Role": "Guy" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/4SYTH5FdB0dAORV98Nwg3llgVnY.jpg"},
-          {"Id": 2, "Name": "Jodie Comer", "Role": "Millie Rusk / Molotov Girl" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/va8pcuzXodVLYUQLjB1USZVB6gz.jpg"},
-          {"Id": 3, "Name": "Taika Waititi", "Role": "Antwan" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/lxbNTecxOIlV4roX02RT4Ga2Rn2.jpg"},
-          {"Id": 4, "Name": "Steve Cooper", "Role": "Art Direction" ,"IsCast": false, "Image": null},
-          {"Id": 5, "Name": "Beat Frutiger", "Role": "Supervising Art Director" ,"IsCast": false, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/2VMPjH8Olb5qHqsKNelSxkViH9b.jpg"},
-          {"Id": 6, "Name": "Lil Rel Howery", "Role": "Buddy" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/9MDi35Fy6ym7SYbO3B04vf1vBnm.jpg"},
-          {"Id": 7, "Name": "Joe Keery", "Role": "Walter 'Keys' McKeys" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/kXoE2UWf01V89yVDD08MCXrEiRe.jpg"},
-          {"Id": 8, "Name": "Utkarsh Ambudkar", "Role": "Mouser" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/wqb2EjDcJ5AKlZQuH7zV9jURs9B.jpg"},
-          {"Id": 9, "Name": "Owen Burke", "Role": "Bank Robber #2" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/kgU8OelLJImeisnTkZQ14Mjp9BP.jpg"},
-          {"Id": 10, "Name": "Kayla Caulfield", "Role": "Soonami Tech" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/3m61wlEQZi5JgBqC5tTOOVEFEUw.jpg"},
-          {"Id": 11, "Name": "Camille Kostek", "Role": "Bombshell" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/kCPrPiUZI2jr85028SWVJcPpHfb.jpg"}
-        ],
-        "Watched":[
-          {"Id": 1},
-          {"Id": 2},
-          {"Id": 3},
-          {"Id": 4}
-        ]
-      }
+        {"id" : 1, 
+          "Title": "Free Guy", 
+          "ReleaseDate": "11/08/2021", 
+          "PosterPath": "https://www.themoviedb.org/t/p/w300_and_h450_face/xmbU4JTUm8rsdtn7Y3Fcm30GpeT.jpg", 
+          "Overview": "A bank teller called Guy realizes he is a background character in an open world video game called Free City that will soon go offline.", 
+          "ImdbId": "tt6264654",
+          "Nominations":[
+            {"Id": 1, "CategoryTtle": "Best Movie", "CategoryId": 1},
+            {"Id": 2, "CategoryTtle": "Actor in a Leading Role", "CategoryId": 1}
+          ],
+          "Credits": [
+            {"Id": 1, "Name": "Ryan Reynolds", "Role": "Guy" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/4SYTH5FdB0dAORV98Nwg3llgVnY.jpg"},
+            {"Id": 2, "Name": "Jodie Comer", "Role": "Millie Rusk / Molotov Girl" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/va8pcuzXodVLYUQLjB1USZVB6gz.jpg"},
+            {"Id": 3, "Name": "Taika Waititi", "Role": "Antwan" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/lxbNTecxOIlV4roX02RT4Ga2Rn2.jpg"},
+            {"Id": 4, "Name": "Steve Cooper", "Role": "Art Direction" ,"IsCast": false, "Image": null},
+            {"Id": 5, "Name": "Beat Frutiger", "Role": "Supervising Art Director" ,"IsCast": false, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/2VMPjH8Olb5qHqsKNelSxkViH9b.jpg"},
+            {"Id": 6, "Name": "Lil Rel Howery", "Role": "Buddy" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/9MDi35Fy6ym7SYbO3B04vf1vBnm.jpg"},
+            {"Id": 7, "Name": "Joe Keery", "Role": "Walter 'Keys' McKeys" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/kXoE2UWf01V89yVDD08MCXrEiRe.jpg"},
+            {"Id": 8, "Name": "Utkarsh Ambudkar", "Role": "Mouser" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/wqb2EjDcJ5AKlZQuH7zV9jURs9B.jpg"},
+            {"Id": 9, "Name": "Owen Burke", "Role": "Bank Robber #2" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/kgU8OelLJImeisnTkZQ14Mjp9BP.jpg"},
+            {"Id": 10, "Name": "Kayla Caulfield", "Role": "Soonami Tech" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/3m61wlEQZi5JgBqC5tTOOVEFEUw.jpg"},
+            {"Id": 11, "Name": "Camille Kostek", "Role": "Bombshell" ,"IsCast": true, "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/kCPrPiUZI2jr85028SWVJcPpHfb.jpg"}
+          ],
+          "Watched":[
+            {"Id": 1},
+            {"Id": 2},
+            {"Id": 3},
+            {"Id": 4}
+          ]},
+        {"id" : 2, "Title": "Venom", "ReleaseDate": "30/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg", "Overview": "", "ImdbId": ""},
+        {"id" : 3, "Title": "Shang-Chi", "ReleaseDate": "01/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg", "Overview": "", "ImdbId": ""},
+        {"id" : 4, "Title": "Black Widow", "ReleaseDate": "07/07/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg", "Overview": "", "ImdbId": ""},
+        {"id" : 5, "Title": "No Time To Die", "ReleaseDate": "29/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/eqWaeh21e4ZgHjwpULZVHCGIq9X.jpg", "Overview": "", "ImdbId": ""},
+        {"id" : 6, "Title": "Army of the Dead", "ReleaseDate": "14/05/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/z8CExJekGrEThbpMXAmCFvvgoJR.jpg", "Overview": "", "ImdbId": ""},
+        {"id" : 7, "Title": "Nobody", "ReleaseDate": "18/03/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/oBgWY00bEFeZ9N25wWVyuQddbAo.jpg", "Overview": "", "ImdbId": ""},
+        {"id" : 8, "Title": "Dune", "ReleaseDate": "15/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/s1FhMAr91WL8D5DeHOcuBELtiHJ.jpg", "Overview": "", "ImdbId": ""}
     ],
     "users":[
       {"Id": 1},
       {"Id": 2},
       {"Id": 3},
       {"Id": 4},
-      {"Id": 5}
+      {"Id": 5},
+      {"Id": 6},
+      {"Id": 7},
+      {"Id": 8},
+      {"Id": 9},
+      {"Id": 10}
     ],
     "categories":[
-      {"Id": 1, "CategoryTitle": "Best Picture", 
+      {"id": 1, "CategoryTitle": "Best Picture", 
         "Nominations":[
           {"Id": 1, "Movie":{"Id" : 1, "Title": "Free Guy", "ReleaseDate": "11/08/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/xmbU4JTUm8rsdtn7Y3Fcm30GpeT.jpg", "Overview": "", "ImdbId": ""}},
           {"Id": 2, "Movie":{"Id" : 2, "Title": "Venom", "ReleaseDate": "30/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg", "Overview": "", "ImdbId": ""}},
@@ -69,7 +69,7 @@
           {"Id": 4, "Movie":{"Id" : 4, "Title": "Black Widow", "ReleaseDate": "07/07/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg", "Overview": "", "ImdbId": ""}},
           {"Id": 5, "Movie":{"Id" : 5, "Title": "No Time To Die", "ReleaseDate": "29/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/eqWaeh21e4ZgHjwpULZVHCGIq9X.jpg", "Overview": "", "ImdbId": ""}}
         ]},
-      {"Id": 2, "CategoryTitle": "Actor in a Leading Role", 
+      {"id": 2, "CategoryTitle": "Actor in a Leading Role", 
         "Nominations":[
           {"Id": 6, "Movie":{"Id" : 1, "Title": "Free Guy", "ReleaseDate": "11/08/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/xmbU4JTUm8rsdtn7Y3Fcm30GpeT.jpg", "Overview": "", "ImdbId": ""}},
           {"Id": 7, "Movie":{"Id" : 2, "Title": "Venom", "ReleaseDate": "30/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg", "Overview": "", "ImdbId": ""}},
@@ -78,14 +78,17 @@
           {"Id": 10, "Movie":{"Id" : 5, "Title": "No Time To Die", "ReleaseDate": "29/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/eqWaeh21e4ZgHjwpULZVHCGIq9X.jpg", "Overview": "", "ImdbId": ""}}
         ]}
     ],
-    "category-1":[
-      {"Id": 1, "CategoryTitle": "Best Picture", 
-      "Nominations":[
-        {"Id": 1, "Movie":{"Id" : 1, "Title": "Free Guy", "ReleaseDate": "11/08/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/xmbU4JTUm8rsdtn7Y3Fcm30GpeT.jpg", "Overview": "", "ImdbId": ""}},
-        {"Id": 2, "Movie":{"Id" : 2, "Title": "Venom", "ReleaseDate": "30/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg", "Overview": "", "ImdbId": ""}},
-        {"Id": 3, "Movie":{"Id" : 3, "Title": "Shang-Chi", "ReleaseDate": "01/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg", "Overview": "", "ImdbId": ""}},
-        {"Id": 4, "Movie":{"Id" : 4, "Title": "Black Widow", "ReleaseDate": "07/07/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg", "Overview": "", "ImdbId": ""}},
-        {"Id": 5, "Movie":{"Id" : 5, "Title": "No Time To Die", "ReleaseDate": "29/09/2021", "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/eqWaeh21e4ZgHjwpULZVHCGIq9X.jpg", "Overview": "", "ImdbId": ""}}
-      ]}
+    "user-information":[
+      {
+        "id":1, 
+        "UserDisplayName":"Yoanna Atanasova", 
+        "Email": "y.atanasova@proxiad.bg",
+        "WatchedMovies":[
+          {"id": 1},
+          {"id": 2},
+          {"id": 3},
+          {"id": 4}
+        ]
+      }
     ]
 }

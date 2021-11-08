@@ -7,34 +7,34 @@ import { Page, PageBody, Title, TitleWrapper } from '../components/PageElements'
 function Category() {
     const {categoryId} = useParams();
 
-    const [categoryData, setCategoryData] = useState([]);
+    const [categoryData, setCategoryData] = useState({title: '', nominations: []});
+
+    const {title, nominations} = categoryData;
 
     useEffect(() => {
         getCategoryData();
     }, []);
     
     const getCategoryData = async () => {
-        return await fetch("http://localhost:3030/category-" + categoryId )
+        return await fetch("http://localhost:3030/categories/" + categoryId )
             .then((response) => response.json())
-            .then((data) => setCategoryData(data));
+            .then((data) => setCategoryData({title: data.CategoryTitle, nominations: data.Nominations}));
       };
     
     return (
         <Page>
             <PageBody>
-                {categoryData.map((category, index) => (
-                    <CategoryWrapper key={index}>
+                    <CategoryWrapper>
                         <TitleWrapper>
                             <Title>
-                                {category.CategoryTitle}
+                                {title}
                             </Title>
                         </TitleWrapper>
-                        <Nominations nominaionsData={category.Nominations}/>
+                        <Nominations nominaionsData={nominations}/>
                     </CategoryWrapper>
-                ))}
             </PageBody>
         </Page>
     )
 }
 
-export default Category
+export default Category;

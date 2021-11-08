@@ -21,8 +21,13 @@ export const Card = styled.div`
     margin: 20px 30px;
     width: 180;
     max-width: 180px;
+    transition: box-shadow 0.4s;
     /*width: calc((100vw - 80px - 260px - (var(--discoverColumnPadding) * var(--numberOfDiscoverColumns))) / var(--numberOfDiscoverColumns));
     max-width: calc((var(--maxPrimaryPageWidth) - 80px - 260px - (var(--discoverColumnPadding) * var(--numberOfDiscoverColumns))) / var(--numberOfDiscoverColumns)); */
+
+    &:hover {
+        box-shadow: 6px 8px #181b1e;
+    }
 `;
 
 export const CardImageContainer = styled.div`
@@ -56,12 +61,12 @@ export const Image = styled.img`
     outline: none;
 `;
 
-export const MarkWarchedWrapper = styled.div`
+export const MarkWatchedWrapper = styled.div`
     position: absolute;
     top: 8px;
     right: 8px;
     z-index: 4;
-    background: #262a2d;
+    background: ${props => props.color};
     border-radius: 50%;
     border: 1px #c19b26;
     border-style: solid;
@@ -70,6 +75,10 @@ export const MarkWarchedWrapper = styled.div`
     justify-content: center;
     align-content: center;
     padding: 2px 2px;
+
+    &:hover {
+        background: #444d53;
+    }
 `;
 
 export const MarkWatchedButton = styled.a`

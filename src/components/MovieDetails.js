@@ -41,7 +41,7 @@ function MovieDetails({imageId, title, releaseDate, imageUrl, imdbId, overview, 
                         </TitleWrapper>
                         <HeaderIconsList>
                             <HeaderIconsListItem>
-                                <HeaderIconsListItemText>{Math.round(100 - usersCount / usersWatched.length) + "%"}</HeaderIconsListItemText>
+                                <HeaderIconsListItemText>{Math.round((usersWatched.length/usersCount) * 100) + "%"}</HeaderIconsListItemText>
                             </HeaderIconsListItem>
                             <HeaderIconsListItem>
                                 <HeaderIconsListItemText>{nominations.length}</HeaderIconsListItemText>
@@ -102,7 +102,7 @@ function MovieDetails({imageId, title, releaseDate, imageUrl, imdbId, overview, 
                                 <ScrollerCardImageLink>
                                     {credit.Image
                                     ? (<ScrollerCardImage src={credit.Image}/>)
-                                    : (<GiInvisibleFace size='5em'/>)}
+                                    : (<GiInvisibleFace color="white" size='5em'/>)}
                                 </ScrollerCardImageLink>
                                 <ScrollerCardTitle>{credit.Name}</ScrollerCardTitle>
                                 <ScrollerCardSubtitle>{credit.Role}</ScrollerCardSubtitle>
@@ -115,4 +115,4 @@ function MovieDetails({imageId, title, releaseDate, imageUrl, imdbId, overview, 
     )
 }
 
-export default MovieDetails
+export default MovieDetails;

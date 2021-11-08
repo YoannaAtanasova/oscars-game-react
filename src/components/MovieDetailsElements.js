@@ -170,6 +170,7 @@ export const OverviewBody = styled.p`
     align-content: center;
     font-size: 1.3rem;
     flex-wrap: wrap;
+    color: white;
 `;
 
 export const NominationsContainer = styled.div`
@@ -278,6 +279,7 @@ export const ScrollerCardTitle = styled.p`
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: bold;
+    color: white;
 `;
 
 export const ScrollerCardSubtitle = styled.p`
