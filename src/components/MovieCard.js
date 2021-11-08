@@ -32,7 +32,7 @@ function MovieCard({movieId, imageId, title, releaseDate, imageUrl, imdbId, over
 
     function handleWatchedButton() {
         if (isWatched) {
-            fetch(`/api/user-information/${currentUser}?_expand.WatchedMovies?id=${movieId}`, {
+            fetch(`http://localhost:3030/user-information/${currentUser}?_expand.WatchedMovies?id=${movieId}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'
@@ -41,7 +41,7 @@ function MovieCard({movieId, imageId, title, releaseDate, imageUrl, imdbId, over
             .then(res => setMovieIsWatched(false))
             .catch(err => console.log(err));
         } else {
-            fetch(`/api/user-information/${currentUser}?_expand.WatchedMovies?id=${movieId}`, {
+            fetch(`http://localhost:3030/user-information/${currentUser}?_expand.WatchedMovies?id=${movieId}`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

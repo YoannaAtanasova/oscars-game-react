@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { GlobalColors } from '../Global';
 
 export const TableWrapper = styled.div`
     margin: 30px;
@@ -16,13 +17,13 @@ export const StyledTable = styled.table`
         padding-top: 12px;
         padding-bottom: 12px;
         text-align: left;
-        background-color: #181b1e;
-        color: white;
+        background-color: ${GlobalColors.DarkGray};
+        color: ${GlobalColors.White};
     }
 
     & td{
         margin: 20px;
         padding: 10px;
-        background: #444d53;
+        background-color: ${GlobalColors.LightGray};
     }
 `

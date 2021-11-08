@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { GlobalColors } from '../Global';
 
 export const MovieDetailsContainer = styled.div`
     margin: 60px;
@@ -13,7 +14,8 @@ export const MovieDetailsContainer = styled.div`
  export const MovieDetailsHeader = styled.div`
     width: 100%;
     //max-width: 1000px;
-    border-bottom: 1px solid #b69323;
+    border-bottom: 1px solid;
+    border-color: ${GlobalColors.OscarsGold};
     display: flex;
     flex-wrap: nowrap;
  `;
@@ -74,7 +76,7 @@ export const MovieDetailsContainer = styled.div`
 
  export const TitleLink = styled.a`
     font-weight: 700;
-    color: #fff;
+    color: ${GlobalColors.White};
     text-decoration: none;
  `;
 
@@ -88,7 +90,7 @@ export const MovieDetailsContainer = styled.div`
     border-radius: 2px;
     margin-right: 7px;
     font-size: 1.5rem;
-    color: #b69323;
+    color: ${GlobalColors.OscarsGold};
  `;
 
 export const HeaderIconsList = styled.ul`
@@ -108,9 +110,10 @@ export const HeaderIconsListItem = styled.li`
     margin-right: 20px;
     height: 100%;
     width: 80px;
-    background-color: #262a2d;
+    background-color: ${GlobalColors.MidGray};
     border-radius: 50%;
-    border: 5px #c19b26;
+    border: 5px;
+    border-color: ${GlobalColors.GoldBorder};
     border-style: solid;
     display: inline-flex;
     align-items: center;
@@ -119,17 +122,17 @@ export const HeaderIconsListItem = styled.li`
 `;
 
 export const HeaderIconsListItemText = styled.span`
-    color: white;
+    color: ${GlobalColors.White};
     font-size: 2.0rem;
     font-weight: bold;
 `;
 
 export const MarkWatchedButton = styled.a`
-    color: white;
+    color: ${GlobalColors.White};
 `;
 
 export const MDBLink = styled.a`
-    color: #fff;
+    color: ${GlobalColors.White};
     justify-content: flex-start;
     cursor: pointer;
     display: flex;
@@ -161,7 +164,7 @@ export const SectionHeader = styled.h2`
     padding: 0;
     font-size: 2.2rem;
     font-weight: bold;
-    color: #b69323;
+    color: ${GlobalColors.OscarsGold};
 `;
 
 export const OverviewBody = styled.p`
@@ -190,7 +193,7 @@ export  const Nomination = styled.li`
 `;
 
 export const NominationLink = styled.a`
-    color: #fff;
+    color: ${GlobalColors.White};
     text-decoration: none;
  `;
 
@@ -222,16 +225,16 @@ export const ScrollerCardList = styled.ol`
     &::-webkit-scrollbar {
     height: 8px;
     width: 8px;
-    background-color: #262a2d;
-    color: #aba499;
+    background-color: ${GlobalColors.MidGray};
+    color: ${GlobalColors.LightGray};
    }
 
    &::-webkit-scrollbar-corner {
-    background-color: #181a1b;
+    background-color: ${GlobalColors.DarkGray};
    }
 
    &::-webkit-scrollbar-thumb {
-    background-color: #454a4d;
+    background-color: ${GlobalColors.LightGray};
     border-radius: 20px;
    }
 
@@ -246,7 +249,8 @@ export const ScrollerCard = styled.li`
     margin-bottom: 15px;
     margin-left: 10px;
     margin-right: 4px;
-    border: 1px solid #b69323;
+    border: 1px solid;
+    border-color: ${GlobalColors.OscarsGold};
     padding-bottom: 10px;
     border-radius: 30px;
     overflow: hidden;
@@ -279,7 +283,7 @@ export const ScrollerCardTitle = styled.p`
     overflow: hidden;
     text-overflow: ellipsis;
     font-weight: bold;
-    color: white;
+    color: ${GlobalColors.White};
 `;
 
 export const ScrollerCardSubtitle = styled.p`
@@ -290,5 +294,5 @@ export const ScrollerCardSubtitle = styled.p`
     overflow: hidden;
     text-overflow: ellipsis;
     font-size: 0.9em;
-    color: #b69323;
+    color: ${GlobalColors.OscarsGold};
 `;

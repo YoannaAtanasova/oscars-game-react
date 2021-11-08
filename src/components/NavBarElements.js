@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
+import { GlobalColors } from '../Global';
 
 export const Nav = styled.nav`
     background: #181b1e;
@@ -14,7 +15,7 @@ export const Nav = styled.nav`
     z-index: 10;
     border-width: 0px 0px 2px 0px;
     border-style: solid;
-    border-color: #b69323;
+    border-color: ${GlobalColors.OscarsGold};
     
     @media screen and (max-width: 960px){
         transition: 0.8s all ease;
@@ -31,7 +32,7 @@ export const NavBarContainer=styled.div`
 `;
 
 export const NavLogoLink =styled(Link)`
-    color: #fff;
+    color: ${GlobalColors.White};
     justify-content: flex-start;
     cursor: pointer;
     font-size: 1.5rem;
@@ -57,7 +58,7 @@ export const BurgerMenu = styled.div`
         transform: translate(-100%, 60%);
         font-size: 1.8rem;
         cursor: pointer;
-        color: #fff;
+        color: ${GlobalColors.White};
     }
 `;
 
@@ -78,7 +79,7 @@ export const NavMenu = styled.ul`
         padding: 0;
         opacity: 1;
         transition: all 0.5s ease;
-        background: #262a2d;
+        background: ${GlobalColors.MidGray};
     }
 `;
 

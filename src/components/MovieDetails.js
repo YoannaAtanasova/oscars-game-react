@@ -9,6 +9,7 @@ import { HeaderWrapper, MovieDetailsContainer, MovieDetailsHeader,
         ScrollerWrapper, ScrollerCardList, ScrollerCard, ScrollerCardImageLink, ScrollerCardImage, ScrollerCardTitle, ScrollerCardSubtitle, NominationLink} from './MovieDetailsElements';
 import {GiPopcorn,GiInvisibleFace} from 'react-icons/gi';
 import {FcFilmReel} from 'react-icons/fc';
+import { GlobalColors } from '../Global';
 
 function MovieDetails({imageId, title, releaseDate, imageUrl, imdbId, overview, nominations, credits, usersWatched}) {
     const [usersCount, setUsersCount] = useState(0);
@@ -102,7 +103,7 @@ function MovieDetails({imageId, title, releaseDate, imageUrl, imdbId, overview, 
                                 <ScrollerCardImageLink>
                                     {credit.Image
                                     ? (<ScrollerCardImage src={credit.Image}/>)
-                                    : (<GiInvisibleFace color="white" size='5em'/>)}
+                                    : (<GiInvisibleFace color={GlobalColors.White} size='5em'/>)}
                                 </ScrollerCardImageLink>
                                 <ScrollerCardTitle>{credit.Name}</ScrollerCardTitle>
                                 <ScrollerCardSubtitle>{credit.Role}</ScrollerCardSubtitle>

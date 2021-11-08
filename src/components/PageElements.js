@@ -1,9 +1,10 @@
 import styled from 'styled-components';
+import { GlobalColors } from '../Global';
 
 export const Page = styled.div`
     padding: ${props => props.padding ? props.padding : '50px 150px'};
-    color: white;
-    background-color: #181b1e;
+    color: ${GlobalColors.White};
+    background-color: ${GlobalColors.DarkGray};
     
     @media only screen and (width: 1000px){
         padding: 20px 50px;
@@ -12,7 +13,7 @@ export const Page = styled.div`
 
 export const PageBody = styled.div`
     padding: 35px 35px;
-    background-color: #262a2d;
+    background-color: ${GlobalColors.MidGray};
     border-radius: 50px 0px 50px 0px;
 `;
 
@@ -68,12 +69,12 @@ export const Banner = styled.div`
 `;
 
 export const Header = styled.div`
-    color: #c19b26;
+    color: ${GlobalColors.OscarsGold};
     font-size: 100px;
 `;
 
 export const SubHeader = styled.div`
-    color: white;
+    color: ${GlobalColors.White};
     font-size: 80px;
 `;
 
@@ -83,9 +84,10 @@ export const GameInformation = styled.div`
     align-content: center;
     justify-content: center;
     font-size: 30px;
-    border: 5px solid #b69323;
+    border: 5px solid;
+    border-color: ${GlobalColors.OscarsGold};
     border-radius: 30px;
-    color: white;
+    color: ${GlobalColors.White};
     padding: 15px;
     margin: 15px;
 `;
@@ -103,11 +105,11 @@ export const TitleWrapper = styled.div`
     margin: 0;
     padding: 0;
     font-size: 3.2rem;
-    color: #b69323;
+    color: ${GlobalColors.OscarsGold};
  `;
 
  export const TitleLink = styled.a`
     font-weight: 700;
-    color: #b69323;
+    color: ${GlobalColors.OscarsGold};
     text-decoration: none;
  `;

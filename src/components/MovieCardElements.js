@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { GlobalColors } from '../Global';
 
 export const MoviesContainer = styled.div`
     width: 1100; //calc(100vw - 80px - 268px);
@@ -15,7 +16,8 @@ export const Card = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    border: 1px solid #b69323;
+    border: 1px solid;
+    border-color: ${GlobalColors.OscarsGold};
     border-radius: 20px;
     overflow: hidden;
     margin: 20px 30px;
@@ -34,7 +36,8 @@ export const CardImageContainer = styled.div`
     width: 100%;
     height: 270px;
     max-width: 180px;
-    border-bottom: 1px solid #b69323;
+    border-bottom: 1px solid;
+    border-color: ${GlobalColors.OscarsGold};
     /*height: calc((100vw - 80px - 260px - (var(--discoverColumnPadding) * var(--numberOfDiscoverColumns))) / var(--numberOfDiscoverColumns) * 1.5);
     max-height: calc((var(--maxPrimaryPageWidth) - 80px - 260px - (var(--discoverColumnPadding) * var(--numberOfDiscoverColumns))) / var(--numberOfDiscoverColumns) * 1.5); */
 `;
@@ -68,7 +71,8 @@ export const MarkWatchedWrapper = styled.div`
     z-index: 4;
     background: ${props => props.color};
     border-radius: 50%;
-    border: 1px #c19b26;
+    border: 1px;
+    border-color: ${GlobalColors.GoldBorder};
     border-style: solid;
     display: inline-flex;
     align-items: center;
@@ -77,12 +81,12 @@ export const MarkWatchedWrapper = styled.div`
     padding: 2px 2px;
 
     &:hover {
-        background: #444d53;
+        background: ${GlobalColors.LightGray};
     }
 `;
 
 export const MarkWatchedButton = styled.a`
-    color: #b69323;
+    color: linear-gradient(${GlobalColors.White} 0%, ${GlobalColors.OscarsGold} 90%);
 `;
 
 export const CardContent = styled.div`
@@ -106,7 +110,7 @@ export const Title = styled.h2`
 
 export const TitleLink = styled.a`
     font-weight: 700;
-    color: #fff;
+    color: ${GlobalColors.White};
     text-decoration: none;
 `;
 
@@ -114,5 +118,5 @@ export const ReleaseDate = styled.p`
     font-size: 1em;
     margin: 0;
     padding: 0;
-    color: #e8e6e399;
+    color: ${GlobalColors.WhiteGray};
 `;
