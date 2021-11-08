@@ -113,3 +113,18 @@ export const TitleWrapper = styled.div`
     color: ${GlobalColors.OscarsGold};
     text-decoration: none;
  `;
+
+ export const Preview = styled.pre`
+    white-space: pre-wrap;
+    overflow-x: auto;
+    display: block;
+    padding: 9.5px;
+    margin: 0 0 10px;
+    line-height: 1.42857143;
+    color: ${GlobalColors.White};
+    word-break: break-all;
+    word-wrap: break-word;
+    background-color: ${GlobalColors.LightGray};
+    border: 1px solid #ccc;
+    border-radius: 4px;
+ `;
