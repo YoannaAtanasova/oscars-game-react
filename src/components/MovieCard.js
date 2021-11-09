@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import { Card, CardContent, CardImageContainer, 
     Image, ImageLink, ImageWrapper, 
-    MarkWatchedWrapper, MarkWatchedButton, 
-    Title, TitleLink, ReleaseDate } from './MovieCardElements';
+    MarkWatchedWrapper, MarkWatchedButton,
+    MarkVotedWrapper, MarkVotedButton, 
+    Title, TitleLink, ReleaseDate} from './MovieCardElements';
 import { PageBody } from './PageElements';
 import MovieDetails from './MovieDetails';
 import {GiPopcorn} from 'react-icons/gi';
@@ -10,6 +11,7 @@ import {MdHowToVote} from 'react-icons/md';
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
 import '../App.css'
+import { GlobalColors } from '../Global';
 
 function MovieCard({movieId, imageId, title, releaseDate, imageUrl, imdbId, overview, nominations, credits, usersWatched, showWatchedButton, isWatched, isVoted, currentUser}) {
     const [open, setOpen] = useState(false);
@@ -26,13 +28,13 @@ function MovieCard({movieId, imageId, title, releaseDate, imageUrl, imdbId, over
     const onCloseModal = () => setOpen(false);
 
     const closeIcon = (
-        <svg viewBox="0 0 36 36" width="28" height="28" data-testid="close-icon" fill="#b69323">
+        <svg viewBox="0 0 36 36" width="28" height="28" data-testid="close-icon" fill={GlobalColors.OscarsGold}>
             <path d="M28.5 9.62L26.38 7.5 18 15.88 9.62 7.5 7.5 9.62 15.88 18 7.5 26.38l2.12 2.12L18 20.12l8.38 8.38 2.12-2.12L20.12 18z"></path>
         </svg>);
 
     function handleWatchedButton() {
         if (isWatched) {
-            fetch(`http://localhost:3030/user-information/${currentUser}?_expand.WatchedMovies?id=${movieId}`, {
+            fetch(`http://localhost:3030/watchedMovies/${movieId}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'
@@ -41,8 +43,12 @@ function MovieCard({movieId, imageId, title, releaseDate, imageUrl, imdbId, over
             .then(res => setMovieIsWatched(false))
             .catch(err => console.log(err));
         } else {
-            fetch(`http://localhost:3030/user-information/${currentUser}?_expand.WatchedMovies?id=${movieId}`, {
+            fetch(`http://localhost:3030/watchedMovies`, {
                 method: 'POST',
+                body: JSON.stringify({
+                    movieId: movieId,
+                    userId: currentUser
+                }),
                 headers: {
                     'Content-Type': 'application/json'
                 }
@@ -68,11 +74,11 @@ function MovieCard({movieId, imageId, title, releaseDate, imageUrl, imdbId, over
                             </MarkWatchedButton>
                         </MarkWatchedWrapper>
                         ) : (
-                        <MarkWatchedWrapper color={isVoted ? '#444d53' : '#262a2d'}>
-                            <MarkWatchedButton onClick={handleWatchedButton} title="Mark as watched">
+                        <MarkVotedWrapper color={movieIsVotedFor ? '#444d53' : '#262a2d'}>
+                            <MarkVotedButton onClick={handleWatchedButton} title="Mark as watched">
                                 <MdHowToVote size='1.8em' style={{ fill: "url(#gold-gradient)" }}/>
-                            </MarkWatchedButton>
-                        </MarkWatchedWrapper>)
+                            </MarkVotedButton>
+                        </MarkVotedWrapper>)
                     }
                 </CardImageContainer>
                 <CardContent>

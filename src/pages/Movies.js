@@ -21,11 +21,11 @@ function Movies() {
       };
 
     const getUserInfo = async () => {
-        return await fetch("http://localhost:3030/user-information/1")
+        return await fetch("http://localhost:3030/users/1?_embed=watchedMovies")
             .then((response) => response.json())
             .then((data) => setUserInfo({
                 userId: data.id,
-                watchedMovies: data.WatchedMovies
+                watchedMovies: data.watchedMovies
             }));
       };
 
@@ -46,7 +46,7 @@ function Movies() {
                                 credits={movie.Credits}
                                 usersWatched={movie.Watched}
                                 showWatchedButton={true}
-                                isWatched={watchedMovies.some(x=> x.id === movie.id)}
+                                isWatched={watchedMovies.some(x=> x.movieId === movie.id)}
                                 currentUser={userId}/>
                     ))}
                 </MoviesContainer>

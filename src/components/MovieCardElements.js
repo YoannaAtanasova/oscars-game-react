@@ -88,6 +88,30 @@ export const MarkWatchedWrapper = styled.div`
 export const MarkWatchedButton = styled.a`
     color: linear-gradient(${GlobalColors.White} 0%, ${GlobalColors.OscarsGold} 90%);
 `;
+export const MarkVotedWrapper = styled.div`
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 4;
+    background: ${props => props.color};
+    border-radius: 50%;
+    border: 1px;
+    border-color: ${GlobalColors.GoldBorder};
+    border-style: solid;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 2px 2px;
+
+    &:hover {
+        background: ${GlobalColors.LightGray};
+    }
+`;
+
+export const MarkVotedButton = styled.a`
+    color: linear-gradient(${GlobalColors.White} 0%, ${GlobalColors.OscarsGold} 90%);
+`;
 
 export const CardContent = styled.div`
     width: 100%;

@@ -40,7 +40,7 @@ function NavBar() {
                 <DropDownList>
                   {categoriesData.map((category, index) => (
                     <DropDownItem key={index}>
-                      <NavLink to={"/category/" + category.Id}>{category.CategoryTitle}</NavLink>
+                      <NavLink to={"/category/" + category.id}>{category.CategoryTitle}</NavLink>
                     </DropDownItem>
                   ))}
                 </DropDownList>
