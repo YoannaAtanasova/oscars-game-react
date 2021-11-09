@@ -56,7 +56,33 @@ function MovieCard({movieId, imageId, title, releaseDate, imageUrl, imdbId, over
             .then(res => setMovieIsWatched(true))
             .catch(err => console.log(err));
         };
-    }
+    };
+
+    function handleVotedButton() {
+        if (isVoted) {
+            fetch(`http://localhost:3030/votedMovies/${movieId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(res => setMovieIsVotedFor(false))
+            .catch(err => console.log(err));
+        } else {
+            fetch(`http://localhost:3030/votedMovies`, {
+                method: 'POST',
+                body: JSON.stringify({
+                    movieId: movieId,
+                    userId: currentUser
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(res => setMovieIsVotedFor(true))
+            .catch(err => console.log(err));
+        };
+    };
 
     return (
         <div>
@@ -75,7 +101,7 @@ function MovieCard({movieId, imageId, title, releaseDate, imageUrl, imdbId, over
                         </MarkWatchedWrapper>
                         ) : (
                         <MarkVotedWrapper color={movieIsVotedFor ? '#444d53' : '#262a2d'}>
-                            <MarkVotedButton onClick={handleWatchedButton} title="Mark as watched">
+                            <MarkVotedButton onClick={handleVotedButton} title="Vote for this movie">
                                 <MdHowToVote size='1.8em' style={{ fill: "url(#gold-gradient)" }}/>
                             </MarkVotedButton>
                         </MarkVotedWrapper>)
