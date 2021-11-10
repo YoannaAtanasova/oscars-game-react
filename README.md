@@ -20,3 +20,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 Runs the json server in the development mode.\
 The server is setup on [http://localhost:3030](http://localhost3030).\
 To view all available mocked enpoints see MockAPIs.json
+
+## Available Environments
+
+In the project root directory are added .env files containing environment variables
+* `.env` is the default environment file
+* `.env.development` is the development environment file that is loaded when we run `npm start` script
+* `.env.production` is the production environment file that is loaded when we run `npm build` script
+
+Each .env file can be overrided locally (e.g. `.env.development.local`), but should not be checked into source control
