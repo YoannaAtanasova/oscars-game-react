@@ -13,7 +13,7 @@ function LeaderboardTable({data}) {
     useEffect(() => { getGameInformation(); },[]);
 
     const getGameInformation = async () => {
-      return await fetch('http://localhost:3030/game-information')
+      return await fetch(`${process.env.REACT_APP_API_URL}/game-information`)
         .then(response => response.json())
         .then(data => setGameInformation({
           moviesCount: data.Movies,

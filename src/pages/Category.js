@@ -16,9 +16,13 @@ function Category() {
     }, []);
     
     const getCategoryData = async () => {
-        return await fetch("http://localhost:3030/categories/" + categoryId )
+        return await fetch(`${process.env.REACT_APP_API_URL}/categories/${categoryId}`)
             .then((response) => response.json())
-            .then((data) => setCategoryData({title: data.CategoryTitle, nominations: data.Nominations}));
+            .then((data) => setCategoryData(
+                {
+                    title: data.CategoryTitle, 
+                    nominations: data.Nominations
+                }));
       };
     
     return (

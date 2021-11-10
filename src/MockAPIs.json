@@ -256,9 +256,14 @@
       "id": 4,
       "movieId": 4,
       "userId": 1
+    },
+    {
+      "movieId": 5,
+      "userId": 1,
+      "id": 5
     }
   ],
-  "votedMovies":[
+  "votedMovies": [
     {
       "id": 1,
       "movieId": 1,

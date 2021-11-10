@@ -11,7 +11,7 @@ function Categories() {
     }, []);
     
     const getCategoriesData = async () => {
-        return await fetch("http://localhost:3030/categories")
+        return await fetch(`${process.env.REACT_APP_API_URL}/categories`)
             .then((response) => response.json())
             .then((data) => setCategoriesData(data));
       };
@@ -23,7 +23,7 @@ function Categories() {
                         <CategoryWrapper key={index}>
                             <TitleWrapper>
                                 <Title>
-                                    <TitleLink href={'/category/' + category.id}>
+                                    <TitleLink href={`/category/${category.id}`}>
                                         {category.CategoryTitle}
                                     </TitleLink>
                                 </Title>

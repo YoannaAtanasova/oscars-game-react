@@ -19,7 +19,7 @@ function MovieDetails({imageId, title, releaseDate, imageUrl, imdbId, overview, 
     })
 
     const getUsersCount = async () => {
-        return await fetch("http://localhost:3030/users")
+        return await fetch(`${process.env.REACT_APP_API_URL}/users`)
             .then((response) => response.json())
             .then((data) => setUsersCount(data.length));
       };

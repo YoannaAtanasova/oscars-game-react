@@ -10,7 +10,7 @@ function Leaderboard() {
     }, []);
 
     const getScoreData = async () => {
-        return await fetch("http://localhost:3030/user-score")
+        return await fetch(`${process.env.REACT_APP_API_URL}/user-score`)
             .then((response) => response.json())
             .then((data) => setScoreData(data));
       };

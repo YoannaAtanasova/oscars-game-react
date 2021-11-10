@@ -15,13 +15,13 @@ function Movies() {
     }, []);
 
     const getMoviesData = async () => {
-        return await fetch("http://localhost:3030/movies-data")
+        return await fetch(`${process.env.REACT_APP_API_URL}/movies-data`)
             .then((response) => response.json())
             .then((data) => setMoviesData(data));
       };
 
     const getUserInfo = async () => {
-        return await fetch("http://localhost:3030/users/1?_embed=watchedMovies")
+        return await fetch(`${process.env.REACT_APP_API_URL}/users/1?_embed=watchedMovies`)
             .then((response) => response.json())
             .then((data) => setUserInfo({
                 userId: data.id,

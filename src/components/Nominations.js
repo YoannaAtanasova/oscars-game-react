@@ -11,14 +11,16 @@ function Nominations({nominaionsData}) {
         //const userId = localStorage.getItem('userId');
         getUserInfo();
     }, []);
+
     const getUserInfo = async () => {
-        return await fetch("http://localhost:3030/users/1?_embed=votedMovies")
+        return await fetch(`${process.env.REACT_APP_API_URL}/users/1?_embed=votedMovies`)
             .then((response) => response.json())
             .then((data) => setUserInfo({
                 userId: data.id,
                 votedMovies: data.votedMovies
             }));
         };
+
     return (
         <MoviesContainer>
                     {nominaionsData.map((nomination, index) => (

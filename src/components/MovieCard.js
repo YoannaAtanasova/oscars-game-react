@@ -34,7 +34,7 @@ function MovieCard({movieId, imageId, title, releaseDate, imageUrl, imdbId, over
 
     function handleWatchedButton() {
         if (isWatched) {
-            fetch(`http://localhost:3030/watchedMovies/${movieId}`, {
+            fetch(`${process.env.REACT_APP_API_URL}/watchedMovies/${movieId}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'
@@ -43,7 +43,7 @@ function MovieCard({movieId, imageId, title, releaseDate, imageUrl, imdbId, over
             .then(res => setMovieIsWatched(false))
             .catch(err => console.log(err));
         } else {
-            fetch(`http://localhost:3030/watchedMovies`, {
+            fetch(`${process.env.REACT_APP_API_URL}/watchedMovies`, {
                 method: 'POST',
                 body: JSON.stringify({
                     movieId: movieId,
@@ -60,7 +60,7 @@ function MovieCard({movieId, imageId, title, releaseDate, imageUrl, imdbId, over
 
     function handleVotedButton() {
         if (isVoted) {
-            fetch(`http://localhost:3030/votedMovies/${movieId}`, {
+            fetch(`${process.env.REACT_APP_API_URL}/votedMovies/${movieId}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'
@@ -69,7 +69,7 @@ function MovieCard({movieId, imageId, title, releaseDate, imageUrl, imdbId, over
             .then(res => setMovieIsVotedFor(false))
             .catch(err => console.log(err));
         } else {
-            fetch(`http://localhost:3030/votedMovies`, {
+            fetch(`${process.env.REACT_APP_API_URL}/votedMovies`, {
                 method: 'POST',
                 body: JSON.stringify({
                     movieId: movieId,

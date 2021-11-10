@@ -26,7 +26,7 @@ function Movie({movieIdParam}) {
     }, []);
 
     const getMovieData = async () => {
-        return await fetch("http://localhost:3030/movies-data/" + (movieIdFromUrl ? movieIdFromUrl : movieIdParam) )
+        return await fetch(`${process.env.REACT_APP_API_URL}/movies-data/${(movieIdFromUrl ? movieIdFromUrl : movieIdParam)}` )
             .then((response) => response.json())
             .then((data) => setMovieData({
                 id: data.id,

@@ -23,14 +23,14 @@ function Home() {
             minutes = minutes-(days*24*60)-(hours*60);
             seconds = seconds-(days*24*60*60)-(hours*60*60)-(minutes*60);
 
-            setTimeRemaining(days + ":" + zeroPad(hours) + ":" + zeroPad(minutes) + ":" + zeroPad(seconds));
+            setTimeRemaining(`${days}:${zeroPad(hours)}:${zeroPad(minutes)}:${zeroPad(seconds)}`);
         }, 1000, endDate);
 
         return () => clearInterval(interval);
     }, [endDate]);
 
     const getGameInformation = async () => {
-        return await fetch('http://localhost:3030/game-information')
+        return await fetch(`${process.env.REACT_APP_API_URL}/game-information`)
             .then(response => response.json())
             .then(data => { setGameInformation({
                 isGameRunning: data.IsGameRunning,
