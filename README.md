@@ -21,7 +21,7 @@ Runs the json server in the development mode.\
 The server is setup on [http://localhost:3030](http://localhost3030).\
 To view all available mocked enpoints see MockAPIs.json
 
-## Available Environments
+## Available Environment Variables
 
 In the project root directory are added .env files containing environment variables
 * `.env` is the default environment file
