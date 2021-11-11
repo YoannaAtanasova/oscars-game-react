@@ -22,11 +22,7 @@ function Movie({movieIdParam}) {
     const {id, title, releaseDate, posterPath, imdbId, overview, nominations, credits, watched} = movieData;
 
     useEffect(() => {
-        getMovieData();
-    }, []);
-
-    const getMovieData = async () => {
-        return await fetch(`${process.env.REACT_APP_API_URL}/movies-data/${(movieIdFromUrl ? movieIdFromUrl : movieIdParam)}` )
+        fetch(`${process.env.REACT_APP_API_URL}/movies-data/${(movieIdFromUrl ? movieIdFromUrl : movieIdParam)}` )
             .then((response) => response.json())
             .then((data) => setMovieData({
                 id: data.id,
@@ -39,7 +35,7 @@ function Movie({movieIdParam}) {
                 credits: data.Credits,
                 watched: data.Watched
             }));
-      };
+    }, [movieIdFromUrl, movieIdParam]);
 
     return (
         <Page padding={movieIdParam ? '50px' : ''}>

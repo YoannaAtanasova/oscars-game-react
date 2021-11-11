@@ -12,18 +12,14 @@ function Category() {
     const {title, nominations} = categoryData;
 
     useEffect(() => {
-        getCategoryData();
-    }, []);
-    
-    const getCategoryData = async () => {
-        return await fetch(`${process.env.REACT_APP_API_URL}/categories/${categoryId}`)
+        fetch(`${process.env.REACT_APP_API_URL}/categories/${categoryId}`)
             .then((response) => response.json())
             .then((data) => setCategoryData(
                 {
                     title: data.CategoryTitle, 
                     nominations: data.Nominations
                 }));
-      };
+    }, [categoryId]);
     
     return (
         <Page>

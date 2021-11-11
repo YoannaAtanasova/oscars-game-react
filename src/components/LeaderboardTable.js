@@ -55,7 +55,7 @@ function LeaderboardTable({data}) {
               </ScoreMeter>
             </ScoreWrapper>
           }
-        ],[gameInformation.moviesCount, gameInformation.categoriesCount]
+        ],[moviesCount, categoriesCount]
       );
 
       function calculateWidthPercentage(value, maxValue){
