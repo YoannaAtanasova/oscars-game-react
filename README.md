@@ -21,6 +21,13 @@ Runs the json server in the development mode.\
 The server is setup on [http://localhost:3030](http://localhost3030).\
 To view all available mocked enpoints see MockAPIs.json
 
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.
+
 ## Available Environment Variables
 
 In the project root directory are added .env files containing environment variables
