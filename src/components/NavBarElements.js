@@ -113,6 +113,7 @@ export const NavLink =styled(Link)`
     cursor: pointer;
     font-size: 20px;
     font-weight: bold;
+    pointer-events: ${props => props.isDisabled ? 'none' : 'auto'};
 
     &.active{
         border-bottom: 3px solid #01bf71;

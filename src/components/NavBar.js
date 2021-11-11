@@ -35,9 +35,12 @@ function NavBar() {
               <NavLink to="/movies">Movies</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/categories">Catogories</NavLink>
+              <NavLink isDisabled={true}>Catogories</NavLink>
               <DropDownWrapper>
                 <DropDownList>
+                  <DropDownItem>
+                      <NavLink to={"/categories"}>All Categories</NavLink>
+                  </DropDownItem>
                   {categoriesData.map((category, index) => (
                     <DropDownItem key={index}>
                       <NavLink to={"/category/" + category.id}>{category.CategoryTitle}</NavLink>
