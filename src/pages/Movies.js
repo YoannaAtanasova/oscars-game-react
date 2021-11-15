@@ -15,7 +15,7 @@ function Movies() {
     }, []);
 
     const getMoviesData = async () => {
-        return await fetch(`${process.env.REACT_APP_API_URL}/movies-data`)
+        return await fetch(`${process.env.REACT_APP_API_URL}/movies`)
             .then((response) => response.json())
             .then((data) => setMoviesData(data));
       };

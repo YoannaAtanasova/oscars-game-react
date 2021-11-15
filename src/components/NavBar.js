@@ -35,7 +35,7 @@ function NavBar() {
               <NavLink to="/movies">Movies</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink isDisabled={true}>Catogories</NavLink>
+              <NavLink to="/" isdisabled="true">Catogories</NavLink>
               <DropDownWrapper>
                 <DropDownList>
                   <DropDownItem>

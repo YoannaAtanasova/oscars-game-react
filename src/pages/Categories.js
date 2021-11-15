@@ -28,7 +28,7 @@ function Categories() {
                                     </TitleLink>
                                 </Title>
                             </TitleWrapper>
-                            <Nominations nominaionsData={category.Nominations}/>
+                            <Nominations categoryId={category.id}/>
                         </CategoryWrapper>
                     ))}
             </PageBody>

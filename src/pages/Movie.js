@@ -22,7 +22,7 @@ function Movie({movieIdParam}) {
     const {id, title, releaseDate, posterPath, imdbId, overview, nominations, credits, watched} = movieData;
 
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}/movies-data/${(movieIdFromUrl ? movieIdFromUrl : movieIdParam)}` )
+        fetch(`${process.env.REACT_APP_API_URL}/movies/${(movieIdFromUrl ? movieIdFromUrl : movieIdParam)}` )
             .then((response) => response.json())
             .then((data) => setMovieData({
                 id: data.id,

@@ -7,18 +7,12 @@ import { Page, PageBody, Title, TitleWrapper } from '../components/PageElements'
 function Category() {
     const {categoryId} = useParams();
 
-    const [categoryData, setCategoryData] = useState({title: '', nominations: []});
-
-    const {title, nominations} = categoryData;
+    const [categoryTitle, setCategoryTitle] = useState(null);
 
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}/categories/${categoryId}`)
             .then((response) => response.json())
-            .then((data) => setCategoryData(
-                {
-                    title: data.CategoryTitle, 
-                    nominations: data.Nominations
-                }));
+            .then((data) => setCategoryTitle(data.CategoryTitle));
     }, [categoryId]);
     
     return (
@@ -27,14 +21,14 @@ function Category() {
                     <CategoryWrapper>
                         <TitleWrapper>
                             <Title>
-                                {title}
+                                {categoryTitle}
                             </Title>
                         </TitleWrapper>
-                        <Nominations nominaionsData={nominations}/>
+                        <Nominations categoryId={categoryId}/>
                     </CategoryWrapper>
             </PageBody>
         </Page>
     )
-}
+};
 
 export default Category;
