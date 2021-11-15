@@ -44,6 +44,7 @@ function Nominations({categoryId}) {
                                 usersWatched={nomination.movie.Watched}
                                 showWatchedButton={false}
                                 isVoted={votedMovies.some(x=>x.movieId === nomination.movie.Id)}
+                                isWinner={nomination.IsWinner}
                                 currentUser={userId}/>
                     ))}
                 </MoviesContainer>

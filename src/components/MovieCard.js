@@ -3,7 +3,7 @@ import { Card, CardContent, CardImageContainer,
     Image, ImageLink, ImageWrapper, 
     MarkWatchedWrapper, MarkWatchedButton,
     MarkVotedWrapper, MarkVotedButton, 
-    Title, TitleLink, ReleaseDate} from './MovieCardElements';
+    Title, TitleLink, ReleaseDate, WinnerIcon} from './MovieCardElements';
 import { PageBody } from './PageElements';
 import MovieDetails from './MovieDetails';
 import {GiPopcorn} from 'react-icons/gi';
@@ -13,7 +13,7 @@ import { Modal } from 'react-responsive-modal';
 import '../App.css'
 import { GlobalColors } from '../Global';
 
-function MovieCard({movieId, imageId, title, releaseDate, imageUrl, imdbId, overview, nominations, credits, usersWatched, showWatchedButton, isWatched, isVoted, currentUser}) {
+function MovieCard({movieId, imageId, title, releaseDate, imageUrl, imdbId, overview, nominations, credits, usersWatched, showWatchedButton, isWatched, isVoted, isWinner, currentUser}) {
     const [open, setOpen] = useState(false);
 
     const [movieIsWatched, setMovieIsWatched ] = useState(false);
@@ -90,7 +90,8 @@ function MovieCard({movieId, imageId, title, releaseDate, imageUrl, imdbId, over
                 <CardImageContainer>
                     <ImageWrapper>
                         <ImageLink onClick={onOpenModal}>
-                            <Image src={imageUrl}/>
+                            <Image src={imageUrl} isWinner={isWinner}/>
+                            {isWinner && <WinnerIcon src='/OscarAward.svg'/>}
                         </ImageLink>
                     </ImageWrapper>
                     {showWatchedButton ? (

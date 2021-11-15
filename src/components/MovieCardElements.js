@@ -51,17 +51,29 @@ export const ImageWrapper = styled.div`
 `;
 
 export const ImageLink = styled.a`
-    display: inline-block;
+    position: absolute;
     width: 100%;
     height: 100%;
 `;
 
 export const Image = styled.img`
     display: inline-block;
+    position: absolute;
     width: 100%;
     height: 100%;
     border: 0;
     outline: none;
+    z-index: 1;
+    opacity: ${props => props.isWinner ? 0.5 : 1};
+`;
+
+export const WinnerIcon = styled.img`
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    outline: none;
+    z-index: 2;
 `;
 
 export const MarkWatchedWrapper = styled.div`
