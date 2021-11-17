@@ -9,14 +9,14 @@ import { HeaderWrapper, MovieDetailsContainer, MovieDetailsHeader,
         ScrollerWrapper, ScrollerCardList, ScrollerCard, ScrollerCardImageLink, ScrollerCardImage, ScrollerCardTitle, ScrollerCardSubtitle, NominationLink} from './styled/MovieDetailsElements';
 import {GiPopcorn,GiInvisibleFace} from 'react-icons/gi';
 import {FcFilmReel} from 'react-icons/fc';
-import { GlobalColors } from '../Global';
+import { GlobalColors, GlobalURLs } from '../Global';
 
 function MovieDetails({movieId, title, releaseDate, imageUrl, imdbId, overview, nominations, credits, usersWatched}) {
     const [usersCount, setUsersCount] = useState(0);
 
     useEffect(() => {
         getUsersCount();
-    })
+    });
 
     const getUsersCount = async () => {
         return await fetch(`${process.env.REACT_APP_API_URL}/users`)
@@ -53,11 +53,11 @@ function MovieDetails({movieId, title, releaseDate, imageUrl, imdbId, overview, 
                                 </MarkWatchedButton>
                             </HeaderIconsListItem>
                         </HeaderIconsList>
-                        <MDBLink href={"https://www.imdb.com/title/" + imdbId} title="IMDB" target="_newtab">
-                            <MDBImage src="https://m.media-amazon.com/images/G/01/IMDb/BG_rectangle._CB1509060989_SY230_SX307_AL_.png" />
+                        <MDBLink href={`${GlobalURLs.IMDB_URL}/title/${imdbId}`} title="IMDB" target="_newtab">
+                            <MDBImage src={GlobalURLs.IMDB_LOGO_URL} />
                         </MDBLink>
-                        <MDBLink href={"http://www.themoviedb.org/movie/" + movieId} title="TMDB" target="_newtab">
-                            <MDBImage src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_1-5bdc75aaebeb75dc7ae79426ddd9be3b2be1e342510f8202baf6bffa71d7f5c4.svg"/> 
+                        <MDBLink href={`${GlobalURLs.TMDB_URL}/movie/${movieId}`} title="TMDB" target="_newtab">
+                            <MDBImage src={GlobalURLs.TMDB_LOGO_URL}/> 
                         </MDBLink>
                     </HeaderWrapper>
                 </MovieDetailsHeader>
