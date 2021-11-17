@@ -127,7 +127,8 @@ export const MarkVotedButton = styled.a`
 
 export const CardContent = styled.div`
     width: 100%;
-    padding: 20px 10px 12px 10px;
+    min-height: 75px;
+    padding: 25px 10px 12px 10px;
     position: relative;
     white-space: normal;
     display: flex;
@@ -138,6 +139,7 @@ export const CardContent = styled.div`
 
 export const Title = styled.h2`
     font-size: 1em;
+    font-weight: 700;
     margin: 0;
     width: 100%;
     word-wrap: normal;
@@ -145,13 +147,13 @@ export const Title = styled.h2`
 `;
 
 export const TitleLink = styled.a`
-    font-weight: 700;
     color: ${GlobalColors.White};
     text-decoration: none;
 `;
 
-export const ReleaseDate = styled.p`
+export const SubTitle = styled.p`
     font-size: 1em;
+    font-weight: 400;
     margin: 0;
     padding: 0;
     color: ${GlobalColors.WhiteGray};

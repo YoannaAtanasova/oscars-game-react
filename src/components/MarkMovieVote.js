@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {MdHowToVote} from 'react-icons/md';
 import { GlobalColors } from '../Global';
-import { MarkVotedWrapper, MarkVotedButton } from './styled/MovieCardElements';
+import { MarkVotedWrapper, MarkVotedButton } from './styled/CardElements';
 
 function MarkMovieVote({isVoted, movieId, currentUser}) {
     const [movieIsVotedFor, setMovieIsVotedFor ] = useState(false);

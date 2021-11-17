@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Card, CardContent, CardImageContainer, 
     Image, ImageLink, ImageWrapper, 
-    Title, TitleLink, ReleaseDate, WinnerIcon} from './styled/MovieCardElements';
+    Title, TitleLink, SubTitle, WinnerIcon} from './styled/CardElements';
 import 'react-responsive-modal/styles.css';
 import '../App.css'
 import MovieModal from './MovieModal';
@@ -33,7 +33,7 @@ function MovieCard({movieId, title, releaseDate, imageUrl, movieDetails, showWat
                     <Title>
                         <TitleLink href={"/movie/" + movieId} target="_newTab"> {title} </TitleLink>
                     </Title>
-                    <ReleaseDate>{releaseDate}</ReleaseDate>
+                    <SubTitle>{releaseDate}</SubTitle>
                 </CardContent>
             </Card>
             <MovieModal movie={movieDetails} open={open} onClose={onCloseModal}/>
