@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Card, CardContent, CardImageContainer, 
     Image, ImageLink, ImageWrapper, 
-    Title, TitleLink, ReleaseDate, WinnerIcon} from './MovieCardElements';
+    Title, TitleLink, ReleaseDate, WinnerIcon} from './styled/MovieCardElements';
 import 'react-responsive-modal/styles.css';
 import '../App.css'
 import MovieModal from './MovieModal';

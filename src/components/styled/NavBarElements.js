@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
-import { GlobalColors } from '../Global';
+import { GlobalColors } from '../../Global';
 
 export const Nav = styled.nav`
     background: #181b1e;

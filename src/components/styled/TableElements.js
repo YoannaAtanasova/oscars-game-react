@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { GlobalColors } from '../Global';
+import { GlobalColors } from '../../Global';
 
 export const TableWrapper = styled.div`
     margin: 30px;

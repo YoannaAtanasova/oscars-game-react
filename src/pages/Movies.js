@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import MovieCard from '../components/MovieCard';
-import { Page, PageBody } from '../components/PageElements';
-import { MoviesContainer } from '../components/MovieCardElements';
+import { Page, PageBody } from '../components/styled/PageElements';
+import { MoviesContainer } from '../components/styled/MovieCardElements';
 
 function Movies() {
     const [moviesData, setMoviesData] = useState([]);

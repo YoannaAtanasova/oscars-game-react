@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import LeaderboardTable from '../components/LeaderboardTable';
-import { Page, PageBody, Title, TitleWrapper } from '../components/PageElements';
+import { Page, PageBody, Title, TitleWrapper } from '../components/styled/PageElements';
 
 function Leaderboard() {
     const [scoreData, setScoreData] = useState([]);

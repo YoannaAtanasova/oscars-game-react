@@ -1,5 +1,5 @@
 import React from 'react';
-import { PageBody } from './PageElements';
+import { PageBody } from './styled/PageElements';
 import MovieDetails from './MovieDetails';
 import { GlobalColors } from '../Global';
 import { Modal } from 'react-responsive-modal';

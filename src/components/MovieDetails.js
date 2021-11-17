@@ -6,7 +6,7 @@ import { HeaderWrapper, MovieDetailsContainer, MovieDetailsHeader,
         SectionWrapper, SectionHeader, 
         OverviewBody, 
         NominationsContainer, NominationsList, Nomination,
-        ScrollerWrapper, ScrollerCardList, ScrollerCard, ScrollerCardImageLink, ScrollerCardImage, ScrollerCardTitle, ScrollerCardSubtitle, NominationLink} from './MovieDetailsElements';
+        ScrollerWrapper, ScrollerCardList, ScrollerCard, ScrollerCardImageLink, ScrollerCardImage, ScrollerCardTitle, ScrollerCardSubtitle, NominationLink} from './styled/MovieDetailsElements';
 import {GiPopcorn,GiInvisibleFace} from 'react-icons/gi';
 import {FcFilmReel} from 'react-icons/fc';
 import { GlobalColors } from '../Global';

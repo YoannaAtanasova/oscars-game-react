@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { GiPopcorn } from 'react-icons/gi';
 import { GlobalColors } from '../Global';
-import { MarkWatchedWrapper, MarkWatchedButton } from './MovieCardElements';
+import { MarkWatchedWrapper, MarkWatchedButton } from './styled/MovieCardElements';
 
 function MarkWatchedMovie({isWatched, movieId, currentUser}) {
     const [movieIsWatched, setMovieIsWatched ] = useState(false);

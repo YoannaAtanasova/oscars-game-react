@@ -1,5 +1,5 @@
 import React, {useEffect, useMemo, useState} from 'react';
-import { Rank, ScoreGauge, ScoreHeader, ScoreMeter, ScoreWrapper, UserDisplayName } from './LeaderboardTableElements';
+import { Rank, ScoreGauge, ScoreHeader, ScoreMeter, ScoreWrapper, UserDisplayName } from './styled/LeaderboardTableElements';
 import Table from './Table';
 
 function LeaderboardTable({data}) {

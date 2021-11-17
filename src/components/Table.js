@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTable } from "react-table";
-import { StyledTable, TableWrapper } from './TableElements';
+import { StyledTable, TableWrapper } from './styled/TableElements';
 
 function Table({ columns, data }) {
     const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({columns,data});

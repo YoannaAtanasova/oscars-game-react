@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { GlobalColors } from '../Global';
+import { GlobalColors } from '../../Global';
 
 export const Page = styled.div`
     padding: ${props => props.padding ? props.padding : '50px 150px'};

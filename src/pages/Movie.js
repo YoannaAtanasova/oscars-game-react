@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router';
 import MovieDetails from '../components/MovieDetails';
-import { Page, PageBody } from '../components/PageElements';
+import { Page, PageBody } from '../components/styled/PageElements';
 
 function Movie({movieIdParam}) {
     const {movieIdFromUrl} = useParams();

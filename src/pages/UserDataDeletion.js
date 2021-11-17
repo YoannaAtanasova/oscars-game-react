@@ -1,4 +1,4 @@
-import {Page, PageBody, Preview} from '../components/PageElements';
+import {Page, PageBody, Preview} from '../components/styled/PageElements';
 
 function UserDataDeletion() {
   return (

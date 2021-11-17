@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import MovieCard from '../components/MovieCard';
-import { MoviesContainer } from '../components/MovieCardElements';
+import { MoviesContainer } from '../components/styled/MovieCardElements';
 
 function Nominations({categoryId}) {
     const [nominations, setNominations] = useState([]);

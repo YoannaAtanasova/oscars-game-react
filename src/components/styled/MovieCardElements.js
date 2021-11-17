@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { GlobalColors } from '../Global';
+import { GlobalColors } from '../../Global';
 
 export const MoviesContainer = styled.div`
     width: 1100; //calc(100vw - 80px - 268px);

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import { Page, PageBody, Title, TitleLink, TitleWrapper } from '../components/PageElements';
-import { CategoryWrapper } from '../components/NominationCategoryElements';
+import { Page, PageBody, Title, TitleLink, TitleWrapper } from '../components/styled/PageElements';
+import { CategoryWrapper } from '../components/styled/NominationCategoryElements';
 import Nominations from '../components/Nominations';
 
 function Categories() {

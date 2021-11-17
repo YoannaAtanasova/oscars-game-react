@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react'
 
-import {Page, BackgroundBanner, Banner, Header, PageBody, Paragraph, SubHeader, GameInformation} from '../components/PageElements';
+import {Page, BackgroundBanner, Banner, Header, PageBody, Paragraph, SubHeader, GameInformation} from '../components/styled/PageElements';
 
 function Home() {
     const [gameInformation, setGameInformation] = useState({isGameRunning: true, endDate: null});

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { GlobalColors } from '../Global';
+import { GlobalColors } from '../../Global';
 
 export const Rank = styled.h4`
     color: ${GlobalColors.White};

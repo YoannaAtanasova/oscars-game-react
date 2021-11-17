@@ -1,4 +1,4 @@
-import {Page, PageBody} from '../components/PageElements';
+import {Page, PageBody} from '../components/styled/PageElements';
 
 function PrivacyPolicy() {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import { CopyRights, FooterContainer, FooterContent, FooterListReferences, FooterLink, FooterPoweredByLink, FooterPoweredByImage, FooterItem } from '../components/FooterElements';
+import { CopyRights, FooterContainer, FooterContent, FooterListReferences, FooterLink, FooterPoweredByLink, FooterPoweredByImage, FooterItem } from '../components/styled/FooterElements';
 
 function Footer() {
     return (
