@@ -37,14 +37,10 @@ function Movies() {
                         <MovieCard
                                 key={index} 
                                 movieId={movie.id}
-                                imageId={movie.id}
                                 title={movie.Title}
                                 releaseDate={movie.ReleaseDate}
                                 imageUrl={movie.PosterPath}
-                                overview={movie.Overview}
-                                nominations={movie.Nominations}
-                                credits={movie.Credits}
-                                usersWatched={movie.Watched}
+                                movieDetails = {movie}
                                 showWatchedButton={true}
                                 isWatched={watchedMovies.some(x=> x.movieId === movie.id)}
                                 currentUser={userId}/>

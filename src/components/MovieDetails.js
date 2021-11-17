@@ -11,7 +11,7 @@ import {GiPopcorn,GiInvisibleFace} from 'react-icons/gi';
 import {FcFilmReel} from 'react-icons/fc';
 import { GlobalColors } from '../Global';
 
-function MovieDetails({imageId, title, releaseDate, imageUrl, imdbId, overview, nominations, credits, usersWatched}) {
+function MovieDetails({movieId, title, releaseDate, imageUrl, imdbId, overview, nominations, credits, usersWatched}) {
     const [usersCount, setUsersCount] = useState(0);
 
     useEffect(() => {
@@ -36,7 +36,7 @@ function MovieDetails({imageId, title, releaseDate, imageUrl, imdbId, overview, 
                     <HeaderWrapper>
                         <TitleWrapper>
                             <Title>
-                                <TitleLink href={"/movie/" + imageId} target="_newtab">{title}</TitleLink>
+                                <TitleLink href={"/movie/" + movieId} target="_newtab">{title}</TitleLink>
                             </Title>
                             <ReleaseDate>{releaseDate}</ReleaseDate>
                         </TitleWrapper>
@@ -56,7 +56,7 @@ function MovieDetails({imageId, title, releaseDate, imageUrl, imdbId, overview, 
                         <MDBLink href={"https://www.imdb.com/title/" + imdbId} title="IMDB" target="_newtab">
                             <MDBImage src="https://m.media-amazon.com/images/G/01/IMDb/BG_rectangle._CB1509060989_SY230_SX307_AL_.png" />
                         </MDBLink>
-                        <MDBLink href={"http://www.themoviedb.org/movie/" + imageId} title="TMDB" target="_newtab">
+                        <MDBLink href={"http://www.themoviedb.org/movie/" + movieId} title="TMDB" target="_newtab">
                             <MDBImage src="https://www.themoviedb.org/assets/2/v4/logos/v2/blue_square_1-5bdc75aaebeb75dc7ae79426ddd9be3b2be1e342510f8202baf6bffa71d7f5c4.svg"/> 
                         </MDBLink>
                     </HeaderWrapper>

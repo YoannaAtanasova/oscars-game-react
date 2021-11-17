@@ -41,7 +41,7 @@ function Movie({movieIdParam}) {
         <Page padding={movieIdParam ? '50px' : ''}>
             <PageBody>
                     <MovieDetails
-                        imageId={id}
+                        movieId={id}
                         title={title}
                         releaseDate={releaseDate}
                         imageUrl={posterPath}
