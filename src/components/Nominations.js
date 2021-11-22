@@ -35,7 +35,7 @@ function Nominations({categoryId}) {
                                 role={nomination.credits[0].Role}
                                 movieId={nomination.movie.Id}
                                 title={nomination.movie.Title}
-                                imageUrl={nomination.credits[0].Image}
+                                poster={nomination.credits[0].Image}
                                 movieDetails = {nomination.movie}
                                 isVoted={vote.some(x=> x.movieId === nomination.movie.id)}
                                 isWinner={nomination.IsWinner}
@@ -47,7 +47,7 @@ function Nominations({categoryId}) {
                             movieId={nomination.movie.Id}
                             title={nomination.movie.Title}
                             releaseDate={nomination.movie.ReleaseDate}
-                            imageUrl={nomination.movie.PosterPath}
+                            poster={nomination.movie.PosterPath}
                             movieDetails = {nomination.movie}
                             showWatchedButton={false}
                             isVoted={vote.some(x=> x.movieId === nomination.movie.id)}

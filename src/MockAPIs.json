@@ -36,7 +36,7 @@
       "id": 1,
       "Title": "Free Guy",
       "ReleaseDate": "11/08/2021",
-      "PosterPath": "https://www.themoviedb.org/t/p/w300_and_h450_face/xmbU4JTUm8rsdtn7Y3Fcm30GpeT.jpg",
+      "PosterPath": "xmbU4JTUm8rsdtn7Y3Fcm30GpeT",
       "Overview": "A bank teller called Guy realizes he is a background character in an open world video game called Free City that will soon go offline.",
       "ImdbId": "tt6264654",
       "Nominations": [
@@ -57,21 +57,21 @@
           "Name": "Ryan Reynolds",
           "Role": "Guy",
           "IsCast": true,
-          "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/4SYTH5FdB0dAORV98Nwg3llgVnY.jpg"
+          "Image": "4SYTH5FdB0dAORV98Nwg3llgVnY"
         },
         {
           "Id": 2,
           "Name": "Jodie Comer",
           "Role": "Millie Rusk / Molotov Girl",
           "IsCast": true,
-          "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/va8pcuzXodVLYUQLjB1USZVB6gz.jpg"
+          "Image": "va8pcuzXodVLYUQLjB1USZVB6gz"
         },
         {
           "Id": 3,
           "Name": "Taika Waititi",
           "Role": "Antwan",
           "IsCast": true,
-          "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/lxbNTecxOIlV4roX02RT4Ga2Rn2.jpg"
+          "Image": "lxbNTecxOIlV4roX02RT4Ga2Rn2"
         },
         {
           "Id": 4,
@@ -85,49 +85,49 @@
           "Name": "Beat Frutiger",
           "Role": "Supervising Art Director",
           "IsCast": false,
-          "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/2VMPjH8Olb5qHqsKNelSxkViH9b.jpg"
+          "Image": "2VMPjH8Olb5qHqsKNelSxkViH9b"
         },
         {
           "Id": 6,
           "Name": "Lil Rel Howery",
           "Role": "Buddy",
           "IsCast": true,
-          "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/9MDi35Fy6ym7SYbO3B04vf1vBnm.jpg"
+          "Image": "9MDi35Fy6ym7SYbO3B04vf1vBnm"
         },
         {
           "Id": 7,
           "Name": "Joe Keery",
           "Role": "Walter 'Keys' McKeys",
           "IsCast": true,
-          "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/kXoE2UWf01V89yVDD08MCXrEiRe.jpg"
+          "Image": "kXoE2UWf01V89yVDD08MCXrEiRe"
         },
         {
           "Id": 8,
           "Name": "Utkarsh Ambudkar",
           "Role": "Mouser",
           "IsCast": true,
-          "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/wqb2EjDcJ5AKlZQuH7zV9jURs9B.jpg"
+          "Image": "wqb2EjDcJ5AKlZQuH7zV9jURs9B"
         },
         {
           "Id": 9,
           "Name": "Owen Burke",
           "Role": "Bank Robber #2",
           "IsCast": true,
-          "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/kgU8OelLJImeisnTkZQ14Mjp9BP.jpg"
+          "Image": "kgU8OelLJImeisnTkZQ14Mjp9BP"
         },
         {
           "Id": 10,
           "Name": "Kayla Caulfield",
           "Role": "Soonami Tech",
           "IsCast": true,
-          "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/3m61wlEQZi5JgBqC5tTOOVEFEUw.jpg"
+          "Image": "3m61wlEQZi5JgBqC5tTOOVEFEUw"
         },
         {
           "Id": 11,
           "Name": "Camille Kostek",
           "Role": "Bombshell",
           "IsCast": true,
-          "Image": "https://www.themoviedb.org/t/p/w138_and_h175_face/kCPrPiUZI2jr85028SWVJcPpHfb.jpg"
+          "Image": "kCPrPiUZI2jr85028SWVJcPpHfb"
         }
       ],
       "Watched": [
@@ -149,7 +149,7 @@
       "id": 2,
       "Title": "Venom",
       "ReleaseDate": "30/09/2021",
-      "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/rjkmN1dniUHVYAtwuV3Tji7FsDO.jpg",
+      "PosterPath": "rjkmN1dniUHVYAtwuV3Tji7FsDO",
       "Overview": "",
       "ImdbId": ""
     },
@@ -157,7 +157,7 @@
       "id": 3,
       "Title": "Shang-Chi",
       "ReleaseDate": "01/09/2021",
-      "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg",
+      "PosterPath": "1BIoJGKbXjdFDAqUEiA2VHqkK1Z",
       "Overview": "",
       "ImdbId": ""
     },
@@ -165,7 +165,7 @@
       "id": 4,
       "Title": "Black Widow",
       "ReleaseDate": "07/07/2021",
-      "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/qAZ0pzat24kLdO3o8ejmbLxyOac.jpg",
+      "PosterPath": "qAZ0pzat24kLdO3o8ejmbLxyOac",
       "Overview": "",
       "ImdbId": ""
     },
@@ -173,7 +173,7 @@
       "id": 5,
       "Title": "No Time To Die",
       "ReleaseDate": "29/09/2021",
-      "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/eqWaeh21e4ZgHjwpULZVHCGIq9X.jpg",
+      "PosterPath": "eqWaeh21e4ZgHjwpULZVHCGIq9X",
       "Overview": "",
       "ImdbId": ""
     },
@@ -181,7 +181,7 @@
       "id": 6,
       "Title": "Army of the Dead",
       "ReleaseDate": "14/05/2021",
-      "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/z8CExJekGrEThbpMXAmCFvvgoJR.jpg",
+      "PosterPath": "z8CExJekGrEThbpMXAmCFvvgoJR",
       "Overview": "",
       "ImdbId": ""
     },
@@ -189,7 +189,7 @@
       "id": 7,
       "Title": "Nobody",
       "ReleaseDate": "18/03/2021",
-      "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/oBgWY00bEFeZ9N25wWVyuQddbAo.jpg",
+      "PosterPath": "oBgWY00bEFeZ9N25wWVyuQddbAo",
       "Overview": "",
       "ImdbId": ""
     },
@@ -197,7 +197,7 @@
       "id": 8,
       "Title": "Dune",
       "ReleaseDate": "15/09/2021",
-      "PosterPath": "https://www.themoviedb.org/t/p/w220_and_h330_face/s1FhMAr91WL8D5DeHOcuBELtiHJ.jpg",
+      "PosterPath": "s1FhMAr91WL8D5DeHOcuBELtiHJ",
       "Overview": "",
       "ImdbId": ""
     }
@@ -329,7 +329,7 @@
           "Name": "Ryan Reynolds",
           "Role": "Guy",
           "IsCast": true,
-          "Image": "https://www.themoviedb.org/t/p/w220_and_h330_face/4SYTH5FdB0dAORV98Nwg3llgVnY.jpg"
+          "Image": "4SYTH5FdB0dAORV98Nwg3llgVnY"
         }
       ]
     },
@@ -344,7 +344,7 @@
           "Name": "Ryan Reynolds",
           "Role": "Guy",
           "IsCast": true,
-          "Image": "https://www.themoviedb.org/t/p/w220_and_h330_face/4SYTH5FdB0dAORV98Nwg3llgVnY.jpg"
+          "Image": "4SYTH5FdB0dAORV98Nwg3llgVnY"
         }
       ]
     },
@@ -359,7 +359,7 @@
           "Name": "Ryan Reynolds",
           "Role": "Guy",
           "IsCast": true,
-          "Image": "https://www.themoviedb.org/t/p/w220_and_h330_face/4SYTH5FdB0dAORV98Nwg3llgVnY.jpg"
+          "Image": "4SYTH5FdB0dAORV98Nwg3llgVnY"
         }
       ]
     },
@@ -374,7 +374,7 @@
           "Name": "Ryan Reynolds",
           "Role": "Guy",
           "IsCast": true,
-          "Image": "https://www.themoviedb.org/t/p/w220_and_h330_face/4SYTH5FdB0dAORV98Nwg3llgVnY.jpg"
+          "Image": "4SYTH5FdB0dAORV98Nwg3llgVnY"
         }
       ]
     },
@@ -389,7 +389,7 @@
           "Name": "Ryan Reynolds",
           "Role": "Guy",
           "IsCast": true,
-          "Image": "https://www.themoviedb.org/t/p/w220_and_h330_face/4SYTH5FdB0dAORV98Nwg3llgVnY.jpg"
+          "Image": "4SYTH5FdB0dAORV98Nwg3llgVnY"
         }
       ]
     }

@@ -11,7 +11,7 @@ import {GiPopcorn,GiInvisibleFace} from 'react-icons/gi';
 import {FcFilmReel} from 'react-icons/fc';
 import { GlobalColors, GlobalURLs } from '../Global';
 
-function MovieDetails({movieId, title, releaseDate, imageUrl, imdbId, overview, nominations, credits, usersWatched}) {
+function MovieDetails({movieId, title, releaseDate, poster, imdbId, overview, nominations, credits, usersWatched}) {
     const [usersCount, setUsersCount] = useState(0);
 
     useEffect(() => {
@@ -30,7 +30,7 @@ function MovieDetails({movieId, title, releaseDate, imageUrl, imdbId, overview, 
                 <MovieDetailsHeader>
                     <PosterWrapper>
                         <Poster>
-                            <PosterImage src={imageUrl}/>
+                            <PosterImage src={GlobalURLs.TMDB_LARGE_IMAGE_URL.format(poster)}/>
                         </Poster>
                     </PosterWrapper>
                     <HeaderWrapper>
@@ -85,7 +85,7 @@ function MovieDetails({movieId, title, releaseDate, imageUrl, imdbId, overview, 
                             <ScrollerCard key={index} >
                                 <ScrollerCardImageLink>
                                     {credit.Image
-                                    ? (<ScrollerCardImage src={credit.Image}/>)
+                                    ? (<ScrollerCardImage src={GlobalURLs.TMDB_SMALL_IMAGE_URL.format(credit.Image)}/>)
                                     : (<GiInvisibleFace size='5em'/>)}
                                 </ScrollerCardImageLink>
                                 <ScrollerCardTitle>{credit.Name}</ScrollerCardTitle>
@@ -102,7 +102,7 @@ function MovieDetails({movieId, title, releaseDate, imageUrl, imdbId, overview, 
                             <ScrollerCard key={index} >
                                 <ScrollerCardImageLink>
                                     {credit.Image
-                                    ? (<ScrollerCardImage src={credit.Image}/>)
+                                    ? (<ScrollerCardImage src={GlobalURLs.TMDB_SMALL_IMAGE_URL.format(credit.Image)}/>)
                                     : (<GiInvisibleFace color={GlobalColors.White} size='5em'/>)}
                                 </ScrollerCardImageLink>
                                 <ScrollerCardTitle>{credit.Name}</ScrollerCardTitle>

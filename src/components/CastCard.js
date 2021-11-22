@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
+import { GlobalURLs } from '../Global';
 import MarkMovieVote from './MarkMovieVote';
 import MovieModal from './MovieModal';
 import { Card, CardContent, CardImageContainer, Image ,ImageLink, ImageWrapper, SubTitle, Title, TitleLink, WinnerIcon } from './styled/CardElements';
 
-function CastCard({nomenee, role, movieId, title, imageUrl, movieDetails, isVoted, isWinner ,currentUser}) {
+function CastCard({nomenee, role, movieId, title, poster, movieDetails, isVoted, isWinner ,currentUser}) {
     const [open, setOpen] = useState(false);    
 
     const onOpenModal = () => setOpen(true);
@@ -15,7 +16,7 @@ function CastCard({nomenee, role, movieId, title, imageUrl, movieDetails, isVote
                 <CardImageContainer>
                     <ImageWrapper>
                         <ImageLink onClick={onOpenModal}>
-                            <Image src={imageUrl} isWinner={isWinner}/>
+                            <Image src={GlobalURLs.TMDB_MEDIUM_IMAGE_URL.format(poster)} isWinner={isWinner}/>
                             {isWinner && <WinnerIcon src='/OscarAward.svg'/>}
                         </ImageLink>
                     </ImageWrapper>

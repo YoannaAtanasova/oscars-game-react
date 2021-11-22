@@ -39,7 +39,7 @@ function Movies() {
                                 movieId={movie.id}
                                 title={movie.Title}
                                 releaseDate={movie.ReleaseDate}
-                                imageUrl={movie.PosterPath}
+                                poster={movie.PosterPath}
                                 movieDetails = {movie}
                                 showWatchedButton={true}
                                 isWatched={watchedMovies.some(x=> x.movieId === movie.id)}

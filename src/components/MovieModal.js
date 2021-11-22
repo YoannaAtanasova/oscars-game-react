@@ -17,7 +17,7 @@ function MovieModal({open, onClose, movie}) {
                             movieId={movie.id}
                             title={movie.Title}
                             releaseDate={movie.ReleaseDate}
-                            imageUrl={movie.PosterPath} 
+                            poster={movie.PosterPath} 
                             imdbId={movie.ImdbId}
                             overview={movie.Overview}
                             nominations={movie.Nominations}

@@ -7,8 +7,9 @@ import '../App.css'
 import MovieModal from './MovieModal';
 import MarkWatchedMovie from './MarkWatchedMovie';
 import MarkMovieVote from './MarkMovieVote';
+import { GlobalURLs } from '../Global';
 
-function MovieCard({movieId, title, releaseDate, imageUrl, movieDetails, showWatchedButton, isWatched, isVoted, isWinner, currentUser}) {
+function MovieCard({movieId, title, releaseDate, poster, movieDetails, showWatchedButton, isWatched, isVoted, isWinner, currentUser}) {
     const [open, setOpen] = useState(false);    
 
     const onOpenModal = () => setOpen(true);
@@ -20,7 +21,7 @@ function MovieCard({movieId, title, releaseDate, imageUrl, movieDetails, showWat
                 <CardImageContainer>
                     <ImageWrapper>
                         <ImageLink onClick={onOpenModal}>
-                            <Image src={imageUrl} isWinner={isWinner}/>
+                            <Image src={GlobalURLs.TMDB_MEDIUM_IMAGE_URL.format(poster)} isWinner={isWinner}/>
                             {isWinner && <WinnerIcon src='/OscarAward.svg'/>}
                         </ImageLink>
                     </ImageWrapper>
