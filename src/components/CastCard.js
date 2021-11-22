@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import { GlobalURLs } from '../Global';
-import MarkMovieVote from './MarkMovieVote';
+import MarkNominationVote from './MarkNominationVote';
 import MovieModal from './MovieModal';
 import { Card, CardContent, CardImageContainer, Image ,ImageLink, ImageWrapper, SubTitle, Title, TitleLink, WinnerIcon } from './styled/CardElements';
 
-function CastCard({nomenee, role, movieId, title, poster, movieDetails, isVoted, isWinner ,currentUser}) {
+function CastCard({categoryId, nominationId, nomenee, role, movieId, title, poster, movieDetails, isVoted, onVoteChange, isWinner, currentUser}) {
     const [open, setOpen] = useState(false);    
 
     const onOpenModal = () => setOpen(true);
@@ -20,7 +20,7 @@ function CastCard({nomenee, role, movieId, title, poster, movieDetails, isVoted,
                             {isWinner && <WinnerIcon src='/OscarAward.svg'/>}
                         </ImageLink>
                     </ImageWrapper>
-                    <MarkMovieVote isVoted={isVoted} movieId={movieId} currentUser={currentUser}/>
+                    <MarkNominationVote isVoted={isVoted} nominationId={nominationId} categoryId={categoryId} currentUser={currentUser} onVoteChange={onVoteChange}/>
                 </CardImageContainer>
                 <CardContent>
                     <Title>{nomenee}</Title>

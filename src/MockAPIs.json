@@ -266,15 +266,15 @@
   "votedMovies": [
     {
       "id": 1,
-      "movieId": 1,
+      "nominationId": 1,
       "userId": 2,
       "categoryId": 1
     },
     {
       "id": 2,
-      "movieId": 1,
+      "nominationId": 6,
       "userId": 1,
-      "categoryId": 1
+      "categoryId": 2
     }
   ],
   "categories": [

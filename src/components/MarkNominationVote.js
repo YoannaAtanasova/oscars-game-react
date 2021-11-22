@@ -3,7 +3,7 @@ import {MdHowToVote} from 'react-icons/md';
 import { GlobalColors } from '../Global';
 import { MarkVotedWrapper, MarkVotedButton } from './styled/CardElements';
 
-function MarkMovieVote({isVoted, movieId, currentUser}) {
+function MarkNominationVote({isVoted, nominationId, categoryId, currentUser, onVoteChange}) {
     const [movieIsVotedFor, setMovieIsVotedFor ] = useState(false);
 
     useEffect(() => {
@@ -11,8 +11,9 @@ function MarkMovieVote({isVoted, movieId, currentUser}) {
     }, [isVoted]);
 
     function handleVotedButton() {
+        onVoteChange(categoryId, currentUser);
         if (isVoted) {
-            fetch(`${process.env.REACT_APP_API_URL}/votedMovies/${movieId}`, {
+            fetch(`${process.env.REACT_APP_API_URL}/votedMovies/${nominationId}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json'
@@ -24,7 +25,7 @@ function MarkMovieVote({isVoted, movieId, currentUser}) {
             fetch(`${process.env.REACT_APP_API_URL}/votedMovies`, {
                 method: 'POST',
                 body: JSON.stringify({
-                    movieId: movieId,
+                    nominationId: nominationId,
                     userId: currentUser
                 }),
                 headers: {
@@ -45,4 +46,4 @@ function MarkMovieVote({isVoted, movieId, currentUser}) {
     )
 }
 
-export default MarkMovieVote
+export default MarkNominationVote;

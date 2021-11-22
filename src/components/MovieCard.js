@@ -6,10 +6,10 @@ import 'react-responsive-modal/styles.css';
 import '../App.css'
 import MovieModal from './MovieModal';
 import MarkWatchedMovie from './MarkWatchedMovie';
-import MarkMovieVote from './MarkMovieVote';
+import MarkNominationVote from './MarkNominationVote';
 import { GlobalURLs } from '../Global';
 
-function MovieCard({movieId, title, releaseDate, poster, movieDetails, showWatchedButton, isWatched, isVoted, isWinner, currentUser}) {
+function MovieCard({categoryId, nominationId, movieId, title, releaseDate, poster, movieDetails, showWatchedButton, isWatched, isVoted, onVoteChange, isWinner, currentUser}) {
     const [open, setOpen] = useState(false);    
 
     const onOpenModal = () => setOpen(true);
@@ -27,7 +27,7 @@ function MovieCard({movieId, title, releaseDate, poster, movieDetails, showWatch
                     </ImageWrapper>
                     {showWatchedButton ? 
                         <MarkWatchedMovie isWatched={isWatched} movieId={movieId} currentUser={currentUser}/>
-                        : (<MarkMovieVote isVoted={isVoted} movieId={movieId} currentUser={currentUser}/>)
+                        : (<MarkNominationVote isVoted={isVoted} nominationId={nominationId} categoryId={categoryId} currentUser={currentUser} onVoteChange={onVoteChange}/>)
                     }
                 </CardImageContainer>
                 <CardContent>
