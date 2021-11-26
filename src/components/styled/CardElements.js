@@ -36,6 +36,7 @@ export const CardImageContainer = styled.div`
     width: 100%;
     height: 270px;
     max-width: 180px;
+    width: 180px;
     border-bottom: 1px solid;
     border-color: ${GlobalColors.OscarsGold};
     /*height: calc((100vw - 80px - 260px - (var(--discoverColumnPadding) * var(--numberOfDiscoverColumns))) / var(--numberOfDiscoverColumns) * 1.5);
