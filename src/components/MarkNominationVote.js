@@ -1,12 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import {MdHowToVote} from 'react-icons/md';
-import { GlobalColors } from '../Global';
+import { GlobalColors, GlobalStorageKeys } from '../Global';
 import { MarkVotedWrapper, MarkVotedButton } from './styled/CardElements';
 
-function MarkNominationVote({isVoted, nominationId, categoryId, currentUser, onVoteChange}) {
+function MarkNominationVote({isVoted, nominationId, categoryId, onVoteChange}) {
     const [movieIsVotedFor, setMovieIsVotedFor ] = useState(false);
+    const [currentUser, setCurrentUser] = useState(null);
 
     useEffect(() => {
+        setCurrentUser(sessionStorage.getItem(GlobalStorageKeys.USER_ID));
         setMovieIsVotedFor(isVoted);
     }, [isVoted]);
 

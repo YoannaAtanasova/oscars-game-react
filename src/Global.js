@@ -20,3 +20,13 @@ export const GlobalURLs = {
     STATUSCAKE_URL:"https://www.statuscake.com",
     STATUSCAKE_LOGO_URL:"https://app.statuscake.com/button/index.php?Track=ZC84x0akbQ&Days=1&Design=1"
 };
+
+export const GlobalStorageKeys = {
+    USER_IS_LOGGED_IN: "userIsLoggedIn",
+    USER_ID: "userId",
+    USER_NAME: "userName",
+    USER_EMAIL: "userEmail",
+    DISPLAY_NAME: "displayName",
+    GAME_IS_RUNNING: "gameIsRunning",
+    GAME_END_DATE: "gameEndDate",
+};

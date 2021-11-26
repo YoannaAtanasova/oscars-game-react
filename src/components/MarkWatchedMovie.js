@@ -1,12 +1,14 @@
 import React, {useEffect, useState} from 'react';
 import { GiPopcorn } from 'react-icons/gi';
-import { GlobalColors } from '../Global';
+import { GlobalColors, GlobalStorageKeys } from '../Global';
 import { MarkWatchedWrapper, MarkWatchedButton } from './styled/CardElements';
 
-function MarkWatchedMovie({isWatched, movieId, currentUser}) {
+function MarkWatchedMovie({isWatched, movieId}) {
     const [movieIsWatched, setMovieIsWatched ] = useState(false);
+    const [currentUser, setCurrentUser] = useState(null);
 
     useEffect(() => {
+        setCurrentUser(sessionStorage.getItem(GlobalStorageKeys.USER_ID));
         setMovieIsWatched(isWatched);
     }, [isWatched]);
 

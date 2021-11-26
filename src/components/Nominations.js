@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import MovieCard from '../components/MovieCard';
 import { MoviesContainer } from '../components/styled/CardElements';
+import { GlobalStorageKeys } from '../Global';
 import CastCard from './CastCard';
 
 function Nominations({categoryId}) {
@@ -8,9 +9,9 @@ function Nominations({categoryId}) {
     const [vote, setVote] = useState([]);
 
     useEffect(() => {
-        //const userId = localStorage.getItem('userId');
+        const user = sessionStorage.getItem(GlobalStorageKeys.USER_ID);
         getNominationsData(categoryId);
-        getUserInfo(categoryId);
+        user && getUserInfo(user, categoryId);
     }, [categoryId]);
     
     const getNominationsData = async (category) => {
@@ -19,8 +20,8 @@ function Nominations({categoryId}) {
             .then((data) => setNominations(data));
       };
 
-    const getUserInfo = async (category) => {
-        return await fetch(`${process.env.REACT_APP_API_URL}/votedMovies?categoryId=${category}&userId=1`)
+    const getUserInfo = async (user, category) => {
+        return await fetch(`${process.env.REACT_APP_API_URL}/votedMovies?categoryId=${category}&userId=${user}`)
             .then((response) => response.json())
             .then((data) => setVote(data));
         };
@@ -44,8 +45,7 @@ function Nominations({categoryId}) {
                                 movieDetails = {nomination.movie}
                                 isVoted={vote.some(x=> x.nominationId === nomination.id)}
                                 onVoteChange={onVoteChange}
-                                isWinner={nomination.IsWinner}
-                                currentUser={1}/>
+                                isWinner={nomination.IsWinner}/>
                     ))
                 : nominations.map((nomination, index) => (
                     <MovieCard
@@ -59,8 +59,7 @@ function Nominations({categoryId}) {
                             showWatchedButton={false}
                             isVoted={vote.some(x=> x.nominationId === nomination.id)}
                             onVoteChange={onVoteChange}
-                            isWinner={nomination.IsWinner}
-                            currentUser={1}/>
+                            isWinner={nomination.IsWinner}/>
             ))}
         </MoviesContainer>
     )

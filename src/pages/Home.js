@@ -1,17 +1,22 @@
 import React, {useEffect, useState} from 'react'
 
 import {Page, BackgroundBanner, Banner, Header, PageBody, Paragraph, SubHeader, GameInformation} from '../components/styled/PageElements';
+import { GlobalStorageKeys } from '../Global';
 
 function Home() {
     const [gameInformation, setGameInformation] = useState({isGameRunning: true, endDate: null});
-    const {isGameRunning, endDate} = gameInformation;
     const [timeRemaining, setTimeRemaining] = useState(null);
 
-    useEffect(() => { getGameInformation(); }, []);
+    useEffect(() => { 
+        setGameInformation({
+            isGameRunning: sessionStorage.getItem(GlobalStorageKeys.GAME_IS_RUNNING),
+            endDate: sessionStorage.getItem(GlobalStorageKeys.GAME_END_DATE)
+        });
+    }, []);
 
     useEffect(() => {
         var interval = setInterval(() => {
-            const end = new Date(endDate);
+            const end = new Date(gameInformation.endDate);
             const now = new Date();
 
             var seconds = Math.floor((end - now)/1000);
@@ -24,19 +29,10 @@ function Home() {
             seconds = seconds-(days*24*60*60)-(hours*60*60)-(minutes*60);
 
             setTimeRemaining(`${days}:${zeroPad(hours)}:${zeroPad(minutes)}:${zeroPad(seconds)}`);
-        }, 1000, endDate);
+        }, 1000, gameInformation.endDate);
 
         return () => clearInterval(interval);
-    }, [endDate]);
-
-    const getGameInformation = async () => {
-        return await fetch(`${process.env.REACT_APP_API_URL}/game-information`)
-            .then(response => response.json())
-            .then(data => { setGameInformation({
-                isGameRunning: data.IsGameRunning,
-                endDate: data.EndDate
-            }) });
-    };
+    }, [gameInformation]);
 
     function zeroPad(number) {
         return ('0' + number).slice(-2);
@@ -53,7 +49,7 @@ function Home() {
                         THE GAME
                     </SubHeader>
                     <GameInformation>
-                        {isGameRunning 
+                        {gameInformation.isGameRunning 
                             ? <> GAME IS RUNNING <br/> TIME LEFT: { timeRemaining } </>
                             : <> GAME IS STOPPED </>}
                     </GameInformation>

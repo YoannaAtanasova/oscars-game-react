@@ -9,7 +9,7 @@ import MarkWatchedMovie from './MarkWatchedMovie';
 import MarkNominationVote from './MarkNominationVote';
 import { GlobalURLs } from '../Global';
 
-function MovieCard({categoryId, nominationId, movieId, title, releaseDate, poster, movieDetails, showWatchedButton, isWatched, isVoted, onVoteChange, isWinner, currentUser}) {
+function MovieCard({categoryId, nominationId, movieId, title, releaseDate, poster, movieDetails, showWatchedButton, isWatched, isVoted, onVoteChange, isWinner}) {
     const [open, setOpen] = useState(false);    
 
     const onOpenModal = () => setOpen(true);
@@ -26,8 +26,8 @@ function MovieCard({categoryId, nominationId, movieId, title, releaseDate, poste
                         </ImageLink>
                     </ImageWrapper>
                     {showWatchedButton ? 
-                        <MarkWatchedMovie isWatched={isWatched} movieId={movieId} currentUser={currentUser}/>
-                        : (<MarkNominationVote isVoted={isVoted} nominationId={nominationId} categoryId={categoryId} currentUser={currentUser} onVoteChange={onVoteChange}/>)
+                        <MarkWatchedMovie isWatched={isWatched} movieId={movieId}/>
+                        : (<MarkNominationVote isVoted={isVoted} nominationId={nominationId} categoryId={categoryId} onVoteChange={onVoteChange}/>)
                     }
                 </CardImageContainer>
                 <CardContent>

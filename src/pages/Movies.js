@@ -2,16 +2,16 @@ import React, {useState, useEffect} from 'react';
 import MovieCard from '../components/MovieCard';
 import { Page, PageBody } from '../components/styled/PageElements';
 import { MoviesContainer } from '../components/styled/CardElements';
+import { GlobalStorageKeys } from '../Global';
 
 function Movies() {
     const [moviesData, setMoviesData] = useState([]);
-    const [userInfo, setUserInfo] = useState({userId: '', watchedMovies: []});
-
-    const{userId, watchedMovies} = userInfo;
+    const [watchedMovies, setWatchedMovies] = useState([]);
     
     useEffect(() => {
+        const user = sessionStorage.getItem(GlobalStorageKeys.USER_ID);
         getMoviesData();
-        getUserInfo();
+        user && getUserInfo(user);
     }, []);
 
     const getMoviesData = async () => {
@@ -20,13 +20,10 @@ function Movies() {
             .then((data) => setMoviesData(data));
       };
 
-    const getUserInfo = async () => {
-        return await fetch(`${process.env.REACT_APP_API_URL}/users/1?_embed=watchedMovies`)
+    const getUserInfo = async (user) => {
+        return await fetch(`${process.env.REACT_APP_API_URL}/users/${user}?_embed=watchedMovies`)
             .then((response) => response.json())
-            .then((data) => setUserInfo({
-                userId: data.id,
-                watchedMovies: data.watchedMovies
-            }));
+            .then((data) => setWatchedMovies(data.watchedMovies));
       };
 
     return (
@@ -42,8 +39,7 @@ function Movies() {
                                 poster={movie.PosterPath}
                                 movieDetails = {movie}
                                 showWatchedButton={true}
-                                isWatched={watchedMovies.some(x=> x.movieId === movie.id)}
-                                currentUser={userId}/>
+                                isWatched={watchedMovies.some(x=> x.movieId === movie.id)}/>
                     ))}
                 </MoviesContainer>
             </PageBody>

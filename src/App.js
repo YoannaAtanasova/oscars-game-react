@@ -1,4 +1,5 @@
-import './App.css'
+import React, {useEffect, useState} from 'react';
+import './App.css';
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -12,15 +13,39 @@ import Movies from './pages/Movies';
 import Categories from './pages/Categories';
 import Category from './pages/Category';
 import Leaderboard from './pages/Leaderboard';
+import { GlobalStorageKeys } from './Global';
 
 function App() {
   // eslint-disable-next-line
   String.prototype.format = function() {
     var a = this;
     for (var k in arguments) {
-      a = a.replace("{" + k + "}", arguments[k])
+      a = a.replace("{" + k + "}", arguments[k]);
     }
-    return a
+    return a;
+  };
+  const [gameInformation, setGameInformation] = useState({isGameRunning: true, endDate: null});
+ 
+  useEffect(() => { 
+    getGameInformation();
+  }, []);
+
+  useEffect(() => { 
+    sessionStorage.setItem(GlobalStorageKeys.GAME_IS_RUNNING, gameInformation.isGameRunning); 
+    sessionStorage.setItem(GlobalStorageKeys.GAME_END_DATE, gameInformation.endDate);
+    
+    //to be removed after login is implemented
+    sessionStorage.setItem(GlobalStorageKeys.USER_IS_LOGGED_IN, true); 
+    sessionStorage.setItem(GlobalStorageKeys.USER_ID, 1); 
+  }, [gameInformation]);
+
+  const getGameInformation = async () => {
+    return await fetch(`${process.env.REACT_APP_API_URL}/game-information`)
+        .then(response => response.json())
+        .then(data =>  { setGameInformation({
+          isGameRunning: data.IsGameRunning,
+          endDate: data.EndDate
+      }) });
   };
 
   return (
