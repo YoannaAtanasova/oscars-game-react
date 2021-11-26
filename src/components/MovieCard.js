@@ -7,7 +7,7 @@ import '../App.css'
 import MovieModal from './MovieModal';
 import MarkWatchedMovie from './MarkWatchedMovie';
 import MarkNominationVote from './MarkNominationVote';
-import { GlobalURLs } from '../Global';
+import { GlobalStorageKeys, GlobalURLs } from '../Global';
 
 function MovieCard({categoryId, nominationId, movieId, title, releaseDate, poster, movieDetails, showWatchedButton, isWatched, isVoted, onVoteChange, isWinner}) {
     const [open, setOpen] = useState(false);    
@@ -25,10 +25,11 @@ function MovieCard({categoryId, nominationId, movieId, title, releaseDate, poste
                             {isWinner && <WinnerIcon src='/OscarAward.svg'/>}
                         </ImageLink>
                     </ImageWrapper>
-                    {showWatchedButton ? 
+                    {sessionStorage.getItem(GlobalStorageKeys.USER_IS_LOGGED_IN) && 
+                    (showWatchedButton ? 
                         <MarkWatchedMovie isWatched={isWatched} movieId={movieId}/>
                         : (<MarkNominationVote isVoted={isVoted} nominationId={nominationId} categoryId={categoryId} onVoteChange={onVoteChange}/>)
-                    }
+                    )}
                 </CardImageContainer>
                 <CardContent>
                     <Title>

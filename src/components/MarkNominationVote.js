@@ -13,6 +13,8 @@ function MarkNominationVote({isVoted, nominationId, categoryId, onVoteChange}) {
     }, [isVoted]);
 
     function handleVotedButton() {
+        if (!sessionStorage.getItem(GlobalStorageKeys.USER_IS_LOGGED_IN)) return;
+        
         onVoteChange(categoryId, currentUser);
         if (isVoted) {
             fetch(`${process.env.REACT_APP_API_URL}/votedMovies/${nominationId}`, {
