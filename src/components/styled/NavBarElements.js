@@ -89,6 +89,11 @@ export const DropDownWrapper = styled.div`
     background-color: #181b1e;
     border: #b69323 solid;
     border-width: 0 2px 2px 2px;
+
+    @media screen and (max-width:780px){
+        position: relative;
+        border-width: 0;
+    }
 `;
 
 export const NavItem = styled.li`
@@ -96,11 +101,24 @@ export const NavItem = styled.li`
 
     @media screen and (max-width:780px){
         width: 100%;
+        display: inline-table;
     }
 
+    &:focus ${DropDownWrapper} {
+        display: block;
+
+        @media screen and (max-width:780px){
+            display: table-footer-group;
+        }
+    }
+    
     &:hover ${DropDownWrapper} {
-            display: block;
-  }
+        display: block;
+
+        @media screen and (max-width:780px){
+            display: table-footer-group;
+        }
+    }
 `;
 
 export const NavLink =styled(Link)`
@@ -177,5 +195,6 @@ export const DropDownItem = styled.li`
 
     @media screen and (max-width:780px){
         width: 100%;
+        height: 80px;
     }
 `;

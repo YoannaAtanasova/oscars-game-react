@@ -4,8 +4,8 @@ import { IconContext } from 'react-icons/lib';
 import { BurgerMenu, Nav, NavBarContainer, NavBtn, NavBtnLink, NavItem, NavLink, NavLogoLink, NavLogo, NavMenu, DropDownWrapper, DropDownList, DropDownItem } from './styled/NavBarElements';
 
 function NavBar() {
-  const [click, setClick] = useState(false)
-  const handleClick = () => setClick(!click)
+  const [click, setClick] = useState(false);
+  const handleClick = () => setClick(!click);
 
   const [categoriesData, setCategoriesData] = useState([]);
 
@@ -30,31 +30,31 @@ function NavBar() {
           <BurgerMenu onClick={handleClick}>
             {click ? <FaTimes/> : <FaBars/>}
           </BurgerMenu>
-          <NavMenu onClick={handleClick} click={click}>
+          <NavMenu click={click}>
             <NavItem>
-              <NavLink to="/movies">Movies</NavLink>
+              <NavLink onClick={handleClick} to="/movies">Movies</NavLink>
             </NavItem>
             <NavItem>
               <NavLink to="/" isdisabled="true">Catogories</NavLink>
               <DropDownWrapper>
                 <DropDownList>
                   <DropDownItem>
-                      <NavLink to={"/categories"}>All Categories</NavLink>
+                      <NavLink onClick={handleClick} to={"/categories"}>All Categories</NavLink>
                   </DropDownItem>
                   {categoriesData.map((category, index) => (
                     <DropDownItem key={index}>
-                      <NavLink to={"/category/" + category.id}>{category.CategoryTitle}</NavLink>
+                      <NavLink onClick={handleClick} to={"/category/" + category.id}>{category.CategoryTitle}</NavLink>
                     </DropDownItem>
                   ))}
                 </DropDownList>
               </DropDownWrapper>
             </NavItem>
             <NavItem>
-              <NavLink to="/leaderboard">Leaderboard</NavLink>
+              <NavLink onClick={handleClick} to="/leaderboard">Leaderboard</NavLink>
             </NavItem>
             <NavItem>
               <NavBtn>
-                <NavBtnLink to="/login">Log In</NavBtnLink>
+                <NavBtnLink onClick={handleClick} to="/login">Log In</NavBtnLink>
               </NavBtn>
             </NavItem>
           </NavMenu>
