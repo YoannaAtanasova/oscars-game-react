@@ -2,6 +2,7 @@
   background: #181b1e;
   font-family: 'Futura Light';
   font-size: 18px;
+  min-height: 100%;
 }
 
 .movieModal{

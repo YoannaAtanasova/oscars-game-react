@@ -5,9 +5,11 @@ export const Page = styled.div`
     padding: ${props => props.padding ? props.padding : '50px 150px'};
     color: ${GlobalColors.White};
     background-color: ${GlobalColors.DarkGray};
+    padding-bottom: 200px;
     
     @media only screen and (width: 1000px){
         padding: 20px 50px;
+        padding-bottom: 500px;
     }
 `;
 

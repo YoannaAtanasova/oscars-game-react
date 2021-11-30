@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {FaBars, FaTimes} from 'react-icons/fa';
 import { IconContext } from 'react-icons/lib';
+import { GlobalColors } from '../Global';
 import { BurgerMenu, Nav, NavBarContainer, NavBtn, NavBtnLink, NavItem, NavLink, NavLogoLink, NavLogo, NavMenu, DropDownWrapper, DropDownList, DropDownItem } from './styled/NavBarElements';
 
 function NavBar() {
@@ -20,7 +21,7 @@ function NavBar() {
       };
 
   return (
-    <IconContext.Provider value={{color: '#fff'}}>
+    <IconContext.Provider value={{color: GlobalColors.White}}>
       <Nav>
           <NavBarContainer>
             <NavLogoLink to="/">
