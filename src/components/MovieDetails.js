@@ -6,7 +6,7 @@ import { HeaderWrapper, MovieDetailsContainer, MovieDetailsHeader,
         SectionWrapper, SectionHeader, 
         OverviewBody, 
         NominationsContainer, NominationsList, Nomination,
-        ScrollerWrapper, ScrollerCardList, ScrollerCard, ScrollerCardImageLink, ScrollerCardImage, ScrollerCardTitle, ScrollerCardSubtitle, NominationLink} from './styled/MovieDetailsElements';
+        ScrollerWrapper, ScrollerCardList, ScrollerCard, ScrollerCardImageLink, ScrollerCardImage, ScrollerCardTitle, ScrollerCardSubtitle, NominationLink, MDBLinkWrapper} from './styled/MovieDetailsElements';
 import {GiPopcorn,GiInvisibleFace} from 'react-icons/gi';
 import {FcFilmReel} from 'react-icons/fc';
 import { GlobalColors, GlobalURLs } from '../Global';
@@ -53,12 +53,14 @@ function MovieDetails({movieId, title, releaseDate, poster, imdbId, overview, no
                                 </MarkWatchedButton>
                             </HeaderIconsListItem>
                         </HeaderIconsList>
-                        <MDBLink href={`${GlobalURLs.IMDB_URL}/title/${imdbId}`} title="IMDB" target="_newtab">
-                            <MDBImage src={GlobalURLs.IMDB_LOGO_URL} />
-                        </MDBLink>
-                        <MDBLink href={`${GlobalURLs.TMDB_URL}/movie/${movieId}`} title="TMDB" target="_newtab">
-                            <MDBImage src={GlobalURLs.TMDB_LOGO_URL}/> 
-                        </MDBLink>
+                        <MDBLinkWrapper>
+                            <MDBLink href={`${GlobalURLs.IMDB_URL}/title/${imdbId}`} title="IMDB" target="_newtab">
+                                <MDBImage src={GlobalURLs.IMDB_LOGO_URL} />
+                            </MDBLink>
+                            <MDBLink href={`${GlobalURLs.TMDB_URL}/movie/${movieId}`} title="TMDB" target="_newtab">
+                                <MDBImage src={GlobalURLs.TMDB_LOGO_URL}/> 
+                            </MDBLink>
+                        </MDBLinkWrapper>                        
                     </HeaderWrapper>
                 </MovieDetailsHeader>
                 <SectionWrapper>

@@ -4,26 +4,44 @@ import { GlobalColors } from '../../Global';
 export const MovieDetailsContainer = styled.div`
     margin: 60px;
     width: auto;
-    //max-width: 1000px;
+    max-width: 1000px;
     display: flex;
     flex-wrap: wrap;
     flex: 0 1 auto;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+
+    @media screen and (max-width: 1110px){
+        margin: 10px;
+        width: 700px;
+     }
+
+    @media screen and (max-width: 850px){
+        width: 600px;
+     }
+
+    @media screen and (max-width: 740px){
+        width: 350px;
+     }
 `;
 
  export const MovieDetailsHeader = styled.div`
     width: 100%;
-    //max-width: 1000px;
+    max-width: 800px;
     border-bottom: 1px solid;
     border-color: ${GlobalColors.OscarsGold};
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 850px){
+        justify-content: center;
+     }
  `;
 
  export const PosterWrapper = styled.div`
     height: auto;
     border-width: 0;
-    min-width: 300px;
+    min-width: 150px;
     width: 300px;
     overflow: hidden;
     border-radius: 10px;
@@ -32,7 +50,7 @@ export const MovieDetailsContainer = styled.div`
 
  export const Poster = styled.div`
     display: block;
-    min-width: 300px;
+    min-width: 150px;
     width: 300px;
     height: 450px;
     position: relative;
@@ -54,6 +72,7 @@ export const MovieDetailsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    flex-direction: column;
     align-content: center;
     box-sizing: border-box;
     padding-left: 50px;
@@ -94,21 +113,22 @@ export const MovieDetailsContainer = styled.div`
  `;
 
 export const HeaderIconsList = styled.ul`
-    margin-bottom: 20px;
-    width: 100%;
-    height: 80px;
+    height: auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: flex-start;
     list-style-type: none;
     margin: 0;
+    margin-bottom: 10px;
     padding: 0;
 `;
 
 export const HeaderIconsListItem = styled.li`
     padding: 3px 0;
     margin-right: 20px;
-    height: 100%;
+    margin-bottom: 10px;
+    height: 80px;
     width: 80px;
     background-color: ${GlobalColors.MidGray};
     border-radius: 50%;
@@ -129,6 +149,10 @@ export const HeaderIconsListItemText = styled.span`
 
 export const MarkWatchedButton = styled.a`
     color: ${GlobalColors.White};
+`;
+
+export const MDBLinkWrapper = styled.div`
+    display: flex;
 `;
 
 export const MDBLink = styled.a`

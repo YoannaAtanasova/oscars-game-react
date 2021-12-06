@@ -6,11 +6,11 @@ export const Page = styled.div`
     color: ${GlobalColors.White};
     background-color: ${GlobalColors.DarkGray};
     padding-bottom: 200px;
-    
-    @media only screen and (width: 1000px){
-        padding: 20px 50px;
-        padding-bottom: 500px;
-    }
+
+    @media screen and (max-width: 1110px){
+        padding-right: 50px;
+        padding-left: 50px;
+     }
 `;
 
 export const PageBody = styled.div`

@@ -7,8 +7,12 @@ export const FooterContainer = styled.footer`
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 310px;
+    height: 200px;
     margin-top: -120px;   
+
+    @media screen and (max-width: 750px){
+        height: 310px;
+     }
 `;
 
 export const FooterContent = styled.div`
