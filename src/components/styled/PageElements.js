@@ -39,10 +39,20 @@ export const BackgroundBanner = styled.div`
     transform: translate3d(0px, 0px, 0px);
     transition: 0.8s all ease;
     align-content: center;
-    opacity: 0.8;
+    opacity: 1;  
 
     @media screen and (max-width: 1400px){
         background-position: right;
+
+        &:before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(0,0,0,0.75);
+    }
      }
 
      @media screen and (max-width: 850px){
@@ -60,6 +70,7 @@ export const Banner = styled.div`
     align-content: center;
     align-items: center;
     justify-items: center;
+    position: relative;
 
     @media screen and (max-width: 1400px){
     
