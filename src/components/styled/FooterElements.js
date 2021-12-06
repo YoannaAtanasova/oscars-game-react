@@ -30,6 +30,11 @@ export const FooterContent = styled.div`
     @media screen and (max-width: 810px){
         margin-left: 5rem;
      }
+
+     @media screen and (max-width: 499px){
+        margin-left: 0rem;
+        justify-content: center;
+     }
 `;
 
 export const CopyRights = styled.div`
@@ -37,6 +42,10 @@ export const CopyRights = styled.div`
     margin: 0;
     padding: 15px 0;    
     color: white;
+
+    @media screen and (max-width: 499px){
+        padding: 0;
+     }
 `;
 
 export const FooterListReferences = styled.ul`
@@ -44,6 +53,15 @@ export const FooterListReferences = styled.ul`
     align-items: center;
     list-style: none;
     text-align: center;
+
+    @media screen and (max-width: 499px){
+        width: 300px;
+    }
+
+    @media screen and (max-width: 499px){
+        justify-content: center;
+        padding: 0;
+    }
 `;
 
 export const FooterItem = styled.li`

@@ -23,6 +23,10 @@ export const MovieDetailsContainer = styled.div`
     @media screen and (max-width: 740px){
         width: 350px;
      }
+
+    @media screen and (max-width: 499px){
+        width: 300px;
+     }
 `;
 
  export const MovieDetailsHeader = styled.div`
@@ -35,6 +39,10 @@ export const MovieDetailsContainer = styled.div`
 
     @media screen and (max-width: 850px){
         justify-content: center;
+     }
+
+     @media screen and (max-width: 499px){
+        padding-top: 35px;
      }
  `;
 

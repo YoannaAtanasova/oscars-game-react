@@ -17,6 +17,10 @@ export const PageBody = styled.div`
     padding: 35px 35px;
     background-color: ${GlobalColors.MidGray};
     border-radius: 50px 0px 50px 0px;
+
+    @media screen and (max-width: 499px){
+        padding: 5px;
+     }
 `;
 
 export const Paragraph = styled.p`
