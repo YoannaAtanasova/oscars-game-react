@@ -56,9 +56,6 @@ export const FooterListReferences = styled.ul`
 
     @media screen and (max-width: 499px){
         width: 300px;
-    }
-
-    @media screen and (max-width: 499px){
         justify-content: center;
         padding: 0;
     }

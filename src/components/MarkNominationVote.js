@@ -13,7 +13,7 @@ function MarkNominationVote({isVoted, nominationId, categoryId, onVoteChange}) {
     }, [isVoted]);
 
     function handleVotedButton() {
-        if (!sessionStorage.getItem(GlobalStorageKeys.USER_IS_LOGGED_IN)) return;
+        if (!JSON.parse(sessionStorage.getItem(GlobalStorageKeys.USER_IS_LOGGED_IN))) return;
         
         onVoteChange(categoryId, currentUser);
         if (isVoted) {

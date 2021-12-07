@@ -13,7 +13,7 @@ function MarkWatchedMovie({isWatched, movieId}) {
     }, [isWatched]);
 
     function handleWatchedButton() {
-        if (!sessionStorage.getItem(GlobalStorageKeys.USER_IS_LOGGED_IN)) return;
+        if (!JSON.parse(sessionStorage.getItem(GlobalStorageKeys.USER_IS_LOGGED_IN))) return;
         
         if (isWatched) {
             fetch(`${process.env.REACT_APP_API_URL}/watchedMovies/${movieId}`, {

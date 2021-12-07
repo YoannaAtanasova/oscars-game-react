@@ -25,7 +25,7 @@ function MovieCard({categoryId, nominationId, movieId, title, releaseDate, poste
                             {isWinner && <WinnerIcon src='/OscarAward.svg'/>}
                         </ImageLink>
                     </ImageWrapper>
-                    {sessionStorage.getItem(GlobalStorageKeys.USER_IS_LOGGED_IN) && 
+                    {JSON.parse(sessionStorage.getItem(GlobalStorageKeys.USER_IS_LOGGED_IN)) && 
                     (showWatchedButton ? 
                         <MarkWatchedMovie isWatched={isWatched} movieId={movieId}/>
                         : (<MarkNominationVote isVoted={isVoted} nominationId={nominationId} categoryId={categoryId} onVoteChange={onVoteChange}/>)
