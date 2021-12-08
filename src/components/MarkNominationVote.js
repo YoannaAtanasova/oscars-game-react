@@ -16,7 +16,7 @@ function MarkNominationVote({isVoted, nominationId, categoryId, onVoteChange}) {
         if (!JSON.parse(sessionStorage.getItem(GlobalStorageKeys.USER_IS_LOGGED_IN))) return;
         
         onVoteChange(categoryId, currentUser);
-        if (isVoted) {
+        if (movieIsVotedFor) {
             fetch(`${process.env.REACT_APP_API_URL}/votedMovies/${nominationId}`, {
                 method: 'DELETE',
                 headers: {

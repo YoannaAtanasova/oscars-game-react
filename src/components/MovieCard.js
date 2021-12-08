@@ -38,7 +38,7 @@ function MovieCard({categoryId, nominationId, movieId, title, releaseDate, poste
                     <SubTitle>{releaseDate}</SubTitle>
                 </CardContent>
             </Card>
-            <MovieModal movie={movieDetails} open={open} onClose={onCloseModal}/>
+            <MovieModal movie={movieDetails} isWatched={isWatched} open={open} onClose={onCloseModal}/>
         </div>
     )
 }

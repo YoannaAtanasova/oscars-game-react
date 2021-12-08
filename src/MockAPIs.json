@@ -238,11 +238,6 @@
   ],
   "watchedMovies": [
     {
-      "id": 1,
-      "movieId": 1,
-      "userId": 1
-    },
-    {
       "id": 2,
       "movieId": 2,
       "userId": 1
@@ -261,6 +256,11 @@
       "movieId": 5,
       "userId": 1,
       "id": 5
+    },
+    {
+      "movieId": 1,
+      "userId": 1,
+      "id": 6
     }
   ],
   "votedMovies": [
@@ -292,7 +292,7 @@
       "id": 1,
       "IsWinner": false,
       "movieId": 1,
-      "categoryId": 1     
+      "categoryId": 1
     },
     {
       "id": 2,
@@ -323,7 +323,7 @@
       "IsWinner": true,
       "movieId": 1,
       "categoryId": 2,
-      "credits":[
+      "credits": [
         {
           "Id": 1,
           "Name": "Ryan Reynolds",
@@ -338,7 +338,7 @@
       "IsWinner": false,
       "movieId": 5,
       "categoryId": 2,
-      "credits":[
+      "credits": [
         {
           "Id": 1,
           "Name": "Ryan Reynolds",
@@ -353,7 +353,7 @@
       "IsWinner": false,
       "movieId": 3,
       "categoryId": 2,
-      "credits":[
+      "credits": [
         {
           "Id": 1,
           "Name": "Ryan Reynolds",
@@ -368,7 +368,7 @@
       "IsWinner": false,
       "movieId": 4,
       "categoryId": 2,
-      "credits":[
+      "credits": [
         {
           "Id": 1,
           "Name": "Ryan Reynolds",
@@ -383,7 +383,7 @@
       "IsWinner": false,
       "movieId": 5,
       "categoryId": 2,
-      "credits":[
+      "credits": [
         {
           "Id": 1,
           "Name": "Ryan Reynolds",

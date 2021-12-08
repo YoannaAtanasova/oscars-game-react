@@ -41,7 +41,7 @@ export const BackgroundBanner = styled.div`
     background-size: cover;
     background-position: left;
     transform: translate3d(0px, 0px, 0px);
-    transition: 0.8s all ease;
+    transition: 0.5s all ease;
     align-content: center;
     opacity: 1;  
 

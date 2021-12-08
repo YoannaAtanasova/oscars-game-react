@@ -13,10 +13,10 @@ export const MovieDetailsContainer = styled.div`
 
     @media screen and (max-width: 1110px){
         margin: 10px;
-        width: 700px;
+        width: 750px;
      }
 
-    @media screen and (max-width: 850px){
+    @media screen and (max-width: 880px){
         width: 600px;
      }
 
@@ -37,7 +37,7 @@ export const MovieDetailsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
 
-    @media screen and (max-width: 850px){
+    @media screen and (max-width: 880px){
         justify-content: center;
      }
 
@@ -133,11 +133,10 @@ export const HeaderIconsList = styled.ul`
 `;
 
 export const HeaderIconsListItem = styled.li`
-    padding: 3px 0;
     margin-right: 20px;
     margin-bottom: 10px;
-    height: 80px;
-    width: 80px;
+    height: 100px;
+    width: 100px;
     background-color: ${GlobalColors.MidGray};
     border-radius: 50%;
     border: 5px;
@@ -147,16 +146,37 @@ export const HeaderIconsListItem = styled.li`
     align-items: center;
     justify-content: center;
     align-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
 `;
 
 export const HeaderIconsListItemText = styled.span`
     color: ${GlobalColors.White};
-    font-size: 2.0rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+`;
+
+export const HeaderIconsListItemSubText = styled.span`
+    color: ${GlobalColors.White};
+    font-size: 0.8rem;
     font-weight: bold;
 `;
 
 export const MarkWatchedButton = styled.a`
     color: ${GlobalColors.White};
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background: ${props => props.isWatched ? 'rgba(68, 77, 83, 1)' : 'none'};
+    border-radius: ${props => props.isWatched ? '100px' : 'none'};
+    
+    &:hover {
+        background: ${props => props.isWatched ? 'rgba(38, 42, 45, 1)' : 'rgba(68, 77, 83, 1)'};
+        border-radius: 100px;
+    }
 `;
 
 export const MDBLinkWrapper = styled.div`

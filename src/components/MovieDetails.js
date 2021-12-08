@@ -6,17 +6,49 @@ import { HeaderWrapper, MovieDetailsContainer, MovieDetailsHeader,
         SectionWrapper, SectionHeader, 
         OverviewBody, 
         NominationsContainer, NominationsList, Nomination,
-        ScrollerWrapper, ScrollerCardList, ScrollerCard, ScrollerCardImageLink, ScrollerCardImage, ScrollerCardTitle, ScrollerCardSubtitle, NominationLink, MDBLinkWrapper} from './styled/MovieDetailsElements';
+        ScrollerWrapper, ScrollerCardList, ScrollerCard, ScrollerCardImageLink, ScrollerCardImage, ScrollerCardTitle, ScrollerCardSubtitle, NominationLink, MDBLinkWrapper, HeaderIconsListItemSubText} from './styled/MovieDetailsElements';
 import {GiPopcorn,GiInvisibleFace} from 'react-icons/gi';
 import {FcFilmReel} from 'react-icons/fc';
-import { GlobalColors, GlobalURLs } from '../Global';
+import { GlobalColors, GlobalStorageKeys, GlobalURLs } from '../Global';
 
-function MovieDetails({movieId, title, releaseDate, poster, imdbId, overview, nominations, credits, usersWatched}) {
+function MovieDetails({movieId, title, releaseDate, poster, imdbId, overview, nominations, credits, usersWatched, isWatched}) {
     const [usersCount, setUsersCount] = useState(0);
+    const [movieIsWatched, setMovieIsWatched ] = useState(false);
+    const [currentUser, setCurrentUser] = useState(null);
 
     useEffect(() => {
+        setCurrentUser(sessionStorage.getItem(GlobalStorageKeys.USER_ID));
+        setMovieIsWatched(isWatched);
         getUsersCount();
-    });
+    }, [isWatched]);
+
+    function handleWatchedButton() {
+        if (!JSON.parse(sessionStorage.getItem(GlobalStorageKeys.USER_IS_LOGGED_IN))) return;
+        
+        if (movieIsWatched) {
+            fetch(`${process.env.REACT_APP_API_URL}/watchedMovies/${movieId}`, {
+                method: 'DELETE',
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(res => setMovieIsWatched(false))
+            .catch(err => console.log(err));
+        } else {
+            fetch(`${process.env.REACT_APP_API_URL}/watchedMovies`, {
+                method: 'POST',
+                body: JSON.stringify({
+                    movieId: movieId,
+                    userId: currentUser
+                }),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(res => setMovieIsWatched(true))
+            .catch(err => console.log(err));
+        };
+    };
 
     const getUsersCount = async () => {
         return await fetch(`${process.env.REACT_APP_API_URL}/users`)
@@ -43,13 +75,15 @@ function MovieDetails({movieId, title, releaseDate, poster, imdbId, overview, no
                         <HeaderIconsList>
                             <HeaderIconsListItem>
                                 <HeaderIconsListItemText>{Math.round((usersWatched.length/usersCount) * 100) + "%"}</HeaderIconsListItemText>
+                                <HeaderIconsListItemSubText>Users watched</HeaderIconsListItemSubText>
                             </HeaderIconsListItem>
                             <HeaderIconsListItem>
                                 <HeaderIconsListItemText>{nominations.length}</HeaderIconsListItemText>
+                                <HeaderIconsListItemSubText>Nominations</HeaderIconsListItemSubText>
                             </HeaderIconsListItem>
                             <HeaderIconsListItem>
-                                <MarkWatchedButton href="/" title="Mark as watched">
-                                    <GiPopcorn size='3.8em' style={{ fill: "url(#gold-gradient)" }}/>
+                                <MarkWatchedButton onClick={handleWatchedButton} title="Mark as watched" isWatched={movieIsWatched}>
+                                    <GiPopcorn size='3.8em' style={{ fill: "url(#gold-gradient)", background: "transparent" }}/>
                                 </MarkWatchedButton>
                             </HeaderIconsListItem>
                         </HeaderIconsList>

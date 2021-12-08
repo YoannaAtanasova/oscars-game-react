@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { useParams } from 'react-router';
 import MovieDetails from '../components/MovieDetails';
 import { Page, PageBody } from '../components/styled/PageElements';
+import { GlobalStorageKeys } from '../Global';
 
 function Movie({movieIdParam}) {
     const {movieIdFromUrl} = useParams();
@@ -49,7 +50,8 @@ function Movie({movieIdParam}) {
                         overview={overview}
                         nominations={nominations}
                         credits={credits}
-                        usersWatched={watched}/>
+                        usersWatched={watched}
+                        isWatched={watched.some(x=>x.id === sessionStorage.getItem(GlobalStorageKeys.USER_ID))}/>
             </PageBody>
         </Page>
     );
