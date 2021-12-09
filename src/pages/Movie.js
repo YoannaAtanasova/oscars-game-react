@@ -4,7 +4,7 @@ import MovieDetails from '../components/MovieDetails';
 import { Page, PageBody } from '../components/styled/PageElements';
 import { GlobalStorageKeys } from '../Global';
 
-function Movie({movieIdParam}) {
+function Movie() {
     const {movieIdFromUrl} = useParams();
 
     const [movieData, setMovieData] = useState(
@@ -23,7 +23,7 @@ function Movie({movieIdParam}) {
     const {id, title, releaseDate, posterPath, imdbId, overview, nominations, credits, watched} = movieData;
 
     useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}/movies/${(movieIdFromUrl ? movieIdFromUrl : movieIdParam)}` )
+        fetch(`${process.env.REACT_APP_API_URL}/movies/${movieIdFromUrl}` )
             .then((response) => response.json())
             .then((data) => setMovieData({
                 id: data.id,
@@ -36,10 +36,10 @@ function Movie({movieIdParam}) {
                 credits: data.Credits,
                 watched: data.Watched
             }));
-    }, [movieIdFromUrl, movieIdParam]);
+    }, [movieIdFromUrl]);
 
     return (
-        <Page padding={movieIdParam ? '50px' : ''}>
+        <Page padding={'50px'}>
             <PageBody>
                     <MovieDetails
                         movieId={id}
