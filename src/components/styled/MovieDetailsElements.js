@@ -170,9 +170,9 @@ export const MarkWatchedButton = styled.a`
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-    background: ${props => props.isWatched ? GlobalColors.OscarsGold : GlobalColors.DarkLightGray};
-    border-radius: ${props => props.isWatched ? '100px' : 'none'};
-    
+    background: ${props => props.isWatched ? GlobalColors.OscarsGold : GlobalColors.LightGray};
+    border-radius: 100px;
+
     &:hover {
         background: ${props => props.isWatched ? GlobalColors.MidGray : GlobalColors.OscarsGold};
         border-radius: 100px;
