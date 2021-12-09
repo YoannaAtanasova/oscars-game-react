@@ -88,11 +88,19 @@ export const Banner = styled.div`
 export const Header = styled.div`
     color: ${GlobalColors.OscarsGold};
     font-size: 100px;
+
+    @media screen and (max-width: 499px){
+        font-size: 70px;
+     }
 `;
 
 export const SubHeader = styled.div`
     color: ${GlobalColors.White};
     font-size: 80px;
+
+    @media screen and (max-width: 499px){
+        font-size: 50px;
+     }
 `;
 
 export const GameInformation = styled.div`
@@ -107,6 +115,10 @@ export const GameInformation = styled.div`
     color: ${GlobalColors.White};
     padding: 15px;
     margin: 15px;
+
+    @media screen and (max-width: 499px){
+        font-size: 20px;
+     }
 `;
 
 export const TitleWrapper = styled.div`
