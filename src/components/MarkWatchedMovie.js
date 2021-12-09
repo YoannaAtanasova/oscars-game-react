@@ -41,9 +41,9 @@ function MarkWatchedMovie({isWatched, movieId}) {
     };
 
     return (
-        <MarkWatchedWrapper color={movieIsWatched ? GlobalColors.LightGray : GlobalColors.MidGray}>
-            <MarkWatchedButton onClick={handleWatchedButton} title="Mark as watched">
-                <GiPopcorn size='1.8em' style={{ fill: "url(#gold-gradient)" }}/>
+        <MarkWatchedWrapper isWatched={movieIsWatched}>
+            <MarkWatchedButton onClick={handleWatchedButton} title="Mark as watched" isWatched={movieIsWatched}>
+                <GiPopcorn size='1.8em' style={{ fill: !movieIsWatched ? "url(#gold-gradient)" : GlobalColors.WhiteGold}}/>
             </MarkWatchedButton>
         </MarkWatchedWrapper>
     )

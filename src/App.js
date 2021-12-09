@@ -13,7 +13,7 @@ import Movies from './pages/Movies';
 import Categories from './pages/Categories';
 import Category from './pages/Category';
 import Leaderboard from './pages/Leaderboard';
-import { GlobalStorageKeys } from './Global';
+import { GlobalColors, GlobalStorageKeys } from './Global';
 
 function App() {
   // eslint-disable-next-line
@@ -68,7 +68,7 @@ function App() {
           <svg width="0" height="0">
                 <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
                     <stop stopColor="white" offset="0%" />
-                    <stop stopColor="#b69323" offset="90%" />
+                    <stop stopColor={GlobalColors.OscarsGold} offset="90%" />
                 </linearGradient>
           </svg> 
         </div>

@@ -42,9 +42,9 @@ function MarkNominationVote({isVoted, nominationId, categoryId, onVoteChange}) {
     };
 
     return (
-        <MarkVotedWrapper color={movieIsVotedFor ? GlobalColors.LightGray : GlobalColors.MidGray}>
+        <MarkVotedWrapper isVoted={movieIsVotedFor}>
             <MarkVotedButton onClick={handleVotedButton} title="Vote for this movie">
-                <MdHowToVote size='1.8em' style={{ fill: "url(#gold-gradient)" }}/>
+                <MdHowToVote size='1.8em' style={{ fill: !movieIsVotedFor ? "url(#gold-gradient)" : GlobalColors.WhiteGold}}/>
             </MarkVotedButton>
         </MarkVotedWrapper>
     )

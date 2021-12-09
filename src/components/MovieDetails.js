@@ -83,7 +83,7 @@ function MovieDetails({movieId, title, releaseDate, poster, imdbId, overview, no
                             </HeaderIconsListItem>
                             <HeaderIconsListItem>
                                 <MarkWatchedButton onClick={handleWatchedButton} title="Mark as watched" isWatched={movieIsWatched}>
-                                    <GiPopcorn size='3.8em' style={{ fill: "url(#gold-gradient)", background: "transparent" }}/>
+                                    <GiPopcorn size='3.8em' style={{ fill: !movieIsWatched ? "url(#gold-gradient)" : GlobalColors.WhiteGold}}/>
                                 </MarkWatchedButton>
                             </HeaderIconsListItem>
                         </HeaderIconsList>

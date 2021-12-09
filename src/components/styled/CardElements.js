@@ -82,7 +82,7 @@ export const MarkWatchedWrapper = styled.div`
     top: 8px;
     right: 8px;
     z-index: 4;
-    background: ${props => props.color};
+    background: ${props => props.isWatched ? GlobalColors.OscarsGold : GlobalColors.DarkLightGray};
     border-radius: 50%;
     border: 1px;
     border-color: ${GlobalColors.GoldBorder};
@@ -94,19 +94,19 @@ export const MarkWatchedWrapper = styled.div`
     padding: 2px 2px;
 
     &:hover {
-        background: ${GlobalColors.LightGray};
+        background: ${props => props.isWatched ? GlobalColors.MidGray : GlobalColors.OscarsGold};
     }
 `;
 
 export const MarkWatchedButton = styled.a`
-    color: linear-gradient(${GlobalColors.White} 0%, ${GlobalColors.OscarsGold} 90%);
 `;
+
 export const MarkVotedWrapper = styled.div`
     position: absolute;
     top: 8px;
     right: 8px;
     z-index: 4;
-    background: ${props => props.color};
+    background: ${props => props.isVoted ? GlobalColors.OscarsGold : GlobalColors.DarkLightGray};
     border-radius: 50%;
     border: 1px;
     border-color: ${GlobalColors.GoldBorder};
@@ -118,7 +118,7 @@ export const MarkVotedWrapper = styled.div`
     padding: 2px 2px;
 
     &:hover {
-        background: ${GlobalColors.LightGray};
+        background: ${props => props.isVoted ? GlobalColors.MidGray : GlobalColors.OscarsGold};
     }
 `;
 
