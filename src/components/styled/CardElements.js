@@ -7,6 +7,10 @@ export const MoviesContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     flex: 0 1 auto;
+
+    @media screen and (max-width: 400px){
+        justify-content: center;
+    }
 `;
 
 export const Card = styled.div`

@@ -8,8 +8,8 @@ export const Page = styled.div`
     padding-bottom: 200px;
 
     @media screen and (max-width: 1110px){
-        padding-right: 50px;
-        padding-left: 50px;
+        padding-right: 20px;
+        padding-left: 20px;
      }
 `;
 
@@ -19,7 +19,7 @@ export const PageBody = styled.div`
     border-radius: 50px 0px 50px 0px;
 
     @media screen and (max-width: 499px){
-        padding: 5px;
+        padding: 35px 5px;
      }
 `;
 

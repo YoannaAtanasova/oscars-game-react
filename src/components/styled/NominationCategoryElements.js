@@ -4,6 +4,6 @@ import styled from 'styled-components';
     margin: 30px;
 
       @media (max-width: 768px) {
-         margin: 20px 5px;
+         margin: 5px;
       }
  `;

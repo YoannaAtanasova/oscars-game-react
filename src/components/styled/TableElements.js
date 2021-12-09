@@ -3,6 +3,10 @@ import { GlobalColors } from '../../Global';
 
 export const TableWrapper = styled.div`
     margin: 30px;
+
+    @media screen and (max-width: 710px){
+        margin: 0;
+     }
 `;
 
 export const StyledTable = styled.table`
@@ -25,5 +29,9 @@ export const StyledTable = styled.table`
         margin: 20px;
         padding: 10px;
         background-color: ${GlobalColors.LightGray};
+
+        @media screen and (max-width: 710px){
+            padding: 0;
+        }
     }
 `

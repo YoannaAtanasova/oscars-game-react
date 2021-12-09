@@ -6,6 +6,10 @@ export const Rank = styled.h4`
     font-size: 1.2em;
     margin: 0;
     padding: 0 10px;
+
+    @media screen and (max-width: 710px){
+        font-size: 1em;
+     }
 `;
 
 export const UserDisplayName = styled.h4`
@@ -13,6 +17,14 @@ export const UserDisplayName = styled.h4`
     font-size: 1.2em;
     margin: 0;
     padding: 0;
+
+    @media screen and (max-width: 710px){
+        font-size: 1em;
+     }
+
+     @media screen and (max-width: 400px){
+        font-size: 0.75em;
+     }
 `;
 
 export const ScoreWrapper = styled.div`
@@ -35,18 +47,30 @@ export const ScoreMeter = styled.div`
 
 export const ScoreGauge = styled.div`
     height: 100%;
-    min-width: 40px;
     border-radius: 4px;
     background: linear-gradient(to right, ${GlobalColors.OscarsLightGold} 0%, ${GlobalColors.OscarsGold} 100%);
     width: ${props => props.width};
     margin-right: 10px;
+
+    @media screen and (max-width: 710px){
+        width: 0;
+        margin: 0;
+     }
 `;
 
 export const ScoreHeader = styled.h4`
     color: ${GlobalColors.White};
-    width: 20%;
+    width: 170px;
     font-size: 0.9em;
     font-weight: normal;
     margin: 0;
     padding: 0;
+
+    @media screen and (max-width: 710px){
+        font-size: 0.8em;
+     }
+
+    @media screen and (max-width: 400px){
+        width: auto;
+     }
 `;
