@@ -49,15 +49,15 @@ export const BackgroundBanner = styled.div`
         background-position: right;
 
         &:before {
-        content: "";
-        position: absolute;
-        top: 0px;
-        right: 0px;
-        bottom: 0px;
-        left: 0px;
-        background-color: rgba(0,0,0,0.75);
+            content: "";
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            background-color: rgba(0,0,0,0.75);
+        }
     }
-     }
 
      @media screen and (max-width: 850px){
         background-image: url("/Oscars_SocialBanners_2.jpg");
@@ -75,14 +75,6 @@ export const Banner = styled.div`
     align-items: center;
     justify-items: center;
     position: relative;
-
-    @media screen and (max-width: 1400px){
-    
-    }
-
-     @media screen and (max-width: 850px){
-        
-     }
 `;
 
 export const Header = styled.div`

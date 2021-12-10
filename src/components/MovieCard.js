@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { Card, CardContent, CardImageContainer, 
     Image, ImageLink, ImageWrapper, 
     Title, TitleLink, SubTitle, WinnerIcon} from './styled/CardElements';
@@ -11,9 +11,18 @@ import { GlobalStorageKeys, GlobalURLs } from '../Global';
 
 function MovieCard({categoryId, nominationId, movieId, title, releaseDate, poster, movieDetails, showWatchedButton, isWatched, isVoted, onVoteChange, isWinner}) {
     const [open, setOpen] = useState(false);    
+    const [isMarkedAsWatched, setIsMarkedAsWatched] = useState(false);
 
     const onOpenModal = () => setOpen(true);
     const onCloseModal = () => setOpen(false);  
+
+    useEffect(() => {
+        setIsMarkedAsWatched(isWatched);
+    }, [isWatched]);
+
+    const onMarkAsWatched = (isMarked) => {
+        setIsMarkedAsWatched(isMarked);
+    }
 
     return (
         <div>
@@ -27,7 +36,7 @@ function MovieCard({categoryId, nominationId, movieId, title, releaseDate, poste
                     </ImageWrapper>
                     {JSON.parse(sessionStorage.getItem(GlobalStorageKeys.USER_IS_LOGGED_IN)) && 
                     (showWatchedButton ? 
-                        <MarkWatchedMovie isWatched={isWatched} movieId={movieId}/>
+                        <MarkWatchedMovie isWatched={isMarkedAsWatched} movieId={movieId}/>
                         : (<MarkNominationVote isVoted={isVoted} nominationId={nominationId} categoryId={categoryId} onVoteChange={onVoteChange}/>)
                     )}
                 </CardImageContainer>
@@ -38,7 +47,7 @@ function MovieCard({categoryId, nominationId, movieId, title, releaseDate, poste
                     <SubTitle>{releaseDate}</SubTitle>
                 </CardContent>
             </Card>
-            <MovieModal movie={movieDetails} isWatched={isWatched} open={open} onClose={onCloseModal}/>
+            <MovieModal movie={movieDetails} isWatched={isWatched} open={open} onClose={onCloseModal} onMarkAsWatched={onMarkAsWatched}/>
         </div>
     )
 }

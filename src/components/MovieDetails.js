@@ -11,7 +11,7 @@ import {GiPopcorn,GiInvisibleFace} from 'react-icons/gi';
 import {FcFilmReel} from 'react-icons/fc';
 import { GlobalColors, GlobalStorageKeys, GlobalURLs } from '../Global';
 
-function MovieDetails({movieId, title, releaseDate, poster, imdbId, overview, nominations, credits, usersWatched, isWatched}) {
+function MovieDetails({movieId, title, releaseDate, poster, imdbId, overview, nominations, credits, usersWatched, isWatched, onMarkAsWatched}) {
     const [usersCount, setUsersCount] = useState(0);
     const [movieIsWatched, setMovieIsWatched ] = useState(false);
     const [currentUser, setCurrentUser] = useState(null);
@@ -32,7 +32,7 @@ function MovieDetails({movieId, title, releaseDate, poster, imdbId, overview, no
                     'Content-Type': 'application/json'
                 }
             })
-            .then(res => setMovieIsWatched(false))
+            .then(res => setMovieIsWatched(false), onMarkAsWatched && onMarkAsWatched(false))
             .catch(err => console.log(err));
         } else {
             fetch(`${process.env.REACT_APP_API_URL}/watchedMovies`, {
@@ -45,7 +45,7 @@ function MovieDetails({movieId, title, releaseDate, poster, imdbId, overview, no
                     'Content-Type': 'application/json'
                 }
             })
-            .then(res => setMovieIsWatched(true))
+            .then(res => setMovieIsWatched(true), onMarkAsWatched && onMarkAsWatched(true))
             .catch(err => console.log(err));
         };
     };
