@@ -45,7 +45,7 @@ function Movie() {
                         movieId={id}
                         title={title}
                         releaseDate={releaseDate}
-                        imageUrl={posterPath}
+                        poster={posterPath}
                         imdbId={imdbId}
                         overview={overview}
                         nominations={nominations}
