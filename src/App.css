@@ -1,16 +1,16 @@
 .App {
   background: #181b1e;
-  font-family: 'Futura Light';
-  font-size: 18px;
+  font-family: "Futura Light";
+  font-size: 1rem;
   min-height: 100%;
 }
 
-.movieModal{
+.movieModal {
   max-width: 1000px !important;
   background: none !important;
   padding: 0px !important;
 }
 
-.movieModal button{
+.movieModal button {
   color: #b69323;
 }
