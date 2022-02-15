@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./App.css";
-import NavBar from "./components/NavBar";
+import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
@@ -13,7 +13,9 @@ import Movies from "./pages/Movies";
 import Categories from "./pages/Categories";
 import Category from "./pages/Category";
 import Leaderboard from "./pages/Leaderboard";
-import { GlobalColors, GlobalStorageKeys } from "./Global";
+import { GlobalColors } from "./Global";
+import Sidebar from "./components/Sidebar/Sidebar";
+import { SessionStorage } from "./components/SessionStorage";
 
 function App() {
   // eslint-disable-next-line
@@ -24,46 +26,20 @@ function App() {
     }
     return a;
   };
-  const [gameInformation, setGameInformation] = useState({
-    isGameRunning: true,
-    endDate: null,
-  });
 
-  useEffect(() => {
-    getGameInformation();
-  }, []);
+  const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    sessionStorage.setItem(
-      GlobalStorageKeys.GAME_IS_RUNNING,
-      gameInformation.isGameRunning
-    );
-    sessionStorage.setItem(
-      GlobalStorageKeys.GAME_END_DATE,
-      gameInformation.endDate
-    );
-
-    //to be removed after login is implemented
-    sessionStorage.setItem(GlobalStorageKeys.USER_IS_LOGGED_IN, true);
-    sessionStorage.setItem(GlobalStorageKeys.USER_ID, 1);
-  }, [gameInformation]);
-
-  const getGameInformation = async () => {
-    return await fetch(`${process.env.REACT_APP_API_URL}/game-information`)
-      .then((response) => response.json())
-      .then((data) => {
-        setGameInformation({
-          isGameRunning: data.IsGameRunning,
-          endDate: data.EndDate,
-        });
-      });
+  const toggleSidebar = () => {
+    setIsOpen(!isOpen);
   };
 
   return (
     <Router>
+      <SessionStorage />
       <div className="App">
         <GlobalStyle />
-        <NavBar />
+        <Sidebar isOpen={isOpen} toggle={toggleSidebar} />
+        <Navbar toggle={toggleSidebar} />
         <Switch>
           <Route path="/" exact component={Home} />
           <Route path="/categories" exact component={Categories} />
