@@ -7,11 +7,11 @@ export const FooterContainer = styled.footer`
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 200px;
+  height: 204px;
   margin-top: -120px;
 
   @media screen and (max-width: 750px) {
-    height: 310px;
+    height: auto;
   }
 `;
 
