@@ -8,6 +8,7 @@ import {
   UserDisplayName,
 } from "./LeaderboardTableElements";
 import Table from "../Table";
+import { getGameInformation } from "../../helper/ApiRequests";
 
 function LeaderboardTable({ data }) {
   const [gameInformation, setGameInformation] = useState({
@@ -18,19 +19,16 @@ function LeaderboardTable({ data }) {
   const { moviesCount, categoriesCount } = gameInformation;
 
   useEffect(() => {
-    getGameInformation();
-  }, []);
+    const fetchData = async () => {
+      const data = await getGameInformation();
+      setGameInformation({
+        moviesCount: data.moviesCount,
+        categoriesCount: data.categoriesCount,
+      });
+    };
 
-  const getGameInformation = async () => {
-    return await fetch(`${process.env.REACT_APP_API_URL}/game-information`)
-      .then((response) => response.json())
-      .then((data) =>
-        setGameInformation({
-          moviesCount: data.Movies,
-          categoriesCount: data.Categories,
-        })
-      );
-  };
+    fetchData();
+  }, [gameInformation]);
 
   const columns = useMemo(
     () => [

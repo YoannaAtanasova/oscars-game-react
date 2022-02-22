@@ -27,6 +27,8 @@ export async function getGameInformation() {
   var gameInformation = {
     isGameRunning: true,
     endDate: null,
+    moviesCount: 0,
+    categoriesCount: 0,
   };
 
   var storageData = JSON.parse(
@@ -42,6 +44,8 @@ export async function getGameInformation() {
         gameInformation = {
           isGameRunning: data.IsGameRunning,
           endDate: data.EndDate,
+          moviesCount: data.Movies,
+          categoriesCount: data.Categories,
         };
       });
 
