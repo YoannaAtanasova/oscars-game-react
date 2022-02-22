@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
-import { GlobalColors, GlobalStorageKeys } from "../../Global";
+import { GlobalColors } from "../../Global";
+import { getCategoriesData } from "../../helper/ApiRequests";
 import {
   BurgerMenu,
   Nav,
@@ -19,6 +20,17 @@ import {
 } from "./NavbarElements";
 
 function Navbar({ toggle }) {
+  const [categoriesData, setCategoriesData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getCategoriesData();
+      setCategoriesData(data);
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <IconContext.Provider value={{ color: GlobalColors.White }}>
       <Nav>
@@ -43,9 +55,7 @@ function Navbar({ toggle }) {
                   <DropDownItem>
                     <NavLink to={"/categories"}>All Categories</NavLink>
                   </DropDownItem>
-                  {JSON.parse(
-                    sessionStorage.getItem(GlobalStorageKeys.CATEGORIES_DATA)
-                  ).map((category, index) => (
+                  {categoriesData.map((category, index) => (
                     <DropDownItem key={index}>
                       <NavLink to={"/category/" + category.id}>
                         {category.CategoryTitle}

@@ -15,7 +15,6 @@ import Category from "./pages/Category";
 import Leaderboard from "./pages/Leaderboard";
 import { GlobalColors } from "./Global";
 import Sidebar from "./components/Sidebar/Sidebar";
-import { SessionStorage } from "./components/SessionStorage";
 
 function App() {
   // eslint-disable-next-line
@@ -28,14 +27,12 @@ function App() {
   };
 
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
   };
 
   return (
     <Router>
-      <SessionStorage />
       <div className="App">
         <GlobalStyle />
         <Sidebar isOpen={isOpen} toggle={toggleSidebar} />

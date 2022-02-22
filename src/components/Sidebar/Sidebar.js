@@ -1,5 +1,5 @@
-import React from "react";
-import { GlobalStorageKeys } from "../../Global";
+import React, { useState, useEffect } from "react";
+import { getCategoriesData } from "../../helper/ApiRequests";
 import {
   CloseIcon,
   SidebarContainer,
@@ -10,6 +10,17 @@ import {
 } from "./SidebarElements";
 
 const Sidebar = ({ isOpen, toggle }) => {
+  const [categoriesData, setCategoriesData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getCategoriesData();
+      setCategoriesData(data);
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <SidebarContainer isOpen={isOpen} onClick={toggle}>
       <SidebarIcon onClick={toggle}>
@@ -23,9 +34,7 @@ const Sidebar = ({ isOpen, toggle }) => {
           <SidebarLink onClick={toggle} to={"/categories"}>
             All Categories
           </SidebarLink>
-          {JSON.parse(
-            sessionStorage.getItem(GlobalStorageKeys.CATEGORIES_DATA)
-          ).map((category, index) => (
+          {categoriesData.map((category, index) => (
             <SidebarLink
               key={index}
               onClick={toggle}

@@ -35,7 +35,6 @@ export const GlobalStorageKeys = {
   USER_NAME: "userName",
   USER_EMAIL: "userEmail",
   DISPLAY_NAME: "displayName",
-  GAME_IS_RUNNING: "gameIsRunning",
-  GAME_END_DATE: "gameEndDate",
+  GAME_INFORMATION: "gameInformation",
   CATEGORIES_DATA: "categoriesData",
 };
