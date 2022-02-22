@@ -58,8 +58,7 @@ function CastCard({
           <SubTitle>
             {role} in
             <TitleLink href={"/movie/" + movieId} target="_newTab">
-              {" "}
-              {title}{" "}
+              {title}
             </TitleLink>
           </SubTitle>
         </CardContent>
